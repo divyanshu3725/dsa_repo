@@ -160,3 +160,197 @@ using namespace std;
 //     return 0;
 // };
 
+// PATTERN 1
+// 1 1 1 1 1
+// 2 2 2 2 2
+// 3 3 3 3 3
+// 4 4 4 4 4
+// 5 5 5 5 5
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n; j++)
+//         {
+//             cout << i << " ";
+//         };
+//         cout << endl;
+//     }
+// };
+// int main()
+// {
+//     int n;
+//     cout << "Enter the value of n: ";
+//     cin >> n;
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 2
+// 1 2 3 4 5
+// 1 2 3 4 5
+// 1 2 3 4 5
+// 1 2 3 4 5
+// 1 2 3 4 5
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=n; j++)
+//         {
+//             cout<<j<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 3
+// 5 4 3 2 1
+// 5 4 3 2 1
+// 5 4 3 2 1
+// 5 4 3 2 1
+// 5 4 3 2 1
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=n; j++)
+//         {
+//             cout<<n-j+1<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 4
+// 1 4 9 16
+// 1 4 9 16
+// 1 4 9 16
+// 1 4 9 16
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=n; j++)
+//         {
+//             cout<<j*j<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 5
+// a a a a 
+// b b b b 
+// c c c c
+// d d d d
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=n; j++)
+//         {
+//             cout<<char(96+i)<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 6
+// a b c d e
+// a b c d e
+// a b c d e
+// a b c d e
+// a b c d e
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=n; j++)
+//         {
+//             cout<<char(96+j)<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 7
+// 1 2 3
+// 5 6 7
+// 8 9 10
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     int count = 1;
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=n; j++)
+//         {
+//             cout<<count<<" ";
+//             count++;
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     printPattern(n);
+//     return 0;
+// };
+

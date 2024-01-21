@@ -691,3 +691,162 @@
 //     return 0;
 // };
 
+// DECIMAL TO BINARY
+// DIVISION BY 2
+// 2 4 0
+// 2 2 0
+// 2 1 1
+//   0 
+// 2 7 1
+// 2 3 1
+// 2 1 1
+//   0 
+// 2 2 0
+// 2 1 1
+//   0
+// FIRST WAY (using division by 2 method) (using the pow function)
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+// int binaryOf(int n)
+// {
+//     float result = 0;
+//     int count = 0;
+//     while(n!=0)
+//     {
+//         int remainder = n%2;
+//         result += pow(10,count)*remainder;
+//         count++;
+//         n/=2;
+//     };
+//     return int(result);
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     cout<<binaryOf(n)<<endl;
+//     return 0;
+// };
+// SECOND WAY (using division by 2 method) (without using the pow function)
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+// int binaryOf(int n)
+// {
+//     int result = 0;
+//     int count = 0;
+//     while(n!=0)
+//     {
+//         int remainder = n%2;
+//         if(count==0)
+//         {
+//             result += remainder;
+//             count=1;
+//         }
+//         else
+//         {
+//             result += 10*count*remainder;
+//             count*=10;
+//         };
+//         n/=2;
+//     };
+//     return result;
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     cout<<binaryOf(n)<<endl;
+//     return 0;
+// };
+// THIRD WAY (using the bit manipulation method) (without using the pow function) 
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+// int binaryOf(int n)
+// {
+//     int result = 0;
+//     int count = 0;
+//     while(n!=0)
+//     {
+//         int lastBit = n&1;
+//         if(count==0)
+//         {
+//             result += lastBit;
+//             count=1;
+//         }
+//         else
+//         {
+//             result += 10*count*lastBit;
+//             count*=10;
+//         };
+//         n>>=1;
+//     };
+//     return result;
+// };
+// FOURTH WAY (using the bit manipulation method) (using pow function) 
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+// int binaryOf(int n)
+// {
+//     float result = 0;
+//     int count = 0;
+//     while(n!=0)
+//     {
+//         int lastBit = n&1;
+//         result += pow(10,count)*lastBit;
+//         count++;
+//         n>>=1;
+//     };
+//     return result;
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     cout<<binaryOf(n)<<endl;
+//     return 0;
+// };
+
+// BINARY TO DECIMAL
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+using namespace std;
+int decimalOf(int n)
+{
+    float result = 0;
+    int count = 0;
+    while(n!=0)
+    {
+        int lastBit = n%10;
+        result += pow(2,count)*lastBit;
+        count++;
+        n/=10;
+    };
+    return int(result);
+};
+int main()
+{
+    int n;
+    cout<<"Enter the value of n: ";
+    cin>>n;
+    cout<<decimalOf(n)<<endl;
+    return 0;
+};
+
+// slow compilation of c++ code

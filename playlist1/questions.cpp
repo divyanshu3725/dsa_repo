@@ -1,4 +1,4 @@
-// subtract-the-product-and-sum-of-digits-of-an-integer
+// subtract-the-product-and-sum-of-digits-of-an-integer (done)
 // https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/description/
 // #include <iostream>
 // using namespace std;
@@ -50,3 +50,4 @@
 //     cout<<hammingWeight(n)<<endl;
 //     return 0;
 // };
+
