@@ -822,31 +822,300 @@
 // };
 
 // BINARY TO DECIMAL
+// #include <iostream>
+// #include <algorithm>
+// #include <cmath>
+// #include <vector>
+// using namespace std;
+// int decimalOf(int n)
+// {
+//     float result = 0;
+//     int count = 0;
+//     while(n!=0)
+//     {
+//         int lastBit = n%10;
+//         result += pow(2,count)*lastBit;
+//         count++;
+//         n/=10;
+//     };
+//     return int(result);
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     cout<<decimalOf(n)<<endl;
+//     return 0;
+// };
+
+// TIME COMPLEXITY
+// amount of time taken by an algorithm to run as a function of length of input
+// why do we need complexities:
+// - to compare algorithm
+// - for making better programs
+// Big O Notation for upper bound worst case scenario
+// Theta Notation for middle bound average case scenario
+// Omega Notation for lower bound best case scenario
+// O(1) for constant time
+// O(n) for linear time
+// O(logn) for logarithmic time
+// O(n^2) for quadratic time
+// O(n^3) for cubic time
+// O(1) < O(logN) < O(N) < O(NlogN) < O(N^2) < O(N^3) < O(2^n) < O(N!)
+// f(n) -> 2(n^2) + 3(n) -> O(n^2)
+// f(n) -> 4(n^4) + 3(n^3) -> O(n^4)
+// f(n) -> (n^2) + logN -> O(n^2)
+// f(n) -> 200 -> O(1)
+// f(n) -> 3(n^3) + 2(n^2) + 5 -> O(n^3)
+// f(n) -> (n^3)/300 -> O(n^3)
+// f(n) -> 5(n^2) + logN -> O(n^2)
+// f(n) -> n/4 -> O(n)
+// f(n) -> n+4/4 -> O(n)
+// time complexity of print array function will be O(n)
+// time complexity of reverse array function will be O(n) (actally n/2)
+// time complexity of linear search in an array O(n) 
+// time complexity of the following code
+// int a = 0;
+// for(i = 0; i<N; i++)
+// {
+//     for(j = N; j>i; j--)
+//     {
+//         a = a + i + j;
+//     };
+// };
+// N = 1; 1
+// N = 2; 2 1 
+// N = 3; 3 2 1 
+// so for N = n; loop will run ((n^2) + n)/2 so TC = O(n^2)
+// simple method is to just do calculation for the worst case
+// for worst case N = n and i = 0; loop will run (n^2) times
+// TC for max in array and min in array will be O(n)
+// TC for isPrime function will be O(n) (actually n-2)
+
+// TLE
+// Most modern machines can perform 10^8 operations/second 
+// n < 11 : O(n!) , O(n^6) 
+// n < 18: O((2^n)*(n^2))  
+// n < 100 : O(n^4) 
+// n < 400 : O(n^3) 
+// n < 2000 : O((n^2)*log(n)) 
+// n < 10^4 : O(n^2)
+// n < 10^6 : O(n*log(n))
+// n < 10^8 : O(n) , O(logn)
+
+// SPACE COMPLEXITY
+// amount of time taken by an algorithm to run as a function of length of input
+// example 1
+// int a = 0, b = 0;
+// for(i = 0; i < N; i++)
+// {
+//     a = a + rand();
+// }
+// for(j = 0; j < M; j++)
+// {
+//     b = b + rand();
+// }
+// SC is O(1)
+// example 2
+// int a = 0, b = 0;
+// for(i = 0; i < N; i++)
+// {
+//     for(j = 0; j < N; j++)
+//     {
+//         a = a + j;
+//     }
+// }
+// for(k = 0; k < N; k++)
+// {
+//     b = b + k;
+// }
+// SC is O(1)
+// example 3
+// int a = 0;
+// for(i = 0; i < N; i++)
+// {
+//     for(j = N; j > i; j--)
+//     {
+//         a = a + i + j;
+//     };
+// };
+// SC is O(1)
+// example 4
+// func()
+// {
+//     int arr[5] = {1,2,3,4,5};
+//     // cod with O(1)
+// };
+// SC is O(1) (because the size has been fixed)
+// example 5
+// int n;
+// cin>>n;
+// vector<int> vect[n];
+// SC is O(n)
+// example 6
+// for(0 to n)
+// {
+//     vector <int> vect[n];
+//     for(0 to n)
+//     {
+//         // code
+//     }
+// }
+// SC is O(n)
+// for loop time khaaega
+// vector space khaaega
+// TC calculate karte wakt vector ke size ko nahi dekhne ka
+// SC calculate karte wakt for ke limit ko nahi dekhne ka
+
+// ARRAYS
+// arrays in c++ can store only similar type of items
+// elements in an array are stored in contagious memory locations
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     // char arr[5] = {'a','b','c','d','e'};
+//     // or 
+//     // char arr[] = {'a','b','c','d','e'};
+//     // cout<<"value at address "<<"arr"<<" ("<<arr<<")"<<" is "<<*(arr)<<endl;
+//     // cout<<"value at address "<<"arr+1"<<" ("<<arr+1<<")"<<" is "<<*(arr+1)<<endl;
+//     // cout<<"value at address "<<"arr+2"<<" ("<<arr+2<<")"<<" is "<<*(arr+2)<<endl;
+//     // cout<<"value at address "<<"arr+3"<<" ("<<arr+3<<")"<<" is "<<*(arr+3)<<endl;
+//     // cout<<"value at address "<<"arr+4"<<" ("<<arr+4<<")"<<" is "<<*(arr+4)<<endl;
+//     // return 0;
+//     char arr[3] = {'a'};
+//     cout<<arr[0]<<endl;
+//     cout<<arr[1]<<endl;
+//     cout<<arr[2]<<endl;
+// };
+
+// ARRAY UTILITY FUNCTIONS
 #include <iostream>
-#include <algorithm>
-#include <cmath>
-#include <vector>
 using namespace std;
-int decimalOf(int n)
+void printArray(auto arr[], int n)
 {
-    float result = 0;
-    int count = 0;
-    while(n!=0)
+    for(int i = 0; i<n; i++)
     {
-        int lastBit = n%10;
-        result += pow(2,count)*lastBit;
-        count++;
-        n/=10;
+        cout<<arr[i]<<" ";
     };
-    return int(result);
+    cout<<endl;
 };
-int main()
+int maxElement(int arr[], int n)
 {
-    int n;
-    cout<<"Enter the value of n: ";
-    cin>>n;
-    cout<<decimalOf(n)<<endl;
-    return 0;
+    int maxElem = INT32_MIN;
+    for(int i = 0; i<n; i++)
+    {
+        if(arr[i]>maxElem)
+        {
+            maxElem = arr[i];
+        };
+    };
+    return maxElem;
+};
+int minElement(int arr[], int n)
+{
+    int minElem = INT32_MAX;
+    for(int i = 0; i<n; i++)
+    {
+        if(arr[i]<minElem)
+        {
+            minElem = arr[i];
+        };
+    };
+    return minElem;
+};
+void inputArrayElement(int arr[], int n)
+{
+    for(int i = 0; i<n; i++)
+    {
+        cin>>arr[i];
+    }
+};
+int sumOfElements(int arr[], int n)
+{
+    int sum = 0;
+    for(int i = 0; i<n; i++)
+    {
+        sum+=arr[i];
+    };
+    return sum;
+}
+void reverseArray1(int arr[], int n)
+{
+    int limit = n/2;
+    for(int i = 0; i<limit; i++)
+    {
+        int temp = arr[i];
+        arr[i] = arr[n-i-1];
+        arr[n-i-1] = temp;
+    };
+};
+void reverseArray2(int arr[], int n)
+{
+    int start = 0;
+    int end = n-1;
+    while(start!=end)
+    {
+        swap(arr[start],arr[end]);
+        start++;
+        end--;
+    };
 };
 
+// INBUILT FUNCTIONS: 
+// MIN_ELEMENT and MAX_ELEMENT (belong to the algorithm header file)
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {2,4,1,5,3};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     cout<<*(min_element(arr,arr+size))<<endl;
+//     cout<<*(max_element(arr,arr+size))<<endl;
+//     return 0;
+// };
+
+// MAX and MIN functions
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+// int main()
+// {
+//     cout<<max(1,2)<<endl;
+//     cout<<min(1,2)<<endl;
+// };
+
+// INSIDER INFORMATION ABOUT ARRAYS
+// if array has 5 elements, but we have initialized only 3 values, then accessing the 4th of 5th element of an array using cout<<arr[4]<<endl; will print garbage value
+// but if we pass this array to the printArray function, then 0s are printed
+
+// WHY DO WE NEED TO PASS SIZE OF ARRAY EXPLICTLY
+// because amount of space alloted to an array might be larger than the space used
+// while printing the array we need to specify the amount of space used by the array and not the amount of space alloted to the array
+
+// VARIABLES ARE PASSED BY VALUE, BUT ARRAYS ARE PASSED BY REFERENCE
+
+// LINEAR SEARCH
+// has TC O(n)
+// bool linearSearch(int arr[], int n, int num)
+// {
+//     for(int i = 0; i<n; i++)
+//     {
+//         if(arr[i]==num)
+//         {
+//             return true;
+//         };
+//     };
+//     return false;
+// };
+
+// PENDING 
+// TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
+
+// RESEARCH TO BE DONE
+// about the auto keyword
+
+// PROBLEMS TO BE SORTED OUT
 // slow compilation of c++ code
