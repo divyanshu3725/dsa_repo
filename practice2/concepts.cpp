@@ -1060,3 +1060,113 @@ using namespace std;
 //     return result;
 // };
 
+// FUNCTIONS
+// returnType functionName (parameters) is the function declaration
+// the body of the function is the function definition
+// funcName(args) is function call
+// DEFAULT PARAMETERS
+// #include <iostream>
+// using namespace std;
+// int sum(int a, int b = 3)
+// {
+//     return a+b;
+// }
+// int main()
+// {
+//     int a = 2;
+//     int b = 3;
+//     cout<<sum(b)<<endl;
+//     return 0;
+// };
+
+// PASS BY VALUE AND PASS BY REFERENCE
+// THIS WON'T WORK
+// #include <iostream>
+// using namespace std;
+// void increment(int a)
+// {
+//     a++;
+// };
+// int main()
+// {
+//     int a = 2;
+//     cout<<a<<endl;
+//     increment(a);
+//     cout<<a<<endl;
+// };
+// THIS WILL WORK (USING REFERENCE VARIABLE CONCEPT)
+// #include <iostream>
+// using namespace std;
+// void increment(int &a)
+// {
+//     a++;
+// };
+// int main()
+// {
+//     int a = 2;
+//     cout<<a<<endl;
+//     increment(a);
+//     cout<<a<<endl;
+// };
+// THIS WILL WORK (USING POINTER CONCEPT)
+// #include <iostream>
+// using namespace std;
+// void increment(int *a)
+// {
+//     (*a)++;
+// };
+// int main()
+// {
+//     int a = 2;
+//     cout<<a<<endl;
+//     increment(&a);
+//     cout<<a<<endl;
+// };
+
+// SWAPPER FUNCTION
+// #include <iostream>
+// using namespace std;
+// void swapper(int &a, int &b)
+// {
+//     int temp = a;
+//     a = b;
+//     b = temp;
+// };
+// int main()
+// {
+//     int a = 2;
+//     int b = 3;
+//     cout<<a<<" "<<b<<endl;
+//     swapper(a,b);
+//     cout<<a<<" "<<b<<endl;
+//     return 0;
+// };
+
+// FUNCTION OVERLOADING
+// #include <iostream>
+// using namespace std;
+// int sum(int a, int b)
+// {
+//     return a+b;
+// };
+// int sum(int a, int b, int c)
+// {
+//     return a+b+c;
+// };
+// float sum(float a, float b)
+// {
+//     return a+b;
+// }
+// int main()
+// {
+//     int a = 2;
+//     int b = 3;
+//     int c = 4;
+//     float d = 8.3;
+//     float e = 25.71;
+//     cout<<sum(a,b)<<endl;
+//     cout<<sum(a,b,c)<<endl;
+//     cout<<sum(d,e)<<endl;
+//     return 0;
+// }
+

@@ -991,77 +991,78 @@
 // };
 
 // ARRAY UTILITY FUNCTIONS
-#include <iostream>
-using namespace std;
-void printArray(auto arr[], int n)
-{
-    for(int i = 0; i<n; i++)
-    {
-        cout<<arr[i]<<" ";
-    };
-    cout<<endl;
-};
-int maxElement(int arr[], int n)
-{
-    int maxElem = INT32_MIN;
-    for(int i = 0; i<n; i++)
-    {
-        if(arr[i]>maxElem)
-        {
-            maxElem = arr[i];
-        };
-    };
-    return maxElem;
-};
-int minElement(int arr[], int n)
-{
-    int minElem = INT32_MAX;
-    for(int i = 0; i<n; i++)
-    {
-        if(arr[i]<minElem)
-        {
-            minElem = arr[i];
-        };
-    };
-    return minElem;
-};
-void inputArrayElement(int arr[], int n)
-{
-    for(int i = 0; i<n; i++)
-    {
-        cin>>arr[i];
-    }
-};
-int sumOfElements(int arr[], int n)
-{
-    int sum = 0;
-    for(int i = 0; i<n; i++)
-    {
-        sum+=arr[i];
-    };
-    return sum;
-}
-void reverseArray1(int arr[], int n)
-{
-    int limit = n/2;
-    for(int i = 0; i<limit; i++)
-    {
-        int temp = arr[i];
-        arr[i] = arr[n-i-1];
-        arr[n-i-1] = temp;
-    };
-};
-void reverseArray2(int arr[], int n)
-{
-    int start = 0;
-    int end = n-1;
-    while(start!=end)
-    {
-        swap(arr[start],arr[end]);
-        start++;
-        end--;
-    };
-};
+// #include <iostream>
+// using namespace std;
+// void printArray(int arr[], int n)
+// {
+//     for(int i = 0; i<n; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     };
+//     cout<<endl;
+// };
+// int maxElement(int arr[], int n)
+// {
+//     int maxElem = INT32_MIN;
+//     for(int i = 0; i<n; i++)
+//     {
+//         if(arr[i]>maxElem)
+//         {
+//             maxElem = arr[i];
+//         };
+//     };
+//     return maxElem;
+// };
+// int minElement(int arr[], int n)
+// {
+//     int minElem = INT32_MAX;
+//     for(int i = 0; i<n; i++)
+//     {
+//         if(arr[i]<minElem)
+//         {
+//             minElem = arr[i];
+//         };
+//     };
+//     return minElem;
+// };
+// void inputArrayElement(int arr[], int n)
+// {
+//     for(int i = 0; i<n; i++)
+//     {
+//         cin>>arr[i];
+//     }
+// };
+// int sumOfElements(int arr[], int n)
+// {
+//     int sum = 0;
+//     for(int i = 0; i<n; i++)
+//     {
+//         sum+=arr[i];
+//     };
+//     return sum;
+// }
+// void reverseArray1(int arr[], int n)
+// {
+//     int limit = n/2;
+//     for(int i = 0; i<limit; i++)
+//     {
+//         int temp = arr[i];
+//         arr[i] = arr[n-i-1];
+//         arr[n-i-1] = temp;
+//     };
+// };
+// void reverseArray2(int arr[], int n)
+// {
+//     int start = 0;
+//     int end = n-1;
+//     while(start!=end)
+//     {
+//         swap(arr[start],arr[end]);
+//         start++;
+//         end--;
+//     };
+// };
+
 
 // INBUILT FUNCTIONS: 
 // MIN_ELEMENT and MAX_ELEMENT (belong to the algorithm header file)
@@ -1110,6 +1111,47 @@ void reverseArray2(int arr[], int n)
 //     };
 //     return false;
 // };
+
+// BINARY SEARCH
+// for linear search the TC is O(n)
+// is applied only on monotoning functions
+// #include <iostream>
+// using namespace std;
+// int binarySearch(int arr[], int size, int key)
+// {
+//     int start = 0;
+//     int end = size-1;
+//     while(start<=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = arr[midInd];
+//         if(key<midElem)
+//         {
+//             end = midInd-1;
+//         }
+//         else if (key==midElem)
+//         {
+//             return midInd;
+//         }
+//         else
+//         {
+//             start = midInd + 1;
+//         };
+//     };
+//     return -1;
+// };
+// int main()
+// {
+//     int arr[] = {1,2,3,4,5,6};
+//     int key = 1;
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     cout<<binarySearch(arr,size,key)<<endl; 
+//     return 0;
+// };
+// why we shouldn't use s+e/2
+// because if s = e = 2^31 - 1
+// so we need to use s + (e-s)/2
+// for binary search TC is logN (base 2)
 
 // PENDING 
 // TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
