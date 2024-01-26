@@ -467,3 +467,138 @@
 //     return 0;
 // };
 
+// 11) triplet-sum (TLE) (codestudo)
+// #include <iostream> 
+// #include <vector> 
+// #include <algorithm> 
+// #include <cmath> 
+// using namespace std;
+// vector< vector<int> > findTriplets(vector<int>arr, int n, int K) {
+//     cout<<"algo called"<<endl;
+//     vector < vector<int> > resultantVector;
+//     sort(arr.begin(), arr.end());
+//     for(int i = 0; i<n; i++)
+//     {
+//         if(arr[i]<=K)
+//         {
+//             for(int j = i+1; j<n; j++)
+//             {
+//                 if(arr[i]+arr[j]<=K)
+//                 {
+//                     for(int k = j+1; k<n; k++)
+//                     {
+//                         if(arr[i]+arr[j]+arr[k]<K)
+//                         {
+//                         }
+//                         else if (arr[i]+arr[j]+arr[k]==K)
+//                         {
+//                             vector <int> sampleVector;
+//                             sampleVector.push_back(arr[i]);
+//                             sampleVector.push_back(arr[j]);
+//                             sampleVector.push_back(arr[k]);
+//                             bool present = false;
+//                             for(int k = 0; k<resultantVector.size(); k++)
+//                             {
+//                                 if(resultantVector[k]==sampleVector)
+//                                 {
+//                                     present = true;
+//                                     break;
+//                                 };
+//                             };
+//                             if(!present)
+//                             {
+//                             resultantVector.push_back(sampleVector);
+//                             }
+//                             break;
+//                         }
+//                         else
+//                         {
+//                             break;
+//                         };
+//                     };
+//                 };
+//             };
+//         };
+//     };
+//     return resultantVector;
+// };
+// int main()
+// {
+//     int sum = 0;
+//     vector<int> vect;
+//     vect.push_back(0);
+//     vect.push_back(0);
+//     vect.push_back(0);
+//     vect.push_back(0);
+//     vect.push_back(0);
+//     vect.push_back(0);
+//     vect.push_back(0);
+//     vect.push_back(0);
+//     cout<<"calling algo"<<endl;
+//     vector< vector<int> > resultantVector = findTriplets(vect, vect.size(), sum);
+//     for(int i = 0; i<resultantVector.size(); i++)
+//     {
+//         for(int j = 0; j<resultantVector[i].size(); j++)
+//         {
+//             cout<<resultantVector[i][j]<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+
+// 12) sort-0-1-2 (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/sort-0-1-2_631055
+// #include <bits/stdc++.h> 
+// using namespace std;
+// void sort012(int *arr, int n)
+// {
+//     int zeroFrek = 0;
+//     int oneFrek = 0;
+//     int twoFrek = 0;
+//     for(int i = 0; i<n; i++)
+//     {
+//         if(arr[i]==0)
+//         {
+//             zeroFrek++;
+//         }
+//         else if (arr[i]==1)
+//         {
+//             oneFrek++;
+//         }
+//         else
+//         {
+//             twoFrek;
+//         };
+//     };
+//     for(int j = 0; j<n; j++)
+//     {
+//         if(j<zeroFrek)
+//         {
+//             arr[j] = 0;
+//         }
+//         else if ((j-zeroFrek)<oneFrek)
+//         {
+//             arr[j] = 1;
+//         }
+//         else
+//         {
+//             arr[j] = 2;
+//         };
+//     };
+// }
+// int main()
+// {
+//     int arr[] = {2,2,2,1,1,1,0};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     for(int i = 0; i<size; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     };
+//     cout<<endl;
+//     sort012(arr,size);
+//     for(int i = 0; i<size; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     };
+// }
+
