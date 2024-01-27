@@ -1,0 +1,19 @@
+⚡ Day 1
+Find Unique
+⚡ Day 2
+Find Area of Rectangle
+Sum of even & odd
+Sum Of Even Numbers Till N
+⚡ Day 3 (26/01/24)
+Cube Sum Pairs
+Form A Triangle (TLE)
+Fahrenheit to Celsius
+Number and Digits (TLE)
+⚡ Day 4 (27/01/24)
+Count of Divisible Pairs
+Ninja and the Triangle (TLE)
+
+TLE
+Form A Triangle
+Number and Digits
+Ninja and the Triangle (TLE)

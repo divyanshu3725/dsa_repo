@@ -1,0 +1,2 @@
+⚡ Day 1 (27/01/24)
+subtract-the-product-and-sum-of-digits-of-an-integer

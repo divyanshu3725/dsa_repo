@@ -2,7 +2,7 @@
 // https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/description/
 // #include <iostream>
 // using namespace std;
-// int subtractProductAndSum(int n) {
+//     int subtractProductAndSum(int n) {
 //     int sum = 0;
 //     int prod = 1;
 //     while(n!=0)
@@ -10,10 +10,8 @@
 //         int lastDigit = n%10;
 //         sum+=lastDigit;
 //         prod*=lastDigit;
-//         n/=10;
+//         n=n/10;
 //     };
-//     // cout<<"prod is "<<prod<<endl;
-//     // cout<<"sum is "<<sum<<endl;
 //     return prod-sum;
 // };
 // int main()
@@ -287,7 +285,7 @@
 // #include <iostream>
 // #include <vector>
 // using namespace std;
-// int findDuplicate(vector<int> &arr) 
+// int findDuplicate(vector<int> &arr)
 // {
 // 	int a = 0;
 // 	int b = 0;
@@ -316,7 +314,7 @@
 // #include <iostream>
 // #include <vector>
 // using namespace std;
-// int findDuplicate(vector<int> &arr) 
+// int findDuplicate(vector<int> &arr)
 // {
 // 	int a = 0;
 // 	int b = 0;
@@ -349,7 +347,7 @@
 // #include <algorithm>
 // using namespace std;
 // vector<int> findDuplicates(vector<int>& nums) {
-//     sort(nums.begin(), nums.end());      
+//     sort(nums.begin(), nums.end());
 //     int index = 0;
 //     int count = 1;
 //     vector<int> vect;
@@ -468,10 +466,10 @@
 // };
 
 // 11) triplet-sum (TLE) (codestudo)
-// #include <iostream> 
-// #include <vector> 
-// #include <algorithm> 
-// #include <cmath> 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
 // using namespace std;
 // vector< vector<int> > findTriplets(vector<int>arr, int n, int K) {
 //     cout<<"algo called"<<endl;
@@ -548,7 +546,7 @@
 
 // 12) sort-0-1-2 (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/sort-0-1-2_631055
-// #include <bits/stdc++.h> 
+// #include <bits/stdc++.h>
 // using namespace std;
 // void sort012(int *arr, int n)
 // {
@@ -601,4 +599,224 @@
 //         cout<<arr[i]<<" ";
 //     };
 // }
+
+// 13) first-and-last-position-of-an-element-in-sorted-array (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// int leftMostOccurence(vector<int> &arr, int n, int k){
+//     int result = -1;
+//     int start = 0;
+//     int end = arr.size()-1;
+//     while (start<=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = arr[midInd];
+//         if(k<midElem)
+//         {
+//             end = midInd-1;
+//         }
+//         else if (k==midElem)
+//         {
+//             result = midInd;
+//             end = midInd-1;
+//         }
+//         else
+//         {
+//             start = midInd+1;
+//         };
+//     };
+//     return result;
+// };
+// int rightMostOccurence(vector<int> &arr, int n, int k){
+//     int result = -1;
+//     int start = 0;
+//     int end = arr.size()-1;
+//     while (start<=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = arr[midInd];
+//         if(k<midElem)
+//         {
+//             end = midInd-1;
+//         }
+//         else if (k==midElem)
+//         {
+//             result = midInd;
+//             start = midInd+1;
+//         }
+//         else
+//         {
+//             start = midInd+1;
+//         };
+//     };
+//     return result;
+// };
+// pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k)
+// {
+//     pair < int, int > resultantPair;
+//     resultantPair.first = leftMostOccurence(arr,n,k);
+//     resultantPair.second = rightMostOccurence(arr,n,k);
+//     return resultantPair;
+// };
+// int main()
+// {
+//     vector<int> vect = {0,0,1,1,2,2,2,2};
+//     pair<int,int> resPair = firstAndLastPosition(vect,vect.size(),2);
+//     cout<<"left most occurence is "<<resPair.first<<endl;
+//     cout<<"right most occurence is "<<resPair.second<<endl;
+//     return 0;
+// };
+
+// 14) TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// int leftMostOccurence(vector<int> &arr, int n, int k){
+//     int result = -1;
+//     int start = 0;
+//     int end = arr.size()-1;
+//     while (start<=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = arr[midInd];
+//         if(k<midElem)
+//         {
+//             end = midInd-1;
+//         }
+//         else if (k==midElem)
+//         {
+//             result = midInd;
+//             end = midInd-1;
+//         }
+//         else
+//         {
+//             start = midInd+1;
+//         };
+//     };
+//     return result;
+// };
+// int rightMostOccurence(vector<int> &arr, int n, int k){
+//     int result = -1;
+//     int start = 0;
+//     int end = arr.size()-1;
+//     while (start<=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = arr[midInd];
+//         if(k<midElem)
+//         {
+//             end = midInd-1;
+//         }
+//         else if (k==midElem)
+//         {
+//             result = midInd;
+//             start = midInd+1;
+//         }
+//         else
+//         {
+//             start = midInd+1;
+//         };
+//     };
+//     return result;
+// };
+// int totalNumberOfOccurences(vector<int>& arr, int n, int k)
+// {
+//     int first = leftMostOccurence(arr,n,k);
+//     int second = rightMostOccurence(arr,n,k);
+//     if(first==-1 && second==-1)
+//     {
+//         return 0;
+//     }
+//     else
+//     {
+//         return second-first+1;
+//     };
+// };
+// int main()
+// {
+//     vector<int> vect = {0,0,1,1,2,2,2,2};
+//     cout<<totalNumberOfOccurences(vect,vect.size(),2)<<endl;
+//     return 0;
+// };
+
+// 15) peak-index-in-a-mountain-array (done) (leetcode)
+// https://leetcode.com/problems/peak-index-in-a-mountain-array/
+// APPROACH 1 (my approach)
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// int peakIndexInMountainArray(vector<int> &arr)
+// {
+//     int start = 0;
+//     int end = arr.size()-1;
+//     while(start!=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = arr[midInd];
+//         int previousElem = arr[midInd-1];
+//         int nextElem = arr[midInd+1];
+//         cout<<"startElem = "<<arr[start]<<" end = "<<arr[end]<<" midElem = "<<midElem<<endl;;
+//         if(previousElem<midElem && midElem>nextElem)
+//         {
+//             cout<<"found"<<endl;
+//             return midInd;
+//         }
+//         else if (previousElem<midElem && midElem<nextElem)
+//         {
+//             cout<<"left"<<endl;
+//             start = midInd;
+//         }
+//         else
+//         {
+//             cout<<"right"<<endl;
+//             end = midInd;
+//         };
+//     };
+//     return -1;
+// };
+// int main()
+// {
+//     vector<int> vect = {3,5,3,2,0};
+//     cout<<peakIndexInMountainArray(vect)<<endl;
+// };
+// APPROACH 2 (sir's approach) (optimized approach)
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// int peakIndexInMountainArray(vector<int> &arr)
+// {
+//     int start = 0;
+//     int end = arr.size()-1;
+//     while(start!=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = arr[midInd];
+//         int nextElem = arr[midInd+1];
+//         cout<<"startElem = "<<arr[start]<<" end = "<<arr[end]<<" midElem = "<<midElem<<endl;;
+//         if(midElem<nextElem)
+//         {
+//             start = midInd + 1;
+//         }
+//         else
+//         {
+//             end = midInd;
+//         };
+//     };
+//     return start;
+// };
+// int main()
+// {
+//     vector<int> vect = {3,5,3,2,0};
+//     cout<<peakIndexInMountainArray(vect)<<endl;
+// };
 

@@ -1,7 +1,3 @@
-#include <iostream>
-#include <cmath>
-using namespace std;
-
 // PRINT FROM a to z
 // int main()
 // {
@@ -273,8 +269,8 @@ using namespace std;
 // };
 
 // PATTERN 5
-// a a a a 
-// b b b b 
+// a a a a
+// b b b b
 // c c c c
 // d d d d
 // #include <iostream>
@@ -356,7 +352,7 @@ using namespace std;
 // };
 
 // PATTERN 8
-// * 
+// *
 // * *
 // * * *
 // * * * *
@@ -377,13 +373,13 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;    
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
 
 // PATTERN 9
-// 1 
+// 1
 // 1 2
 // 1 2 3
 // 1 2 3 4
@@ -404,13 +400,13 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;    
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
 
 // PATTERN 10
-// 1 
+// 1
 // 2 2
 // 3 3 3
 // 4 4 4 4
@@ -432,17 +428,17 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;    
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
 
 // PATTERN 11
 // 1
-// 2 1 
-// 3 2 1 
-// 4 3 2 1 
-// 5 4 3 2 1 
+// 2 1
+// 3 2 1
+// 4 3 2 1
+// 5 4 3 2 1
 // void printPattern(int n)
 // {
 //     for(int i = 1; i<=n; i++)
@@ -460,17 +456,17 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;    
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
 
 // PATTERN 12
-// a 
-// b b 
-// c c c 
-// d d d d 
-// e e e e e 
+// a
+// b b
+// c c c
+// d d d d
+// e e e e e
 // void printPattern(int n)
 // {
 //     for(int i = 1; i<=n; i++)
@@ -488,13 +484,13 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;    
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
 
 // PATTERN 13
-// * * * * * 
+// * * * * *
 // * * * *
 // * * *
 // * *
@@ -516,7 +512,7 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;    
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
@@ -544,16 +540,16 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;    
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
 
 // PATTERN 15
-// 5 
-// 5 4 
-// 5 4 3 
-// 5 4 3 2 
+// 5
+// 5 4
+// 5 4 3
+// 5 4 3 2
 // 5 4 3 2 1
 // void printPattern(int n)
 // {
@@ -572,17 +568,17 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;    
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
 
 // PATTERN 16
-//         * 
-//       * * 
-//     * * * 
-//   * * * * 
-// * * * * * 
+//         *
+//       * *
+//     * * *
+//   * * * *
+// * * * * *
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -610,11 +606,11 @@ using namespace std;
 // };
 
 // PATTERN 16
-//         1 
-//       2 2 
-//     3 3 3  
+//         1
+//       2 2
+//     3 3 3
 //   4 4 4 4
-// 5 5 5 5 5 
+// 5 5 5 5 5
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -642,11 +638,11 @@ using namespace std;
 // };
 
 // PATTERN 17
-//         1 
-//       1 2 
-//     1 2 3  
+//         1
+//       1 2
+//     1 2 3
 //   1 2 3 4
-// 1 2 3 4 5 
+// 1 2 3 4 5
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -674,11 +670,11 @@ using namespace std;
 // };
 
 // PATTERN 18
-//         A 
-//       A B 
-//     A B C  
+//         A
+//       A B
+//     A B C
 //   A B C D
-// A B C D E 
+// A B C D E
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -708,9 +704,9 @@ using namespace std;
 // PATTERN 19
 //         1
 //       2 1
-//     3 2 1 
-//   4 3 2 1 
-// 5 4 3 2 1 
+//     3 2 1
+//   4 3 2 1
+// 5 4 3 2 1
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -738,11 +734,11 @@ using namespace std;
 // };
 
 // PATTERN 20
-//         *     
-//       * * *    
-//     * * * * *    
-//   * * * * * * *   
-// * * * * * * * * *  
+//         *
+//       * * *
+//     * * * * *
+//   * * * * * * *
+// * * * * * * * * *
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -770,11 +766,11 @@ using namespace std;
 // };
 
 // PATTERN 21
-// * * * * * * * * *  
-//   * * * * * * *   
-//     * * * * *    
-//       * * *    
-//         *     
+// * * * * * * * * *
+//   * * * * * * *
+//     * * * * *
+//       * * *
+//         *
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -802,11 +798,11 @@ using namespace std;
 // };
 
 // PATTERN 22
-//         1     
-//       1 2 1    
-//     1 2 3 2 1    
-//   1 2 3 4 3 2 1   
-// 1 2 3 4 5 4 3 2 1  
+//         1
+//       1 2 1
+//     1 2 3 2 1
+//   1 2 3 4 3 2 1
+// 1 2 3 4 5 4 3 2 1
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -838,13 +834,13 @@ using namespace std;
 // };
 
 // PATTERN 23
-// * * * * * * * *  
-// * * *     * * * 
-// * *         * * 
-// *             * 
-// * *         * * 
-// * * *     * * * 
-// * * * * * * * *  
+// * * * * * * * *
+// * * *     * * *
+// * *         * *
+// *             *
+// * *         * *
+// * * *     * * *
+// * * * * * * * *
 // #include <iostream>
 // using namespace std;
 // int printPattern(int n)
@@ -892,13 +888,13 @@ using namespace std;
 // };
 
 // PATTERN 24
-// *             * 
-// * *         * * 
-// * * *     * * * 
-// * * * * * * * * 
-// * * *     * * * 
-// * *         * * 
-// *             * 
+// *             *
+// * *         * *
+// * * *     * * *
+// * * * * * * * *
+// * * *     * * *
+// * *         * *
+// *             *
 // #include <iostream>
 // using namespace std;
 // void printPattern(int n)
@@ -946,14 +942,14 @@ using namespace std;
 // };
 
 // PATTERN 25
-//    *    
-//   * *   
-//  * * *  
-// * * * * 
-// * * * * 
-//  * * *  
-//   * *   
-//    *    
+//    *
+//   * *
+//  * * *
+// * * * *
+// * * * *
+//  * * *
+//   * *
+//    *
 // #include <iostream>
 // using namespace std;
 // void printPattern(int n)
@@ -987,6 +983,128 @@ using namespace std;
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 26
+// 1
+// 2 3
+// 3 4 5
+// 4 5 6 7
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = i; j<=(2*i)-1; j++)
+//         {
+//             cout<<j<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 27
+// 1 1 1 1 
+//   2 2 2 
+//     3 3
+//       4
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=i-1; j++)
+//         {
+//             cout<<"  ";
+//         };
+//         for(int k = 1; k<=n-i+1; k++)
+//         {
+//             cout<<i<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;  
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 28
+// 1 2 3 4
+//   2 3 4 
+//     3 4
+//       4
+// #include <iostream>
+// using namespace std;
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=i-1; j++)
+//         {
+//             cout<<"  ";
+//         };
+//         for(int k = i; k<=n; k++)
+//         {
+//             cout<<k<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;  
+//     printPattern(n);
+//     return 0;
+// };
+
+// PATTERN 29
+// 1 2 3 4 5 5 4 3 2 1
+// 1 2 3 4 * * 4 3 2 1
+// 1 2 3 * * * * 3 2 1
+// 1 2 * * * * * * 2 1
+// 1 * * * * * * * * 1
+// void printPattern(int n)
+// {
+//     for(int i = 1; i<=n; i++)
+//     {
+//         for(int j = 1; j<=n-i+1; j++)
+//         {
+//             cout<<j<<" ";
+//         };
+//         for(int k = 1; k<=2*(i-1); k++)
+//         {
+//             cout<<"* ";
+//         };
+//         for(int l = n-i+1; l>=1; l--)
+//         {
+//             cout<<l<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the number: ";
 //     cin>>n;
 //     printPattern(n);
 //     return 0;
@@ -1169,4 +1287,54 @@ using namespace std;
 //     cout<<sum(d,e)<<endl;
 //     return 0;
 // }
+
+// INSERTION AND EXTRACTION OPERATORS
+// insertion operator << is used with cout
+// extraction operator >> is used with cin
+// multiple insertions can be separated using spaces or enters
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+    // separating multiple inputs using spaces or enters 
+    // int a,b,c;
+    // cout<<"enter the nums: ";
+    // cin>>a>>b>>c;
+    // cout<<a+b+c<<endl;
+    // typecasting
+//     int a = 2550;
+//     char b = a;
+//     cout<<b<<endl;
+// };
+// if we are typecasting a data which take more memory into a data type that takes less memory then we will suffer data memory
+
+// ARRAYS
+// elements are stored in contagious memory locations
+// ways to declare array
+// FIRST WAY
+// int arr[5] = {1,2,3,4,5};
+// SECOND WAY
+// int arr[] = {1,2,3,4,5};
+// THIRD WAY
+// cin>arr[i];
+// FOURTH WAY
+// int arr[5] = {1,2};
+// FIFTH WAY
+// int arr[6] = {0};
+
+// ADDRESS IN ARRAYS
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {1,2,3,4,5};
+//     // cout<<"value stored at address "<<arr<<" is "<<*(arr)<<endl;
+//     cout<<arr<<endl;
+//     cout<<arr+1<<endl;
+//     cout<<arr+2<<endl;
+//     cout<<arr+3<<endl;
+//     cout<<arr+4<<endl;
+//     return 0;
+// };
+// address of a particular index n = address of first element or address of array + index*size of datatype
 

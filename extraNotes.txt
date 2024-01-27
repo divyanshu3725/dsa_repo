@@ -1,0 +1,96 @@
+----------------------------------------------------------
+give me a detailed explanation on how is c++ code compiled
+----------------------------------------------------------
+PREPROCESSOR
+- takes code 
+- gives preprocessed code 
+- header files are included
+- macros are expanded
+COMPILER 
+- takes preprocessed code or HLSC 
+- gives assembler code 
+- syntax and semantic analysis is done
+ASSEMBLER 
+- takes assembly code 
+- gives object file 
+- object files contain machine code
+- machine code is architecture specific 
+- LINKING 
+- takes all the object file 
+- gives executable fil
+- resolves references between object files
+- static linking and dynamic linking
+LOADER 
+- loads executable file into memory
+CPU 
+- executes the program
+
+------------------------------
+LEARNT WHILE SOLVING QUESTIONS
+------------------------------
+
+- min and max functions
+  - require the algorithm header file
+  - int minInt = min(a,b);
+  - int minIntInArr = min({a,b,c,d});
+
+- about arrays
+  - size of an array
+    int size = sizeof(arr)/sizeof(arr[0]);
+  - sorting an array
+    sort(arr,arr+size);
+
+- about vectors
+  - require the vector header file
+  - initializing a vector
+  vector <int> vect = {1,2,3,4};
+  - size of a vector
+    int size = vect.size();
+  - pushing an element inside a vector
+  vect.push_back(element);
+  - finding an element in a vector
+    auto iterName = find(vect.begin(), vect.end(), element); 
+  - sorting an integer vector
+    requires the algorithm header file
+    sort(vect.begin(), vect.end())
+
+- about integer pair
+  - requires the vector header file
+  - declaration
+    pair<int,int> resPair;
+  - adding elements to an integer pair:
+    resPair.first = value1;
+    resPair.second = value2;
+
+- finding min and max element in an integer array
+  int minInt = *(min_element(arr,arr+size));
+  int maxInt = *(max_element(arr,arr+size));
+
+- finding min and max element in an integer vector
+  int minInt = *(min_element(vect.begin(), vect.end()));
+  int maxInt = *(max_element(vect.begin(), vect.end()));
+
+- checking whether a vector contains a particular element or not
+  auto it = find(vect.begin(), vect.end(), num);
+  if(it!=vect.end())
+  {
+    cout<<"present"<<endl;
+  }
+  else
+  {
+    cout<<"absent"<<endl;
+  };
+
+- checking whether a vector is empty or not
+  if(vect.empty())
+  {
+    cout<<"it's empty"<<endl;
+  }
+  else
+  {
+    cout<<"it's not empty"<<endl;
+  };
+
+- about leap years
+  - is divisible by 4
+  - is also divisible by 400 if it's divisible by 100
