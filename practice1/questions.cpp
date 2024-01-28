@@ -253,14 +253,15 @@
 //         else
 //         {
 //             // cout<<arr[index]<<" occurred "<<count<<" times"<<endl;
-//             for(int j = 0; j<vect.size(); j++)
+//             auto it = find(vect.begin(), vect.end(), count);
+//             if(it==vect.end())
 //             {
-//                 if(count==vect[j])
-//                 {
-//                     return false;
-//                 }
-//             };
-//             vect.push_back(count);
+//                 vect.push_back(count);
+//             }
+//             else
+//             {
+//                 return 0;
+//             }
 //             count = 1;
 //         };
 //         index++;
@@ -340,6 +341,63 @@
 //     return 0;
 // };
 
+// LEFT) triplets-with-given-sum (TLE) (codestudio) 
+// https://www.codingninjas.com/studio/problems/triplets-with-given-sum_893028
+// #include <iostream> 
+// #include <algorithm> 
+// #include <cmath> 
+// #include <vector> 
+// using namespace std;
+// vector< vector<int> > findTriplets(vector<int>arr, int n, int K) {
+//     // cout<<"algo called"<<endl;
+//     vector < vector<int> > resultantVector;
+//     sort(arr.begin(), arr.end());
+//     for(int i = 0; i<n; i++)
+//     {
+//         if(arr[i]<=K)
+//         {
+//             for(int j = i+1; j<n; j++)
+//             {
+//                 if(arr[i]+arr[j]<=K)
+//                 {
+//                     for(int k = j+1; k<n; k++)
+//                     {
+//                         if(arr[i]+arr[j]+arr[k]<K)
+//                         {
+//                         }
+//                         else if (arr[i]+arr[j]+arr[k]==K)
+//                         {
+//                             vector <int> sampleVector;
+//                             sampleVector.push_back(arr[i]);
+//                             sampleVector.push_back(arr[j]);
+//                             sampleVector.push_back(arr[k]);
+// 							bool present = false;
+//                             for(int k = 0; k<resultantVector.size(); k++)
+//                             {
+//                                 if(resultantVector[k]==sampleVector)
+//                                 {
+//                                     present = true;
+//                                     break;
+//                                 };
+//                             };
+//                             if(!present)
+//                             {
+//                             resultantVector.push_back(sampleVector);
+//                             }
+//                             break;
+//                         }
+//                         else
+//                         {
+//                             break;
+//                         };
+//                     };
+//                 };
+//             };
+//         };
+//     };
+//     return resultantVector;
+// };
+
 // 8) find-all-duplicates-in-an-array (dobut) (leetcode) (working on local but not on leetcode)
 // https://leetcode.com/problems/find-all-duplicates-in-an-array/description/
 // #include <iostream>
@@ -347,12 +405,17 @@
 // #include <algorithm>
 // using namespace std;
 // vector<int> findDuplicates(vector<int>& nums) {
+//     cout<<"algo called"<<endl;
 //     sort(nums.begin(), nums.end());
 //     int index = 0;
 //     int count = 1;
 //     vector<int> vect;
+//     int iter = 1;
 //     while(index<nums.size())
 //     {
+//         cout<<"checking for "<<nums[index]<<endl;
+//         cout<<iter<<endl;
+//         iter++;
 //         if(nums[index]==nums[index+1])
 //         {
 //             vect.push_back(nums[index]);
@@ -363,14 +426,13 @@
 // };
 // int main()
 // {
-//     // int arr[] = {4,3,2,7,8,2,3,1};
-//     // int arr[] = {1,1,2};
-//     int arr[] = {1};
+//     int arr[] = {4,3,2,7,8,2,3,1};
 //     vector<int> vect;
 //     for(int i = 0; i<(sizeof(arr)/sizeof(arr[0])); i++)
 //     {
 //         vect.push_back(arr[i]);
 //     };
+//     cout<<"algo calling"<<endl;
 //     vector<int> resVect = findDuplicates(vect);
 //     for(int i = 0; i<resVect.size(); i++)
 //     {
@@ -456,7 +518,7 @@
 //     vect.push_back(4);
 //     vect.push_back(5);
 //     int sum = 5;
-//     // cout<<"calling the algo func"<<endl;
+//     cout<<"calling the algo func"<<endl;
 //     vector< vector<int> > resVector = pairSum(vect,sum);
 //     for(int i = 0; i<resVector.size(); i++)
 //     {
@@ -599,6 +661,69 @@
 //         cout<<arr[i]<<" ";
 //     };
 // }
+
+// EXTRA) sort-0-1 (codestudio)
+// https://www.codingninjas.com/studio/problems/sort-0-1_624379?leftPanelTabValue=PROBLEM
+// #include<iostream>
+// #include<vector>
+// #include<cmath>
+// #include<algorithm>
+// using namespace std;
+// void sort01(vector<int> &vect)
+// {
+//     cout<<"algo start"<<endl;
+//     int siz = vect.size();
+//     int start = 0;
+//     int end = siz-1;
+//     int count = 1;
+//     while(start<end)
+//     {
+//         cout<<"start = "<<start<<endl;
+//         cout<<"end = "<<end<<endl;
+//         cout<<count<<endl;
+//         count++;
+//         if(vect[start]==1)
+//         {
+//             if(vect[end]==0)
+//             {
+//                 swap(vect[start],vect[end]);
+//                 start++;
+//                 end--;
+//             }
+//             else
+//             {
+//                 end--;
+//             };
+//         }
+//         else
+//         {
+//             if(vect[end]==0)
+//             {
+//                 start++;
+//             }
+//             else
+//             {
+//                 start++;
+//                 end--;
+//             };
+//         };
+//     };
+// };
+// int main()
+// {
+//     vector<int> vect = {0,1,1,0,0,1,0,1};
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     cout<<"algo called"<<endl;
+//     sort01(vect);
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+// };
 
 // 13) first-and-last-position-of-an-element-in-sorted-array (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549

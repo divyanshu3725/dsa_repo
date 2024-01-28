@@ -12,6 +12,8 @@ Number and Digits (TLE)
 ⚡ Day 4 (27/01/24)
 Count of Divisible Pairs
 Ninja and the Triangle (TLE)
+⚡ Day 5 (28/01/24)
+Sort 0 1
 
 TLE
 Form A Triangle

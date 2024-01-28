@@ -1338,3 +1338,27 @@
 // };
 // address of a particular index n = address of first element or address of array + index*size of datatype
 
+// TIME AND SPACE COMPLEXITY
+// for linear search TC is O(n)
+// for loop (0 to n) inside another loop (0 to n) TC is O(n^2)
+// for loop (0 to i) inside another loop (0 to n)
+// - 1 + 2 + 3 + 4 + .... n = n(n+1)/2
+// - so TC is O(n^2)
+// for loop (0 to i^2) inside another loop (0 to n)
+// - 1 + 2*2 + 3*3.... n*n = n(n+1)(2n+1)/6
+// - so TC is O(n^3) 
+// for loop (0 to m) inside another loop (0 to n) TC is m*n
+// for loop (1 to n/2) inside another loop (1 to i*i) inside another loop (1 to n)
+// - (n/2)*1 + (n/2)*4 + (n/2)*9..... = (n/2)*(n)(n+1)(2n+1)/6
+// - so TC is O(n^3)
+// for loop (i = 1; i<=n; i*=2)
+// - (1)(for1) + (1)(for2) + (1)(for4) + (1)(for8) + (1)(for16) + (1)(for2^k)
+// - 2^k = n
+// - k = log(n) (base 2)
+// - so TC is log(n) (base 2)
+// - if we had i*=m then TC would be log(n) (base m)
+// for loop (i to n) inside another loop (1 to n/2) inside another loop (n/2 to n)
+// - TC will be n^3
+// if the loop just depend on the n and do not depend on iterations of sibling loops then just multiple the number of iterations for be performed (which will be in terms of n)
+// for loop (j=1; j<=n; j=i+j) inside another loop for(i=1; i<=n; i++)
+// - TC is O(n*logn) (base e)
