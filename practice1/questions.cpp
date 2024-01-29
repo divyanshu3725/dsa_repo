@@ -200,7 +200,7 @@
 //     return 0;
 // };
 
-// SWAP ALTERNATE
+// XAMPLE) SWAP ALTERNATE
 // #include <iostream>
 // using namespace std;
 // void swapAlternate(int arr[], int size)
@@ -341,12 +341,12 @@
 //     return 0;
 // };
 
-// LEFT) triplets-with-given-sum (TLE) (codestudio) 
+// FORGOT) triplets-with-given-sum (TLE) (codestudio)
 // https://www.codingninjas.com/studio/problems/triplets-with-given-sum_893028
-// #include <iostream> 
-// #include <algorithm> 
-// #include <cmath> 
-// #include <vector> 
+// #include <iostream>
+// #include <algorithm>
+// #include <cmath>
+// #include <vector>
 // using namespace std;
 // vector< vector<int> > findTriplets(vector<int>arr, int n, int K) {
 //     // cout<<"algo called"<<endl;
@@ -662,7 +662,7 @@
 //     };
 // }
 
-// EXTRA) sort-0-1 (codestudio)
+// FORGOT) sort-0-1 (codestudio)
 // https://www.codingninjas.com/studio/problems/sort-0-1_624379?leftPanelTabValue=PROBLEM
 // #include<iostream>
 // #include<vector>
@@ -943,5 +943,243 @@
 // {
 //     vector<int> vect = {3,5,3,2,0};
 //     cout<<peakIndexInMountainArray(vect)<<endl;
+// };
+
+// XAMPLE) PIVOTE IN A ROTATED SORTED ARRAY
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// int pivot(vector<int> vect)
+// {
+//     cout<<"algo called"<<endl;
+//     int start = 0;
+//     int end = vect.size() - 1;
+//     int firstElem = vect[start];
+//     int lastElem = vect[end];
+//     int count = 1;
+//     while (start != end)
+//     {
+//         cout<<"count = "<<count<<endl;
+//         count++;
+//         int midInd = start + (end - start) / 2;
+//         int midElem = vect[midInd];
+//         if (firstElem <= midElem)
+//         {
+//             start = midInd + 1;
+//         }
+//         else
+//         {
+//             end = midInd;
+//         };
+//     };
+//     return start;
+// };
+// int main()
+// {
+//     vector<int> vect = {2, 3, 7, 9, 1};
+//     cout<<"algo calling"<<endl;
+//     cout << pivot(vect) << endl;
+// };
+
+// 16) search-in-rotated-sorted-array (TLE) (codestudio)
+// https://www.codingninjas.com/studio/problems/search-in-rotated-sorted-array_1082554?leftPanelTabValue=PROBLEM
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// int pivot(vector<int> vect)
+// {
+//     cout<<"pivot called"<<endl;
+//     // cout<<"algo called"<<endl;
+//     int start = 0;
+//     int end = vect.size() - 1;
+//     int firstElem = vect[start];
+//     int lastElem = vect[end];
+//     int count = 1;
+//     while (start != end)
+//     {
+//         // cout<<"count = "<<count<<endl;
+//         count++;
+//         int midInd = start + (end - start) / 2;
+//         int midElem = vect[midInd];
+//         if (firstElem <= midElem)
+//         {
+//             start = midInd + 1;
+//         }
+//         else
+//         {
+//             end = midInd;
+//         };
+//     };
+//     return start;
+// };
+// int binarySearch(vector<int> vect, int key, int s, int e)
+// {
+//     cout<<"binary search called"<<endl;
+//     int start = s;
+//     int end = e;
+//     while(start<=end)
+//     {
+//         // cout<<"startElem is "<<arr[start]<<endl;
+//         // cout<<"endElem is "<<arr[end]<<endl;
+//         int midInd = start + (end-start)/2;
+//         int midElem = vect[midInd];
+//         // cout<<"midElem is "<<midElem<<endl;
+//         if(key<midElem)
+//         {
+//             end = midInd-1;
+//         }
+//         else if (key==midElem)
+//         {
+//             return midInd;
+//         }
+//         else
+//         {
+//             start = midInd + 1;
+//         };
+//     };
+//     return -1;
+// };
+// int search(vector<int>& arr, int n, int k)
+// {
+//     cout<<"search called"<<endl;
+//     int pivotInd = pivot(arr);
+//     if(arr[pivotInd]<=k && k<=arr[n-1])
+//     {
+//         return binarySearch(arr,k,pivotInd,arr.size()-1);
+//     }
+//     else
+//     {
+//         return binarySearch(arr,k,0,pivotInd-1);
+//     }
+// };
+// int main()
+// {
+//     // vector<int> vect = {1,2,3,7,9};
+//     vector<int> vect = {9,1,2,3,7};
+//     cout<<"algo calling"<<endl;
+//     cout<<search(vect, vect.size(), 7) << endl;
+// };
+
+// 17) square-root-of-a-number (TLE) (leetcode)
+// https://www.codingninjas.com/studio/problems/square-root-integral_893351
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// int floorSqrt(int n)
+// {
+//     if(n==0)
+//     {
+//         return 0;
+//     };
+//     // cout<<"algo called"<<endl;
+//     vector<int> vect;
+//     for(int i = 1; i<=n; i++)
+//     {
+//         vect.push_back(i);
+//     };
+//     int start = 0;
+//     int end = vect.size() - 1;
+//     int answer;
+//     while(start<=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = vect[midInd];
+//         if(n<midElem*midElem)
+//         {
+//             end = midInd - 1;
+//         }
+//         else if (n==midElem*midElem)
+//         {
+//             return midElem;
+//         }
+//         else 
+//         {
+//             answer = midElem;
+//             start = midInd + 1;
+//         };
+//     };
+//     return answer;
+// };
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     // cout<<"calling algo"<<endl;
+//     for(int i = 0; i<=n; i++)
+//     {
+//         cout<<"square root of "<<i<<" is "<<floorSqrt(i)<<endl;
+//     }
+//     return 0;
+// };
+
+// XAMPLE) FLOATING SQUARE ROOT 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// long double floorSqrt(int n, int p)
+// {
+//     if(n==0)
+//     {
+//         return 0;
+//     };
+//     // cout<<"algo called"<<endl;
+//     vector<int> vect;
+//     for(int i = 1; i<=n; i++)
+//     {
+//         vect.push_back(i);
+//     };
+//     int start = 0;
+//     int end = vect.size() - 1;
+//     long double answer;
+//     while(start<=end)
+//     {
+//         int midInd = start + (end-start)/2;
+//         int midElem = vect[midInd];
+//         if(n<midElem*midElem)
+//         {
+//             end = midInd - 1;
+//         }
+//         else if (n==midElem*midElem)
+//         {
+//             return midElem;
+//         }
+//         else 
+//         {
+//             answer = midElem;
+//             start = midInd + 1;
+//         };
+//     };
+//     double multiplier = 1;
+//     for(int i = 1; i<=p; i++)
+//     {
+//         multiplier/=10;
+//         // cout<<multiplier<<endl;
+//         for(; answer*answer<=n; answer+=multiplier)
+//         {
+//             // cout<<"checking for "<<answer<<endl;;
+//         };
+//         answer-=multiplier;
+//         // cout<<"answer is "<<answer<<endl;
+//     };
+//         return answer;
+// };
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     cout<<"square root of "<<n<<" is "<<floorSqrt(n,10)<<endl;
+//     return 0;
 // };
 

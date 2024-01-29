@@ -1015,8 +1015,8 @@
 // };
 
 // PATTERN 27
-// 1 1 1 1 
-//   2 2 2 
+// 1 1 1 1
+//   2 2 2
 //     3 3
 //       4
 // #include <iostream>
@@ -1040,14 +1040,14 @@
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;  
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
 
 // PATTERN 28
 // 1 2 3 4
-//   2 3 4 
+//   2 3 4
 //     3 4
 //       4
 // #include <iostream>
@@ -1071,7 +1071,7 @@
 // {
 //     int n;
 //     cout<<"Enter the value of n: ";
-//     cin>>n;  
+//     cin>>n;
 //     printPattern(n);
 //     return 0;
 // };
@@ -1296,12 +1296,12 @@
 // using namespace std;
 // int main()
 // {
-    // separating multiple inputs using spaces or enters 
-    // int a,b,c;
-    // cout<<"enter the nums: ";
-    // cin>>a>>b>>c;
-    // cout<<a+b+c<<endl;
-    // typecasting
+// separating multiple inputs using spaces or enters
+// int a,b,c;
+// cout<<"enter the nums: ";
+// cin>>a>>b>>c;
+// cout<<a+b+c<<endl;
+// typecasting
 //     int a = 2550;
 //     char b = a;
 //     cout<<b<<endl;
@@ -1346,7 +1346,7 @@
 // - so TC is O(n^2)
 // for loop (0 to i^2) inside another loop (0 to n)
 // - 1 + 2*2 + 3*3.... n*n = n(n+1)(2n+1)/6
-// - so TC is O(n^3) 
+// - so TC is O(n^3)
 // for loop (0 to m) inside another loop (0 to n) TC is m*n
 // for loop (1 to n/2) inside another loop (1 to i*i) inside another loop (1 to n)
 // - (n/2)*1 + (n/2)*4 + (n/2)*9..... = (n/2)*(n)(n+1)(2n+1)/6
@@ -1362,3 +1362,139 @@
 // if the loop just depend on the n and do not depend on iterations of sibling loops then just multiple the number of iterations for be performed (which will be in terms of n)
 // for loop (j=1; j<=n; j=i+j) inside another loop for(i=1; i<=n; i++)
 // - TC is O(n*logn) (base e)
+
+// UNARY OPERATORS
+// a++ post increment (first use then increment)
+// ++a pre increment (first increment then use)
+// --a pre decrement (first decrement then use)
+// a-- post decrement (first use then decrement)
+
+// BINARY OPERATORS
+// need two operands
+// + - * / %
+
+// UNDERSTANDING DIVISION OPERATOR
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     cout<<12/5<<endl;
+//     cout<<int(12)/5<<endl;
+//     cout<<long(12)/5<<endl;
+//     cout<<(long long)12/5<<endl;
+//     cout<<float(12)/5<<endl;
+//     cout<<double(12)/5<<endl;
+//     cout<<(long double)12/5<<endl;
+//     return 0;
+// };
+
+// PRECISION OFFERED BY NUMERIC DATATYPES IN C++
+// char < short (short int) < int < long int < long long int < float < double < long double
+
+// PRECEDENCE OF ARITHMETIC BINARY OPERATORS
+// * / % have higher precision than + -
+// * / % have same precedence
+// + - have same precedence
+
+// IF PRECEDENSE IS SAME THEN
+// then check associativity
+// * / % offer left to right associativity
+// + and - also offer the same
+// the one which occurs in left will be handled first
+
+// COMPARISION OPERATORS
+// > < >= <= != ==
+// give answer is yes or no
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     cout<<(5>2>1)<<endl; // 0
+//     cout<<(5>2>=1)<<endl; // 1
+//     cout<<(5>2<1)<<endl; // 0
+//     cout<<(5>2<=1)<<endl; // 1
+//     return 0;
+// };
+
+// PRECEDENCE OF ARITHMETIC BINARY OPERATORS
+// > < >= <= have higher precedence than == !=
+// > < >= <= are left to right associative
+// == != are right to left associative
+
+// LOGICAL OPERATORS
+// && || !
+// 0 && a is 0
+
+// LARGEST AMONG THREE
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a, b, c;
+//     cout<<"Enter a: ";
+//     cin>>a;
+//     cout<<"Enter b: ";
+//     cin>>b;
+//     cout<<"Enter c: ";
+//     cin>>c;
+//     cout<<"input taken"<<endl;
+//     if(a>b)
+//     {
+//         if(b>c)
+//         {
+//             cout<<"a>b>c"<<endl;
+//         }
+//         else
+//         {
+//             cout<<"a>b and b<=c"<<endl;
+//         };
+//     }
+//     else
+//     {
+//         if(b>c)
+//         {
+//             cout<<"a<=b and b>c"<<endl;
+//         }
+//         else
+//         {
+//             cout<<"a<=b<=c"<<endl;
+//         };
+//     }
+//     return 0;
+// };
+
+// CHECK WHETHER THE SUPPLIED CHARACTER IS CONSONANT OR VOWEL
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     for (int i = 1; i <= 10; i++)
+//     {
+//         char a;
+//         cout << "Enter the character: ";
+//         cin >> a;
+//         if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u' || a == 'A' || a == 'E' || a == 'I' || a == 'O' || a == 'U')
+//         {
+//             cout << "vowel" << endl;
+//         }
+//         else
+//         {
+//             cout << "consonant" << endl;
+//         };
+//     }
+//     return 0;
+// };
+
+// BITWISE OPERATORS
+//  & | ^ ~ >> <<
+// IF WE DO LEFT SHIFT ON A LARGE NUMBER THEN WE WILL GET NEGATIVE NUMBERS
+// DOING SHIFTING OPERATIONS ON NEGATIVE NUMBERS RESULTS IN COMPILER DEPENDE
+
+// PRECENCE IN BITWISE OPERATORS
+// >> << have higher precedence than & ! ^
+// ~a is +ve if a is -ve
+// ~a is -ve if a is +ve
+
+// ASSIGNMENT OPERATORS
+// all operators followed by = 
+// += -= *= /= %= 

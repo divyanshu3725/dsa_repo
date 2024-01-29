@@ -14,8 +14,12 @@ Count of Divisible Pairs
 Ninja and the Triangle (TLE)
 ⚡ Day 5 (28/01/24)
 Sort 0 1
+⚡ Day 5 (29/01/24)
+Search in a Rotated Sorted Array (TLE) 
+Factorial of a Number
 
 TLE
 Form A Triangle
 Number and Digits
-Ninja and the Triangle (TLE)
+Ninja and the Triangle
+Search in a Rotated Sorted Array 

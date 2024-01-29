@@ -1123,8 +1123,11 @@
 //     int end = size-1;
 //     while(start<=end)
 //     {
+//         cout<<"startElem is "<<arr[start]<<endl;
+//         cout<<"endElem is "<<arr[end]<<endl;
 //         int midInd = start + (end-start)/2;
 //         int midElem = arr[midInd];
+//         cout<<"midElem is "<<midElem<<endl;
 //         if(key<midElem)
 //         {
 //             end = midInd-1;
@@ -1161,4 +1164,3 @@
 
 // PROBLEMS TO BE SORTED OUT
 // slow compilation of c++ code
-

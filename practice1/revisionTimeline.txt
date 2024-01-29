@@ -10,3 +10,6 @@ duplicate-in-array
 intersection-of-2-arrays
 sort-0-1-2
 sort-0-1
+⚡ Day 3 (28/01/24)
+first-and-last-position-of-an-element-in-sorted-array
+peak-index-in-a-mountain-array
