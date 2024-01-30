@@ -353,7 +353,7 @@
 //     return 0;
 // };
 
-// AND 
+// AND
 // a = 2 010
 // b = 3 011
 // a&b = 010 = 2
@@ -381,7 +381,7 @@
 //     return 0;
 // };
 
-// NOT 
+// NOT
 // int a = ~2;
 // 2 is  00000000000000000000000000000010
 // ~2 is 11111111111111111111111111111101
@@ -389,7 +389,7 @@
 // 1's compliment 00000000000000000000000000000010
 // 2's compliment 00000000000000000000000000000011
 // 00000000000000000000000000000011 correpsonds to 3
-// -3 will printed because MSB of 11111111111111111111111111111101 is 1 
+// -3 will printed because MSB of 11111111111111111111111111111101 is 1
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -420,7 +420,7 @@
 // };
 
 // LEFT SHIFT OPERATOR
-// 2<<1 
+// 2<<1
 // 2 is 010
 // 100 is 4
 // #include <iostream>
@@ -453,7 +453,7 @@
 
 // FOR SHIFTING WITH NEGATIVE NUMBER PADDING IS DEPENDENT ON COMPILER
 
-// POST INCREMENT 
+// POST INCREMENT
 // use then increment
 
 // PRE INCREMENT
@@ -598,7 +598,7 @@
 //     {
 //         cout<<"neither prime nor composite"<<endl;
 //     }
-//     else 
+//     else
 //     {
 //         for(int i = 2; i<n; i++)
 //         {
@@ -613,7 +613,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT 1 
+// GUESS THE OUTPUT 1
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -696,11 +696,11 @@
 // 2 4 0
 // 2 2 0
 // 2 1 1
-//   0 
+//   0
 // 2 7 1
 // 2 3 1
 // 2 1 1
-//   0 
+//   0
 // 2 2 0
 // 2 1 1
 //   0
@@ -766,7 +766,7 @@
 //     cout<<binaryOf(n)<<endl;
 //     return 0;
 // };
-// THIRD WAY (using the bit manipulation method) (without using the pow function) 
+// THIRD WAY (using the bit manipulation method) (without using the pow function)
 // #include <iostream>
 // #include <algorithm>
 // #include <vector>
@@ -793,7 +793,7 @@
 //     };
 //     return result;
 // };
-// FOURTH WAY (using the bit manipulation method) (using pow function) 
+// FOURTH WAY (using the bit manipulation method) (using pow function)
 // #include <iostream>
 // #include <algorithm>
 // #include <vector>
@@ -874,7 +874,7 @@
 // f(n) -> n+4/4 -> O(n)
 // time complexity of print array function will be O(n)
 // time complexity of reverse array function will be O(n) (actally n/2)
-// time complexity of linear search in an array O(n) 
+// time complexity of linear search in an array O(n)
 // time complexity of the following code
 // int a = 0;
 // for(i = 0; i<N; i++)
@@ -885,8 +885,8 @@
 //     };
 // };
 // N = 1; 1
-// N = 2; 2 1 
-// N = 3; 3 2 1 
+// N = 2; 2 1
+// N = 3; 3 2 1
 // so for N = n; loop will run ((n^2) + n)/2 so TC = O(n^2)
 // simple method is to just do calculation for the worst case
 // for worst case N = n and i = 0; loop will run (n^2) times
@@ -894,12 +894,12 @@
 // TC for isPrime function will be O(n) (actually n-2)
 
 // TLE
-// Most modern machines can perform 10^8 operations/second 
-// n < 11 : O(n!) , O(n^6) 
-// n < 18: O((2^n)*(n^2))  
-// n < 100 : O(n^4) 
-// n < 400 : O(n^3) 
-// n < 2000 : O((n^2)*log(n)) 
+// Most modern machines can perform 10^8 operations/second
+// n < 11 : O(n!) , O(n^6)
+// n < 18: O((2^n)*(n^2))
+// n < 100 : O(n^4)
+// n < 400 : O(n^3)
+// n < 2000 : O((n^2)*log(n))
 // n < 10^4 : O(n^2)
 // n < 10^6 : O(n*log(n))
 // n < 10^8 : O(n) , O(logn)
@@ -976,7 +976,7 @@
 // int main()
 // {
 //     // char arr[5] = {'a','b','c','d','e'};
-//     // or 
+//     // or
 //     // char arr[] = {'a','b','c','d','e'};
 //     // cout<<"value at address "<<"arr"<<" ("<<arr<<")"<<" is "<<*(arr)<<endl;
 //     // cout<<"value at address "<<"arr+1"<<" ("<<arr+1<<")"<<" is "<<*(arr+1)<<endl;
@@ -1063,8 +1063,7 @@
 //     };
 // };
 
-
-// INBUILT FUNCTIONS: 
+// INBUILT FUNCTIONS:
 // MIN_ELEMENT and MAX_ELEMENT (belong to the algorithm header file)
 // #include <iostream>
 // #include <algorithm>
@@ -1148,7 +1147,7 @@
 //     int arr[] = {1,2,3,4,5,6};
 //     int key = 6;
 //     int size = sizeof(arr)/sizeof(arr[0]);
-//     cout<<binarySearch(arr,size,key)<<endl; 
+//     cout<<binarySearch(arr,size,key)<<endl;
 //     return 0;
 // };
 // why we shouldn't use s+e/2
@@ -1156,11 +1155,179 @@
 // so we need to use s + (e-s)/2
 // for binary search TC is logN (base 2)
 
-// PENDING 
-// TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
+// SELECTION SORT
+// in selection sort we select the smallest element and send them to their original position
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// void selectionSort(vector<int> vect)
+// {
+//     for (int i = 0; i < vect.size()-1; i++)
+//     {
+//         int minInd = i;
+//         for (int j = i; j < vect.size(); j++)
+//         {
+//             if (vect[j] < vect[minInd])
+//             {
+//                 minInd = j;
+//             };
+//         };
+//         swap(vect[i], vect[minInd]);
+//         for (int i = 0; i < vect.size(); i++)
+//         {
+//             cout << vect[i] << " ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     // vector<int> vect = {64, 25, 12, 22, 11};
+//     vector<int> vect = {1, 7, 9, 2, 3, 0};
+//     for (int i = 0; i < vect.size(); i++)
+//     {
+//         cout << vect[i] << " ";
+//     };
+//     cout << endl;
+//     selectionSort(vect);
+//     return 0;
+// };
+// COMPLIEXITIES OF SELECTION SORT
+// space complexity of this is O(1)
+// time complexity of this is O(n^2)
+// best case and worst case complexities are O(n^2)
+// USE CASES
+// - use it for sorting arrays and vector of small size
+
+// BUBBLE SORT
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// void bubbleSort(vector<int> vect)
+// {
+//     for (int i = 0; i < vect.size() - 1; i++)
+//     {
+//         bool swapping = false;
+//         for (int j = 0; j < vect.size() - 1 - i; j++)
+//         {
+//             int firstElem = vect[j];
+//             int secondElem = vect[j + 1];
+//             if (secondElem < firstElem)
+//             {
+//                 swapping = true;
+//                 swap(vect[j], vect[j + 1]);
+//             };
+//         };
+//         for (int k = 0; k < vect.size(); k++)
+//         {
+//             cout << vect[k] << " ";
+//         };
+//         cout << endl;
+//         if(!swapping)
+//         {
+//             break;
+//         };
+//     };
+// };
+// int main()
+// {
+//     // vector<int> vect = {10, 1, 7, 6, 14, 9};
+//     // vector<int> vect = {5, 4, 3, 2, 1};
+//     vector<int> vect = {1,2,3,4,5};
+//     for (int i = 0; i < vect.size(); i++)
+//     {
+//         cout << vect[i] << " ";
+//     };
+//     cout << endl;
+//     bubbleSort(vect);
+//     return 0;
+// };
+// COMPLEXITIES
+// code runs: n-1 n-2 n-3 ...1 times = n(n-1)/2
+// time complexity is O(n^2)
+// space complexity is O(1)
+// best case complexity is O(n) discussed belong
+// OPTIMIZATIONS
+// we will maintina a bool variable through which we will check if some swaps are required or not
+// if swaps are not required than means array has been sorted so we would break from the loop
+// IF ARRAYS IS ALREADY SORTED
+// we will be running n-1 times so O(n) will be the complexity for best case scenario
+// USE CASES
+
+// INSERTION SORT
+// EXAMPLE
+// 11 1 7 4 8 2 10
+// 1 11 7 4 8 2 10
+// 1 7 11 4 8 2 10
+// 1 4 7 11 8 2 10
+// 1 4 7 8 11 2 10
+// 1 2 4 7 8 11 10
+// 1 2 4 7 8 10 11
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// void insertionSort(vector<int> vect)
+// {
+//     for(int i = 1; i<vect.size(); i++)
+//     {
+//         int checkInd = i;
+//         for(int j = i-1; j>=0; j--)
+//         {
+//             // cout<<"i = "<<i<<" j = "<<j<<endl;
+//             if(vect[checkInd]<vect[j])
+//             {
+//                 // cout<<"swap"<<endl;
+//                 swap(vect[checkInd],vect[j]);
+//                 checkInd = j;
+//             }
+//             else
+//             {
+//                 break;
+//             };
+//         };
+//     for (int k = 0; k < vect.size(); k++)
+//     {
+//         cout << vect[k] << " ";
+//     };
+//     cout << endl;
+//     }
+// };
+// int main()
+// {
+//     vector<int> vect = {5, 4, 3, 2, 1};
+//     for (int i = 0; i < vect.size(); i++)
+//     {
+//         cout << vect[i] << " ";
+//     };
+//     cout << endl;
+//     insertionSort(vect);
+//     return 0;
+// };
+// USE CASES
+// - it is very adabptable algorithm
+// - it is stable algorithm
+// - if n is small then this is better algorithm
+// COMPLEXITIES
+// - code runs: 1 2 3 ..n-1 = (n)(n-1)/2
+// - time complexity is O(n^2)
+// - space complexity is O(1)
+// - best case complexity is O(n) (runs n-1 times)
+
+
 
 // RESEARCH TO BE DONE
 // about the auto keyword
 
 // PROBLEMS TO BE SORTED OUT
 // slow compilation of c++ code
+
+// HOMEWORKS
+// TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
+// STABLE AND UNSTABLE ALGORITHMS (FOR BUBBLE AND SELECTION)
+// WHAT IS IN-PLACE SORTING

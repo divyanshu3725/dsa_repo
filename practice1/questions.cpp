@@ -1098,7 +1098,7 @@
 //         {
 //             return midElem;
 //         }
-//         else 
+//         else
 //         {
 //             answer = midElem;
 //             start = midInd + 1;
@@ -1120,7 +1120,7 @@
 //     return 0;
 // };
 
-// XAMPLE) FLOATING SQUARE ROOT 
+// XAMPLE) FLOATING SQUARE ROOT
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1153,7 +1153,7 @@
 //         {
 //             return midElem;
 //         }
-//         else 
+//         else
 //         {
 //             answer = midElem;
 //             start = midInd + 1;
@@ -1182,4 +1182,119 @@
 //     cout<<"square root of "<<n<<" is "<<floorSqrt(n,10)<<endl;
 //     return 0;
 // };
+
+// 18) selection-sort (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/selection-sort_624469?leftPanelTabValue=SUBMISSION
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// void selectionSort(vector<int> vect)
+// {
+//     for (int i = 0; i < vect.size()-1; i++)
+//     {
+//         int minInd = i;
+//         for (int j = i; j < vect.size(); j++)
+//         {
+//             if (vect[j] < vect[minInd])
+//             {
+//                 minInd = j;
+//             };
+//         };
+//         swap(vect[i], vect[minInd]);
+//         for (int i = 0; i < vect.size(); i++)
+//         {
+//             cout << vect[i] << " ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// int main()
+// {
+//     // vector<int> vect = {64, 25, 12, 22, 11};
+//     vector<int> vect = {1, 7, 9, 2, 3, 0};
+//     for (int i = 0; i < vect.size(); i++)
+//     {
+//         cout << vect[i] << " ";
+//     };
+//     cout << endl;
+//     selectionSort(vect);
+//     return 0;
+// };
+
+// 19) bubble-sort (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/bubble-sort_980524
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// void bubbleSort(vector<int> vect)
+// {
+//     for (int i = 0; i < vect.size() - 1; i++)
+//     {
+//         bool swapping = false;
+//         for (int j = 0; j < vect.size() - 1 - i; j++)
+//         {
+//             int firstElem = vect[j];
+//             int secondElem = vect[j + 1];
+//             if (secondElem < firstElem)
+//             {
+//                 swapping = true;
+//                 swap(vect[j], vect[j + 1]);
+//             };
+//         };
+//         for (int k = 0; k < vect.size(); k++)
+//         {
+//             cout << vect[k] << " ";
+//         };
+//         cout << endl;
+//         if(!swapping)
+//         {
+//             break;
+//         };
+//     };
+// };
+// int main()
+// {
+//     // vector<int> vect = {10, 1, 7, 6, 14, 9};
+//     // vector<int> vect = {5, 4, 3, 2, 1};
+//     vector<int> vect = {1,2,3,4,5};
+//     for (int i = 0; i < vect.size(); i++)
+//     {
+//         cout << vect[i] << " ";
+//     };
+//     cout << endl;
+//     bubbleSort(vect);
+//     return 0;
+// };
+
+// 20) insertion-sort (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/insertion-sort_3155179?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2&leftPanelTabValue=SUBMISSION
+// #include <iostream> 
+// #include <vector> 
+// #include <algorithm> 
+// #include <cmath> 
+// void insertionSort(int n, vector<int> &arr){
+//     for(int i = 1; i<n; i++)
+//     {
+//         int checkInd = i;
+//         for(int j = i-1; j>=0; j--)
+//         {
+//             // cout<<"i = "<<i<<" j = "<<j<<endl;
+//             if(arr[checkInd]<arr[j])
+//             {
+//                 // cout<<"swap"<<endl;
+//                 swap(arr[checkInd],arr[j]);
+//                 checkInd = j;
+//             };
+//         };
+//     // for (int k = 0; k < vect.size(); k++)
+//     // {
+//     //     cout << vect[k] << " ";
+//     // };
+//     // cout << endl;
+//     }
+// }
 

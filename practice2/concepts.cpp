@@ -1496,5 +1496,156 @@
 // ~a is -ve if a is +ve
 
 // ASSIGNMENT OPERATORS
-// all operators followed by = 
-// += -= *= /= %= 
+// all operators followed by =
+// += -= *= /= %=
+
+// PRINT TABLE USING USING WHILE LOOP
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     int i = 1;
+//     while(i<=10)
+//     {
+//         cout<<n<<" X "<<i<<" = "<<n*i<<endl;
+//         i++;
+//     };
+//     return 0;
+// };
+
+// FACTORS OF A NUMBER USING WHILE LOOP
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout << "Enter the value of n: ";
+//     cin >> n;
+//     int i = 1;
+//     while (i <= n)
+//     {
+//         if (n % i == 0)
+//         {
+//             cout << i << " ";
+//         };
+//         i++;
+//     };
+//     return 0;
+// };
+
+// PRINT ALL EVEN NUMBERS FROM 1 TO 100
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     int i = 2;
+//     while (i<=n)
+//     {
+//         if(!(n%2)){
+//             cout<<i<<" ";
+//         };
+//         i+=2;
+//     }
+//     return 0;
+// };
+
+// USING A DO WHILE LOOP
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int i = 11;
+//     do{
+//         cout<<i<<" ";
+//         i++;
+//     }while(i<=10);
+//     return 0;
+// };
+
+// SWITCH CASE STATEMENTS
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout << "Enter the value of n: ";
+//     cin >> n;
+//     switch (n)
+//     {
+//     case 1:
+//         cout << "it is 1" << endl;
+//         break;
+//     case 2:
+//         cout << "it is 2" << endl;
+//         break;
+//     default:
+//         cout << "it is neither 1 nor 2" << endl;
+//         break;
+//     };
+//     return 0;
+// };
+
+// CONVERT LOWERCASE TO UPPERCASE
+// #include <iostream>
+// using namespace std;
+// char upperCase(char a)
+// {
+//     return char(int(a)-32);
+// }
+// int main()
+// {
+//     char a;
+//     cout<<"Enter the character: ";
+//     cin>>a;
+//     cout<<upperCase(a)<<endl;
+//     return 0;
+// };
+
+// CHECK IF ARMSTRONG NUMBER
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+// bool isArmstrong(int n)
+// {
+//     int m = n;
+//     float sum = 0;
+//     int count = 0;
+//     while(m!=0)
+//     {
+//         count++;
+//         int lastDigit = n%10;
+//         m/=10;
+//     };
+//     m = n;
+//     while(m!=0)
+//     {
+//         int lastDigit = m%10;
+//         sum += pow(lastDigit,count);
+//         m/=10;
+//     }
+//     cout<<"sum is "<<sum<<endl;
+//     cout<<"number of digits is "<<count<<endl;
+//     if(n==sum)
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     };
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;  
+//     cout<<isArmstrong(n)<<endl;
+//     return 0;
+// };
+
