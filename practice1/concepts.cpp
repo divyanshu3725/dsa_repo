@@ -1319,7 +1319,323 @@
 // - space complexity is O(1)
 // - best case complexity is O(n) (runs n-1 times)
 
+// STL ARRAY
+// #include <iostream>
+// #include <array>
+// using namespace std;
+// int main()
+// {
+//     // BASIC ARRAY
+//     // int arr[5] = {1,2,3,4};
+//     // STL ARRAY
+//     // requires the array header file
+//     // array <int,4> arr = {1,2,3,4};
+//     // array stl is implemented using static array of fixed size
+//     // so we don't use it 
+//     // TAKING IT'S SIZE
+//     // array <int,4> arr = {1,2,3,4};
+//     // cout<<arr.size()<<endl;
+//     // ACCESSING AN ELEMENT
+//     // array <int,4> arr = {1,2,3,4};
+//     // cout<<arr[0]<<endl;
+//     // USING THE AT METHOD
+//     // array <int,4> arr = {1,2,3,4};
+//     // cout<<arr.at(2)<<endl;
+//     // CHECK IF ARRAY IS EMPTY OR NOT 
+//     // array <int,4> arr = {1,2,3,4};
+//     // cout<<arr.empty()<<endl;
+//     // TAKING THE FIRST AND THE LAST ELEMENT
+//     // array <int,4> arr = {1,2,3,4};
+//     // cout<<arr.front()<<endl;
+//     // cout<<arr.back()<<endl;
+//     // TIME COMPLEXITY FOR ACCESSING AN ELEMENT IS O(1)
+//     return 0;
+// };
 
+// STL VECTOR
+// needs the vector header file
+// VECTOR IS DYNAMIC
+// it's size can be reduced and increased
+// if we try to store more elements than the size it can hold
+// it will make a new vector of double size
+// copy the element of this vector into the new vector
+// and the new element will be added to the new vector
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     // vector<int> vect;
+//     // CAPACITY FUNCTION
+//     // tells us how much space has been assigned to the vector
+//     // cout<<"capacity of vect is "<<vect.capacity()<<endl;
+//     // vect.push_back(1);
+//     // cout<<"capacity of vect is "<<vect.capacity()<<endl;
+//     // vect.push_back(2);
+//     // cout<<"capacity of vect is "<<vect.capacity()<<endl;
+//     // vect.push_back(3);
+//     // cout<<"capacity of vect is "<<vect.capacity()<<endl;
+//     // SIZE FUNCION
+//     // tells us how many elements has been stored in the vector
+//     // cout<<"size of vect is "<<vect.size()<<endl;
+//     // FRONT AND BACK OPERATION
+//     // vect.push_back(1);
+//     // vect.push_back(2);
+//     // vect.push_back(3);
+//     // cout<<vect.front()<<endl;
+//     // cout<<vect.back()<<endl;
+//     // POP BACK OPERATION
+//     // drops the last element
+//     // vect.push_back(1);
+//     // vect.push_back(2);
+//     // vect.push_back(3);
+//     // cout<<vect.size()<<endl;
+//     // vect.pop_back();
+//     // cout<<vect.size()<<endl;
+//     // CLEAR FUNCTION
+//     // size is set to 0
+//     // capacity remains the same
+//     // vect.push_back(1);
+//     // vect.push_back(2);
+//     // vect.push_back(3);
+//     // cout<<"size is "<<vect.size()<<endl;
+//     // cout<<"capacity is "<<vect.capacity()<<endl;
+//     // vect.clear();
+//     // cout<<"size is "<<vect.size()<<endl;
+//     // cout<<"capacity is "<<vect.capacity()<<endl;
+//     // BEGIN AND END ITERATORS
+//     // vect.push_back(1);
+//     // vect.push_back(2);
+//     // vect.push_back(3);
+//     // cout<<"begin iterator is "<<*(vect.begin())<<endl;
+//     // cout<<"end iterator is "<<*(vect.end()-1)<<endl;
+//     // TIME COMPLEXITY FOR ACCESSING AN ELEMENT IS O(1)
+//     // INITIALIZING A VECTOR WITH ALL ELEMENT SET TO 2
+//     // vector<int> vect(5,1);
+//     // for(int i = 0; i<vect.size(); i++)
+//     // {
+//     //     cout<<vect[i]<<" ";
+//     // };
+//     // cout<<endl;
+//     // COPYING A VECTOR INTO ANOTHER VECTOR
+//     // vector<int> vect = {1,2,3,4};
+//     // vector<int> vect2(vect);
+//     // for(int i = 0; i<vect2.size(); i++)
+//     // {
+//     //     cout<<vect2[i]<<" ";
+//     // };
+//     // cout<<endl;
+//     return 0;
+// };
+
+// STL DEQUEQUE OR DECK DOUBLE ENDED QUEUE  
+// #include <iostream>
+// #include <deque>
+// using namespace std;
+// int main()
+// {
+//     // DEQUEQUE
+//     // needs the dequeque header file
+//     // we can perform push and pop operations at the end and at the beginning
+//     // data isn't stored in contagious memory locations
+//     // it is also dynamic
+//     // random access is possible
+//     // PUSH_BACK AND PUSH_FRONT OPERATIONS
+//     // deque<int> a;
+//     // a.push_back(1);
+//     // a.push_back(2);
+//     // a.push_back(3);
+//     // for(int i = 0; i<a.size(); i++)
+//     // {
+//     //     cout<<a[i]<<" ";
+//     // };
+//     // a.push_front(9);
+//     // for(int i = 0; i<a.size(); i++)
+//     // {
+//     //     cout<<a[i]<<" ";
+//     // };
+//     // POP_BACK AND POP_FRONT OPERATIONS
+//     // deque<int> a;
+//     // a.push_back(1);
+//     // a.push_back(2);
+//     // a.push_back(3);
+//     // a.push_back(4);
+//     // a.push_back(5);
+//     // a.pop_front();
+//     // for(int i = 0; i<a.size(); i++)
+//     // {
+//     //     cout<<a[i]<<" ";
+//     // };
+//     // a.pop_back();
+//     // cout<<endl;
+//     // for(int i = 0; i<a.size(); i++)
+//     // {
+//     //     cout<<a[i]<<" ";
+//     // };
+//     // ACCESSING ELEMENT
+//     // deque<int> a;
+//     // a.push_back(1);
+//     // a.push_back(2);
+//     // a.push_back(3);
+//     // a.push_back(4);
+//     // a.push_back(5);
+//     // cout<<a.at(1)<<endl;
+//     // FRONT AND BACK
+//     // deque<int> a;
+//     // a.push_back(1);
+//     // a.push_back(2);
+//     // a.push_back(3);
+//     // a.push_back(4);
+//     // a.push_back(5);
+//     // cout<<a.front()<<endl;
+//     // cout<<a.back()<<endl;
+//     // EMPTY METHOD
+//     // deque<int> a;
+//     // cout<<a.empty()<<endl;
+//     // a.push_back(1);
+//     // a.push_back(2);
+//     // a.push_back(3);
+//     // a.push_back(4);
+//     // a.push_back(5);
+//     // cout<<a.empty()<<endl;
+//     // BEGIN AND END ITERATORS
+//     // deque<int> a;
+//     // a.push_back(1);
+//     // a.push_back(2);
+//     // a.push_back(3);
+//     // a.push_back(4);
+//     // a.push_back(5);
+//     // cout<<*(a.begin())<<endl;
+//     // cout<<*(a.end()-1)<<endl;
+//     // ERASE FUNCTION
+//     // deque<int> a;
+//     // a.push_back(1);
+//     // a.push_back(2);
+//     // a.push_back(3);
+//     // a.push_back(4);
+//     // a.push_back(5);
+//     // for(int i = 0; i<a.size(); i++)
+//     // {
+//     //     cout<<a[i]<<" ";
+//     // };
+//     // cout<<endl;
+//     // a.erase(a.begin(),a.begin()+1);
+//     // for(int i = 0; i<a.size(); i++)
+//     // {
+//     //     cout<<a[i]<<" ";
+//     // };
+//     // cout<<endl;
+//     // IF WE ERASE THE DEQUE COMPLETELY
+//     // then the size becomes zero
+//     // but the memory allocated to the deque remains the same
+//     // LIST
+//     return 0;
+// };
+
+// STL LIST
+// stl list is implemented using the doubly linked list
+// we cannot access the elements directly, we need to traverse to that element
+// we need to include the list header file
+// #include <iostream>
+// #include <list>
+// using namespace std;
+// int main()
+// {
+//     // PUSH_BACK AND PUSH_FRONT OPERATION
+//     list <int> l;
+//     l.push_back(1);
+//     l.push_back(2);
+//     l.push_back(3);
+//     l.push_back(4);
+//     l.push_front(5);
+//     // for(int i:l)
+//     // {
+//     //     cout<<i<<" ";
+//     // };
+//     // POP_BACK POP_FRONT OPERATIONS
+//     // for(int i:l)
+//     // {
+//     //     cout<<i<<" ";
+//     // };
+//     // cout<<endl;
+//     // l.pop_back();
+//     // for(int i:l)
+//     // {
+//     //     cout<<i<<" ";
+//     // };
+//     // cout<<endl;
+//     // l.pop_front();
+//     // for(int i:l)
+//     // {
+//     //     cout<<i<<" ";
+//     // };
+//     // SIZE FUNCTION
+//     // cout<<l.size()<<endl;
+//     // COPYING A LIST INTO ANOTHER LIST
+//     // list<int> l1(l);
+//     // for(int i:l)
+//     // {
+//     //     cout<<i<<" ";
+//     // };
+//     // cout<<endl;
+//     // INTIALIZING A LIST WITH ALL THE ELEMENTS AS 1
+//     // list<int> l1(5,100);
+//     // for(int i:l1)
+//     // {
+//     //     cout<<i<<" ";
+//     // };
+//     return 0;
+// };
+
+// STL STACK
+// last in first out
+// needs the stack header file
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+// int main()
+// {
+//     // PUSHING ELEMENTS
+//     stack<string> s;
+//     cout<<s.empty()<<endl;
+//     s.push("first");
+//     s.push("second");
+//     s.push("third");
+//     // ACCESSING THE FIRST ELEMENT
+//     cout<<s.top()<<endl;
+//     // CHECKING WHETHER STACK IS EMPTY OR NOT
+//     cout<<s.empty()<<endl;
+//     // FINDING THE SIZE OF AN ELEMENT
+//     cout<<s.size()<<endl;
+//     return 0;
+// };
+
+// STL QUEUE
+// first in first out 
+// needs the queue header file
+// #include <iostream>
+// #include <queue>
+// using namespace std;
+// int main()
+// {
+//     queue <string> q;
+//     cout<<"is it empty "<<q.empty()<<endl;
+//     // PUSHING ELEMENTS TO IT
+//     q.push("first");
+//     q.push("second");
+//     q.push("third");
+//     // ACCESSGING THE FIRST ELEMENT
+//     cout<<"first element is "<<q.front()<<endl;
+//     // POPPING ELEMENTS
+//     // popping is done from the front only
+//     q.pop();
+//     cout<<"first element is "<<q.front()<<endl;
+//     // ACCESSING THE SIZE OF QUEUE
+//     cout<<q.size()<<endl;
+//     // EMPTY FUNCTION
+//     cout<<"is it empty "<<q.empty()<<endl;
+//     return 0;
+// };
 
 // RESEARCH TO BE DONE
 // about the auto keyword
@@ -1331,3 +1647,4 @@
 // TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
 // STABLE AND UNSTABLE ALGORITHMS (FOR BUBBLE AND SELECTION)
 // WHAT IS IN-PLACE SORTING
+

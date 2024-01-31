@@ -1272,10 +1272,10 @@
 
 // 20) insertion-sort (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/insertion-sort_3155179?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2&leftPanelTabValue=SUBMISSION
-// #include <iostream> 
-// #include <vector> 
-// #include <algorithm> 
-// #include <cmath> 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
 // void insertionSort(int n, vector<int> &arr){
 //     for(int i = 1; i<n; i++)
 //     {
@@ -1298,3 +1298,243 @@
 //     }
 // }
 
+// 21) reverse-the-array (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/reverse-the-array_1262298
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// #include<cmath>
+// using namespace std;
+// void reverseArray(vector<int> &arr , int m)
+// {
+//     int start = m+1;
+//     int end = arr.size()-1;
+//     while(start<end)
+//     {
+//         swap(arr[start],arr[end]);
+//         start++;
+//         end--;
+//     };
+// };
+// int main()
+// {
+//     vector<int> vect {1,2,3,4,5,6};
+//     for(int i = 0; i<vect.size(); i++){
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     reverseArray(vect,3);
+//     for(int i = 0; i<vect.size(); i++){
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+// };
+
+// 22) merge-sorted-array (done) (leetcode)
+// https://leetcode.com/problems/merge-sorted-array/
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// FIRST APPROACH
+// void merge(vector<int> vect1, vector<int> vect2)
+// {
+//     vector<int> vect3;
+//     int i = 0;
+//     int j = 0;
+//     int count = 1;
+//     while (i < vect1.size() || j < vect2.size())
+//     {
+//         // cout << "count is " << count << endl;
+//         count++;
+//         if (j == vect2.size())
+//         {
+//             // cout<<endl;
+//             // cout<<"j done, i remaining"<<endl;
+//             for (int k = i; k < vect1.size(); k++)
+//             {
+//                 // cout<<"pushing "<<vect1[k]<<endl;
+//                 vect3.push_back(vect1[k]);
+//             };
+//             break;
+//         }
+//         else if (i == vect1.size())
+//         {
+//             // cout<<endl;
+//             // cout<<"i done, j remaining"<<endl;
+//             for (int k = j; k < vect2.size(); k++)
+//             {
+//                 // cout<<"pushing "<<vect2[k]<<endl;
+//                 vect3.push_back(vect2[k]);
+//             };
+//             break;
+//         }
+//         else
+//         {
+//             if (vect1[i] > vect2[j])
+//             {
+//                 vect3.push_back(vect2[j]);
+//                 j++;
+//             }
+//             else if (vect1[i] < vect2[j])
+//             {
+//                 vect3.push_back(vect1[i]);
+//                 i++;
+//             }
+//             else
+//             {
+//                 vect3.push_back(vect1[i]);
+//                 vect3.push_back(vect2[j]);
+//                 i++;
+//                 j++;
+//             };
+//         };
+//         // cout<<"i is "<<i<<" j is "<<j<<endl;
+//         // for (int i = 0; i < vect3.size(); i++)
+//         // {
+//         //     // cout << vect3[i] << " ";
+//         // };
+//         // // cout << endl;
+//     };
+//         // for (int i = 0; i < vect3.size(); i++)
+//         // {
+//         //     cout << vect3[i] << " ";
+//         // };
+//         // cout << endl;
+//         // vect1 = vect3;
+// };
+// SECOND APPROACH
+// void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
+// {
+//     vector<int> nums3(nums1);
+//     nums1.clear();
+//     int i = 0;
+//     int j = 0;
+//     while(i<m && j<n)
+//     {
+//         if(nums3[i]<nums2[j])
+//         {
+//             nums1.push_back(nums3[i]);
+//             i++;
+//         }
+//         else if(nums3[i]>nums2[j])
+//         {
+//             nums1.push_back(nums2[j]);
+//             j++;
+//         }
+//         else
+//         {
+//             nums1.push_back(nums2[j]);
+//             nums1.push_back(nums1[i]);
+//             j++;
+//             i++;
+//         };
+//     };
+//     while (i<m)
+//     {
+//         nums1.push_back(nums3[i]);
+//         i++;
+//     };
+//     while (j<n)
+//     {
+//         nums1.push_back(nums2[j]);
+//         j++;
+//     };
+// };
+// THIRD APPROACH
+// void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
+// {
+// vector<int> nums3(nums1);
+// nums1.clear();
+// int i = 0;
+// int j = 0;
+// int k = 0;
+// while(i<m && j<n)
+// {
+//     if(nums3[i]<nums2[j])
+//     {
+//         nums1[k] = nums3[i];
+//         k++;
+//         i++;
+//     }
+//     else
+//     {
+//         nums1[k] = nums2[j];
+//         k++;
+//         j++;
+//     }
+// };
+// while (i<m)
+// {
+//     nums1[k] = nums3[i];
+//     i++;
+//     k++;
+// };
+// while (j<n)
+// {
+//     nums1[k] = nums2[j];
+//     j++;
+//     k++;
+// };
+// };
+// int main()
+// {
+//     vector<int> vect1 = {1, 3, 5, 7, 9};
+//     vector<int> vect2 = {2, 4, 6};
+//     merge(vect1, vect1.size(), vect2, vect2.size());
+//     for (int i = 0; i < vect1.size(); i++)
+//     {
+//         cout << vect1[i] << " ";
+//     };
+//     cout << endl;
+//     return 0;
+// };
+
+// 23) move-zeroes
+// https://leetcode.com/problems/move-zeroes/
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<cmath>
+using namespace std;
+// void moveZeroes(vector<int> &nums)
+// {
+//     vector<int> resVector;
+//     int zeroCount = 0;
+//     for(int i = 0; i<nums.size(); i++)
+//     {
+//         if(nums[i]==0)
+//         {
+//             zeroCount++;
+//         }
+//         else
+//         {
+//             resVector.push_back(nums[i]);
+//         };
+//     };
+//     for(int j = 0; j<zeroCount; j++)
+//     {
+//         resVector.push_back(0);
+//     };
+//     for(int k = 0; k<nums.size(); k++)
+//     {
+//         nums[k] = resVector[k];
+//     };
+// };
+int main()
+{
+    vector<int> vect = {0,0,1};
+    for(int i = 0; i<vect.size(); i++)
+    {
+        cout<<vect[i]<<" ";
+    };
+    cout<<endl;
+    cout<<"processing"<<endl;
+    moveZeroes(vect);
+    cout<<"final output"<<endl;
+    for(int i = 0; i<vect.size(); i++)
+    {
+        cout<<vect[i]<<" ";
+    };
+};

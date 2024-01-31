@@ -13,3 +13,11 @@ sort-0-1
 ⚡ Day 3 (28/01/24)
 first-and-last-position-of-an-element-in-sorted-array
 peak-index-in-a-mountain-array
+⚡ Day 4 (29/01/24) (forgot)
+⚡ Day 5 (30/01/24) 
+binary-search
+first-and-last-occurence-of-an-element
+peak-index-in-a-mountain-array
+⚡ Day 6 (31/01/24) 
+check-if-armstrong-number
+trailing-zeroes-in-a-factorial
