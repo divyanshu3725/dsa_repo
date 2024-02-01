@@ -1,4 +1,4 @@
-// 1) subtract-the-product-and-sum-of-digits-of-an-integer (done) (leetcode)
+// 1) subtract-the-product-and-sum-of-digits-of-an-integer ✅ (done) (leetcode)
 // https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/description/
 // #include <iostream>
 // using namespace std;
@@ -23,7 +23,7 @@
 //     return 0;
 // };
 
-// 2) number-of-1-bits (done) (leetcode)
+// 2) number-of-1-bits (done) ✅ (leetcode)
 // https://leetcode.com/problems/number-of-1-bits/
 // #include <iostream>
 // using namespace std;
@@ -49,7 +49,7 @@
 //     return 0;
 // };
 
-// 3) reverse-integer (done) (leetcode)
+// 3) reverse-integer (done) ✅ (leetcode)
 // https://leetcode.com/problems/reverse-integer/description/
 // #include <iostream>
 // using namespace std;
@@ -75,7 +75,7 @@
 //     return 0;
 // };
 
-// 4) complement-of-base-10-integer (done) (leetcode)
+// 4) complement-of-base-10-integer (done) ✅ (leetcode)
 // https://leetcode.com/problems/complement-of-base-10-integer/
 // #include <iostream>
 // using namespace std;
@@ -102,7 +102,7 @@
 //     return 0;
 // };
 
-// 5) find-unique (done) (codestudio)
+// 5) find-unique (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/find-unique_625159
 // one way (better solution) (using xor)
 // #include <iostream>
@@ -200,7 +200,7 @@
 //     return 0;
 // };
 
-// XAMPLE) SWAP ALTERNATE
+// XAMPLE) SWAP ALTERNATE ✅
 // #include <iostream>
 // using namespace std;
 // void swapAlternate(int arr[], int size)
@@ -280,7 +280,7 @@
 //     return 0;
 // };
 
-// 7) duplicate-in-array (done) (codestudio)
+// 7) duplicate-in-array (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/duplicate-in-array_893397
 // one way (using xor)
 // #include <iostream>
@@ -442,7 +442,7 @@
 //     return 0;
 // };
 
-// 9) intersection-of-2-arrays (done) (codestudio)
+// 9) intersection-of-2-arrays (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/intersection-of-2-arrays_1082149
 // #include <iostream>
 // #include <algorithm>
@@ -606,7 +606,7 @@
 //     };
 // };
 
-// 12) sort-0-1-2 (done) (codestudio)
+// 12) sort-0-1-2 (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/sort-0-1-2_631055
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -662,7 +662,7 @@
 //     };
 // }
 
-// FORGOT) sort-0-1 (codestudio)
+// FORGOT) sort-0-1 ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/sort-0-1_624379?leftPanelTabValue=PROBLEM
 // #include<iostream>
 // #include<vector>
@@ -725,7 +725,7 @@
 //     };
 // };
 
-// 13) first-and-last-position-of-an-element-in-sorted-array (done) (codestudio)
+// 13) first-and-last-position-of-an-element-in-sorted-array (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549
 // #include <iostream>
 // #include <vector>
@@ -796,7 +796,7 @@
 //     return 0;
 // };
 
-// 14) TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY
+// 14) TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY ✅
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -870,7 +870,7 @@
 //     return 0;
 // };
 
-// 15) peak-index-in-a-mountain-array (done) (leetcode)
+// 15) peak-index-in-a-mountain-array (done) ✅ (leetcode)
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/
 // APPROACH 1 (my approach)
 // #include <iostream>
@@ -1183,90 +1183,88 @@
 //     return 0;
 // };
 
-// 18) selection-sort (done) (codestudio)
+// 18) selection-sort (done) ✅ (codestudio)
+// "Iteratively select the minimum element and place it at the beginning of the unsorted portion by swapping."
+// after each step the smallest element in the unsorted part of the array goes to it's correct position
 // https://www.codingninjas.com/studio/problems/selection-sort_624469?leftPanelTabValue=SUBMISSION
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
 // #include <cmath>
 // using namespace std;
-// void selectionSort(vector<int> vect)
+// void selectionSort(vector<int> &vect)
 // {
-//     for (int i = 0; i < vect.size()-1; i++)
+//     int n = vect.size();
+//     for (int i = 0; i < n - 1; i++)
 //     {
 //         int minInd = i;
-//         for (int j = i; j < vect.size(); j++)
+//         for (int j = i; j < n; j++)
 //         {
 //             if (vect[j] < vect[minInd])
 //             {
 //                 minInd = j;
 //             };
 //         };
-//         swap(vect[i], vect[minInd]);
-//         for (int i = 0; i < vect.size(); i++)
+//         if (minInd != i)
 //         {
-//             cout << vect[i] << " ";
-//         };
-//         cout<<endl;
+//             swap(vect[i], vect[minInd]);
+//         }
 //     };
 // };
 // int main()
 // {
 //     // vector<int> vect = {64, 25, 12, 22, 11};
 //     vector<int> vect = {1, 7, 9, 2, 3, 0};
-//     for (int i = 0; i < vect.size(); i++)
+//     int n = vect.size();
+//     for (int i = 0; i < n; i++)
 //     {
 //         cout << vect[i] << " ";
 //     };
 //     cout << endl;
 //     selectionSort(vect);
+//     for (int i = 0; i < n; i++)
+//     {
+//         cout << vect[i] << " ";
+//     };
 //     return 0;
 // };
 
-// 19) bubble-sort (done) (codestudio)
+// 19) bubble-sort (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/bubble-sort_980524
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
 // #include <cmath>
 // using namespace std;
-// void bubbleSort(vector<int> vect)
+// void bubbleSort(vector <int> &vect)
 // {
-//     for (int i = 0; i < vect.size() - 1; i++)
+//     int n = vect.size();
+//     for(int i = 0; i<n-1; i++)
 //     {
-//         bool swapping = false;
-//         for (int j = 0; j < vect.size() - 1 - i; j++)
+//         for(int j = 0; j<n-1-i; j++)
 //         {
-//             int firstElem = vect[j];
-//             int secondElem = vect[j + 1];
-//             if (secondElem < firstElem)
+//             if(vect[j]>vect[j+1])
 //             {
-//                 swapping = true;
-//                 swap(vect[j], vect[j + 1]);
+//                 swap(vect[j],vect[j+1]);
 //             };
-//         };
-//         for (int k = 0; k < vect.size(); k++)
-//         {
-//             cout << vect[k] << " ";
-//         };
-//         cout << endl;
-//         if(!swapping)
-//         {
-//             break;
 //         };
 //     };
 // };
 // int main()
 // {
 //     // vector<int> vect = {10, 1, 7, 6, 14, 9};
-//     // vector<int> vect = {5, 4, 3, 2, 1};
-//     vector<int> vect = {1,2,3,4,5};
+//     vector<int> vect = {6,2,8,4,10};
+//     // vector<int> vect = {1,2,3,4,5};
 //     for (int i = 0; i < vect.size(); i++)
 //     {
 //         cout << vect[i] << " ";
 //     };
 //     cout << endl;
 //     bubbleSort(vect);
+//     for (int i = 0; i < vect.size(); i++)
+//     {
+//         cout << vect[i] << " ";
+//     };
 //     return 0;
 // };
 
@@ -1343,67 +1341,47 @@
 //     vector<int> vect3;
 //     int i = 0;
 //     int j = 0;
-//     int count = 1;
+//     int count = 0;
 //     while (i < vect1.size() || j < vect2.size())
 //     {
-//         // cout << "count is " << count << endl;
+//         cout << "count = " << count << endl;
 //         count++;
 //         if (j == vect2.size())
 //         {
-//             // cout<<endl;
-//             // cout<<"j done, i remaining"<<endl;
-//             for (int k = i; k < vect1.size(); k++)
-//             {
-//                 // cout<<"pushing "<<vect1[k]<<endl;
-//                 vect3.push_back(vect1[k]);
-//             };
-//             break;
+//             vect3.push_back(vect1[i]);
+//             i++;
 //         }
 //         else if (i == vect1.size())
 //         {
-//             // cout<<endl;
-//             // cout<<"i done, j remaining"<<endl;
-//             for (int k = j; k < vect2.size(); k++)
-//             {
-//                 // cout<<"pushing "<<vect2[k]<<endl;
-//                 vect3.push_back(vect2[k]);
-//             };
-//             break;
+//             vect3.push_back(vect2[j]);
+//             j++;
 //         }
 //         else
 //         {
-//             if (vect1[i] > vect2[j])
-//             {
-//                 vect3.push_back(vect2[j]);
-//                 j++;
-//             }
-//             else if (vect1[i] < vect2[j])
+//             if (vect1[i] < vect2[j])
 //             {
 //                 vect3.push_back(vect1[i]);
 //                 i++;
+//             }
+//             else if (vect1[i] > vect2[j])
+//             {
+//                 vect3.push_back(vect2[j]);
+//                 j++;
 //             }
 //             else
 //             {
 //                 vect3.push_back(vect1[i]);
-//                 vect3.push_back(vect2[j]);
 //                 i++;
+//                 vect3.push_back(vect2[j]);
 //                 j++;
 //             };
 //         };
-//         // cout<<"i is "<<i<<" j is "<<j<<endl;
-//         // for (int i = 0; i < vect3.size(); i++)
-//         // {
-//         //     // cout << vect3[i] << " ";
-//         // };
-//         // // cout << endl;
 //     };
-//         // for (int i = 0; i < vect3.size(); i++)
-//         // {
-//         //     cout << vect3[i] << " ";
-//         // };
-//         // cout << endl;
-//         // vect1 = vect3;
-// };
+//     for (int i = 0; i < vect3.size(); i++)
+//     {
+//         cout << vect3[i] << " ";
+//     };
+// }
 // SECOND APPROACH
 // void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
 // {
@@ -1482,29 +1460,25 @@
 // {
 //     vector<int> vect1 = {1, 3, 5, 7, 9};
 //     vector<int> vect2 = {2, 4, 6};
-//     merge(vect1, vect1.size(), vect2, vect2.size());
-//     for (int i = 0; i < vect1.size(); i++)
-//     {
-//         cout << vect1[i] << " ";
-//     };
-//     cout << endl;
+//     merge(vect1, vect2);
 //     return 0;
 // };
 
-// 23) move-zeroes
-// https://leetcode.com/problems/move-zeroes/
-#include<iostream>
-#include<vector>
-#include<algorithm>
-#include<cmath>
-using namespace std;
+// 23) move-zeroes (done) (leetcode)
+// https://leetcode.com/problems/move-zeroes/description/
+// #include<iostream>
+// #include<algorithm>
+// #include<vector>
+// #include<cmath>
+// using namespace std;
 // void moveZeroes(vector<int> &nums)
 // {
 //     vector<int> resVector;
+//     int n = nums.size();
 //     int zeroCount = 0;
-//     for(int i = 0; i<nums.size(); i++)
+//     for (int i = 0; i < n; i++)
 //     {
-//         if(nums[i]==0)
+//         if (nums[i] == 0)
 //         {
 //             zeroCount++;
 //         }
@@ -1513,28 +1487,71 @@ using namespace std;
 //             resVector.push_back(nums[i]);
 //         };
 //     };
-//     for(int j = 0; j<zeroCount; j++)
+//     for (int j = 0; j < zeroCount; j++)
 //     {
 //         resVector.push_back(0);
 //     };
-//     for(int k = 0; k<nums.size(); k++)
+//     for (int k = 0; k < n; k++)
 //     {
 //         nums[k] = resVector[k];
 //     };
+// }
+// SECOND APPROACH (WORKING ON LOCAL BUT NOT ON LEETCODE)
+// void moveZeroes(vector<int> &nums)
+// {
+//     int n = nums.size();
+//     vector<int> vect;
+//     for(int i = 0; i<n; i++)
+//     {
+//         if(nums[i]!=0)
+//         {
+//             vect.push_back(nums[i]);
+//         };
+//     };
+//     int i = 0;
+//     int j = n-1;
+//     int zeroCount = 0;
+//     int count = 1;
+//     while (i<j)
+//     {
+//         // cout<<"count = "<<count<<endl;
+//         count++;
+//         if(nums[i]==0 && nums[j]!=0)
+//         {
+//             zeroCount++;
+//             swap(nums[i],nums[j]);
+//             i++;
+//             j--;
+//         }
+//         else if (nums[i]!=0 && nums[j]==0)
+//         {
+//             zeroCount++;
+//             j--;
+//         }
+//         else
+//         {
+//             i++;
+//         };
+//     };
+//     // cout<<zeroCount<<" zeroes"<<endl;
+//     for(int i = 0; i<n-zeroCount; i++)
+//     {
+//         nums[i] = vect[i];
+//     };
 // };
-int main()
-{
-    vector<int> vect = {0,0,1};
-    for(int i = 0; i<vect.size(); i++)
-    {
-        cout<<vect[i]<<" ";
-    };
-    cout<<endl;
-    cout<<"processing"<<endl;
-    moveZeroes(vect);
-    cout<<"final output"<<endl;
-    for(int i = 0; i<vect.size(); i++)
-    {
-        cout<<vect[i]<<" ";
-    };
-};
+// int main()
+// {
+//     vector<int> vect = {4,3,2};
+//     int n = vect.size();
+//     for(int i = 0; i<n; i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     moveZeroes(vect);
+//     for(int i = 0; i<n; i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+// };
+

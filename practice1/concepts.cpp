@@ -1331,7 +1331,7 @@
 //     // requires the array header file
 //     // array <int,4> arr = {1,2,3,4};
 //     // array stl is implemented using static array of fixed size
-//     // so we don't use it 
+//     // so we don't use it
 //     // TAKING IT'S SIZE
 //     // array <int,4> arr = {1,2,3,4};
 //     // cout<<arr.size()<<endl;
@@ -1341,7 +1341,7 @@
 //     // USING THE AT METHOD
 //     // array <int,4> arr = {1,2,3,4};
 //     // cout<<arr.at(2)<<endl;
-//     // CHECK IF ARRAY IS EMPTY OR NOT 
+//     // CHECK IF ARRAY IS EMPTY OR NOT
 //     // array <int,4> arr = {1,2,3,4};
 //     // cout<<arr.empty()<<endl;
 //     // TAKING THE FIRST AND THE LAST ELEMENT
@@ -1428,7 +1428,7 @@
 //     return 0;
 // };
 
-// STL DEQUEQUE OR DECK DOUBLE ENDED QUEUE  
+// STL DEQUEQUE OR DECK DOUBLE ENDED QUEUE
 // #include <iostream>
 // #include <deque>
 // using namespace std;
@@ -1611,7 +1611,7 @@
 // };
 
 // STL QUEUE
-// first in first out 
+// first in first out
 // needs the queue header file
 // #include <iostream>
 // #include <queue>
@@ -1648,3 +1648,126 @@
 // STABLE AND UNSTABLE ALGORITHMS (FOR BUBBLE AND SELECTION)
 // WHAT IS IN-PLACE SORTING
 
+// MATHS FOR DSA
+
+// CHECK IF PRIME (sieve of Eratosthenes)
+// #include<iostream>
+// #include<algorithm>
+// #include<cmath>
+// #include<vector>
+// using namespace std;
+// int countPrimes(int n)
+// {
+//     int primeCount = 0;
+//     vector<int> prime(n+1, true);
+//     for(int i = 2; i<n; i++)
+//     {
+//         if(prime[i])
+//         {
+//             // cout<<i<<" is prime"<<endl;
+//             primeCount++;
+//             for(int k = 2*i; k<n; k+=i)
+//             {
+//                 prime[k] = 0;;
+//             }
+//         }
+//     }
+//     return primeCount;
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the number: "<<endl;
+//     cin>>n;
+//     cout<<countPrimes(n)<<endl;
+// };
+// time taken is: n/2 + n/3 + n/5 + n/7 + n/11 + n/13 + n/17 + n/19
+// n(SUM of hp of prime numbers)
+// n*log(logN)
+
+// FIND GCD (using  euclid's algorithm)
+// EUCLID'S ALGORITHM
+// gcd(a,b) = gcd(a-b,b);
+// lcm(a,b) * gcd(a,b) = a*b;
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+// FIRST APPROACH (MY APPROACH)
+// int gcd(int a, int b)
+// {
+//     if (a == 0)
+//     {
+//         return b;
+//     }
+//     else if (b == 0)
+//     {
+//         return a;
+//     }
+//     else
+//     {
+//         int maxi = max(a, b);
+//         int mini = min(a, b);
+//         int count = 0;
+//         while (maxi != 0 && mini != 0)
+//         {
+//             cout << "count is " << count << endl;
+//             count++;
+//             int temp = maxi - mini;
+//             maxi = max(temp, mini);
+//             mini = min(temp, mini);
+//         };
+//         if (maxi == 0)
+//         {
+//             return mini;
+//         }
+//         else
+//         {
+//             return maxi;
+//         };
+//     };
+// };
+// SECOND APPROACH (SIRS APPROACH)
+// int gcd(int a, int b)
+// {
+//     if(a==0)
+//     {
+//         return b;
+//     }
+//     else if (b==0)
+//     {
+//         return a;
+//     }
+//     else
+//     {
+//         while (a!=b)
+//         {
+//             if(a>b)
+//             {
+//                 a = a-b;
+//             }
+//             else
+//             {
+//                 b = b-a;
+//             };
+//         }
+//         return b;
+//     };
+// }
+// int main()
+// {
+//     int n, m;
+//     cout << "Enter the numbers: ";
+//     cin >> n >> m;
+//     cout << gcd(n, m) << endl;
+//     return 0;
+// };
+
+// MODULO ARITHMETICS
+// (a+b)%m = a%m + b%m
+// (a-b)%m = a%m - b%m
+// (a*b)%m = a%m * b%m
+// (a*b)%m = a%m * b%m
+
+// FAST EXPONENTIATION
