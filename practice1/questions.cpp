@@ -1466,10 +1466,10 @@
 
 // 23) move-zeroes (done) (leetcode)
 // https://leetcode.com/problems/move-zeroes/description/
-// #include<iostream>
-// #include<algorithm>
-// #include<vector>
-// #include<cmath>
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <cmath>
 // using namespace std;
 // void moveZeroes(vector<int> &nums)
 // {
@@ -1534,24 +1534,252 @@
 //         };
 //     };
 //     // cout<<zeroCount<<" zeroes"<<endl;
+//     for(int i = 0; i<n; i++)
+//     {
+//         cout<<nums[i]<<" ";
+//     };
+//     cout<<endl;
+//     for(int i = 0; i<n-zeroCount; i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
 //     for(int i = 0; i<n-zeroCount; i++)
 //     {
 //         nums[i] = vect[i];
 //     };
 // };
+// THIRD APPROACH (MY APPROACH AFTER SIR'S SOLUTION)
+// void moveZeros(vector<int> &nums)
+// {
+//     int count = 1;
+//     cout<<"working starts"<<endl;
+//     for(int i = 0; i<nums.size(); i++)
+//     {
+//         if(nums[i]==0)
+//         {
+//         cout<<"count = "<<count<<endl;
+//         count++;
+//             bool allZeroes = true;
+//             for(int j = i+1; j<nums.size(); j++)
+//             {
+//                 if(nums[j]!=0)
+//                 {
+//                     allZeroes = false;
+//                     swap(nums[i],nums[j]);
+//                     break;
+//                 }
+//             };
+//             if(allZeroes)
+//             {
+//                 return;
+//             }
+//             for(int k = 0; k<nums.size(); k++)
+//             {
+//                 cout<<nums[k]<<" ";
+//             };
+//             cout<<endl;
+//         };
+//     };
+// };
+// FOURTH APPROACH (SIR'S SOLUTION)
+// void moveZeros(vector<int> &nums)
+// {
+//     int nonZero = 0;
+//     for(int j = 0; j<nums.size(); j++)
+//     {
+//         if(nums[j]!=0)
+//         {
+//             swap(nums[nonZero],nums[j]);
+//             nonZero++;
+//         }
+//     };
+// };
 // int main()
 // {
-//     vector<int> vect = {4,3,2};
+//     vector<int> vect = {0,2,0,1,0};
 //     int n = vect.size();
 //     for(int i = 0; i<n; i++)
 //     {
 //         cout<<vect[i]<<" ";
 //     };
 //     cout<<endl;
-//     moveZeroes(vect);
+//     moveZeros(vect);
 //     for(int i = 0; i<n; i++)
 //     {
 //         cout<<vect[i]<<" ";
 //     };
 // };
 
+// 24) FAST EXPONENTIATE
+// FAST EXPONENTIATION
+// a^b  = (a^(b/2))^2 if b is even
+// a^b = (a^((b-1)/2))^2 * a if b is odd
+// #include<iostream>
+// #include<algorithm>
+// #include<vector>
+// #include<cmath>
+// using namespace std;
+// int method1(int a, int n)
+// {
+//     int count = 1;
+//     float prod = 1;
+//     for(int i = 1; i<=n; i++)
+//     {
+//         cout<<"count "<<count<<endl;
+//         count++;
+//         prod*=a;
+//     };
+//     return prod;
+// };
+// int method2(int a, int n)
+// {
+//     // int count = 1;
+//     float prod = 1;
+//     if(n%2==0)
+//     {
+//         for(int i = 1; i<=n/2; i++)
+//         {
+//         // cout<<"count "<<count<<endl;
+//         // count++;
+//             prod*=a;
+//         };
+//         return prod*prod;
+//     }
+//     else
+//     {
+//         for(int i = 1; i<=(n-1)/2; i++)
+//         {
+//         // cout<<"count "<<count<<endl;
+//         // count++;
+//             prod*=a;
+//         };
+//         return prod*prod*a;
+//     }
+// };
+// int main()
+// {
+//     int a;
+//     cout<<"Enter the value of a: ";
+//     cin>>a;
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     cout<<"method1 result "<<" = "<<method1(a,n)<<endl;
+//     cout<<"method2 result "<<" = "<<method2(a,n)<<endl;
+// }
+
+// 25) FIND GCD USING EUCLID'S ALGORITHM
+// gcd(a,b) = gcd(a-b,b);
+// lcm(a,b) * gcd(a,b) = a*b;
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+// FIRST APPROACH (MY APPROACH)
+// int gcd(int a, int b)
+// {
+//     if (a == 0)
+//     {
+//         return b;
+//     }
+//     else if (b == 0)
+//     {
+//         return a;
+//     }
+//     else
+//     {
+//         int maxi = max(a, b);
+//         int mini = min(a, b);
+//         int count = 0;
+//         while (maxi != 0 && mini != 0)
+//         {
+//             cout << "count is " << count << endl;
+//             count++;
+//             int temp = maxi - mini;
+//             maxi = max(temp, mini);
+//             mini = min(temp, mini);
+//         };
+//         if (maxi == 0)
+//         {
+//             return mini;
+//         }
+//         else
+//         {
+//             return maxi;
+//         };
+//     };
+// };
+// SECOND APPROACH (SIRS APPROACH)
+// int gcd(int a, int b)
+// {
+//     if(a==0)
+//     {
+//         return b;
+//     }
+//     else if (b==0)
+//     {
+//         return a;
+//     }
+//     else
+//     {
+//         while (a!=b)
+//         {
+//             if(a>b)
+//             {
+//                 a = a-b;
+//             }
+//             else
+//             {
+//                 b = b-a;
+//             };
+//         }
+//         return b;
+//     };
+// }
+// int main()
+// {
+//     int n, m;
+//     cout << "Enter the numbers: ";
+//     cin >> n >> m;
+//     cout << gcd(n, m) << endl;
+//     return 0;
+// };
+
+// 26) CHECK IF PRIME USING SIEVE OF ERATOSTHENES
+// #include<iostream>
+// #include<algorithm>
+// #include<cmath>
+// #include<vector>
+// using namespace std;
+// int countPrimes(int n)
+// {
+//     int primeCount = 0;
+//     vector<int> prime(n+1, true);
+//     for(int i = 2; i<n; i++)
+//     {
+//         if(prime[i])
+//         {
+//             // cout<<i<<" is prime"<<endl;
+//             primeCount++;
+//             for(int k = 2*i; k<n; k+=i)
+//             {
+//                 prime[k] = 0;;
+//             }
+//         }
+//     }
+//     return primeCount;
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the number: "<<endl;
+//     cin>>n;
+//     cout<<countPrimes(n)<<endl;
+// };
+
+// 27) MODULAR EXPONENTIATION (DOUBT)
+// https://www.codingninjas.com/studio/problems/modular-exponentiation_1082146
+
+// 28) 

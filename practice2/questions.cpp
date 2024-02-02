@@ -4,7 +4,7 @@
 // 2) palindrome-number (done) (leetcode)
 // https://leetcode.com/problems/palindrome-number/description/
 
-// 3) trailing-zeroes-in-factorial (done) (geeksforgeeks) 
+// 3) trailing-zeroes-in-factorial (done) ✅ (geeksforgeeks) 
 // https://www.geeksforgeeks.org/problems/trailing-zeroes-in-factorial5134/1?utm_source=geeksforgeeks&utm_medium=ml_article_practice_tab&utm_campaign=article_practice_tab
 // #include <iostream>
 // using namespace std;
@@ -33,7 +33,7 @@
 //     return 0;
 // };
 
-// CHECK IF ARMSTRONG NUMBER
+// CHECK IF ARMSTRONG NUMBER ✅ 
 // #include <iostream>
 // #include <cmath>
 // using namespace std;
@@ -90,4 +90,3 @@
 //     cout<<upperCase(a)<<endl;
 //     return 0;
 // };
-

@@ -1643,49 +1643,14 @@
 // PROBLEMS TO BE SORTED OUT
 // slow compilation of c++ code
 
-// HOMEWORKS
-// TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
-// STABLE AND UNSTABLE ALGORITHMS (FOR BUBBLE AND SELECTION)
-// WHAT IS IN-PLACE SORTING
-
 // MATHS FOR DSA
 
 // CHECK IF PRIME (sieve of Eratosthenes)
-// #include<iostream>
-// #include<algorithm>
-// #include<cmath>
-// #include<vector>
-// using namespace std;
-// int countPrimes(int n)
-// {
-//     int primeCount = 0;
-//     vector<int> prime(n+1, true);
-//     for(int i = 2; i<n; i++)
-//     {
-//         if(prime[i])
-//         {
-//             // cout<<i<<" is prime"<<endl;
-//             primeCount++;
-//             for(int k = 2*i; k<n; k+=i)
-//             {
-//                 prime[k] = 0;;
-//             }
-//         }
-//     }
-//     return primeCount;
-// };
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the number: "<<endl;
-//     cin>>n;
-//     cout<<countPrimes(n)<<endl;
-// };
 // time taken is: n/2 + n/3 + n/5 + n/7 + n/11 + n/13 + n/17 + n/19
 // n(SUM of hp of prime numbers)
 // n*log(logN)
 
-// FIND GCD (using  euclid's algorithm)
+// FIND GCD USING EUCLID'S ALGORITHM)
 // EUCLID'S ALGORITHM
 // gcd(a,b) = gcd(a-b,b);
 // lcm(a,b) * gcd(a,b) = a*b;
@@ -1771,3 +1736,474 @@
 // (a*b)%m = a%m * b%m
 
 // FAST EXPONENTIATION
+// a^b  = (a^(b/2))^2 if b is even
+// a^b = (a^((b-1)/2))^2 * a if b is odd
+// #include<iostream>
+// #include<algorithm>
+// #include<vector>
+// #include<cmath>
+// using namespace std;
+// int method1(int a, int n)
+// {
+//     int count = 1;
+//     float prod = 1;
+//     for(int i = 1; i<=n; i++)
+//     {
+//         cout<<"count "<<count<<endl;
+//         count++;
+//         prod*=a;
+//     };
+//     return prod;
+// };
+// int method2(int a, int n)
+// {
+//     // int count = 1;
+//     float prod = 1;
+//     if(n%2==0)
+//     {
+//         for(int i = 1; i<=n/2; i++)
+//         {
+//         // cout<<"count "<<count<<endl;
+//         // count++;
+//             prod*=a;
+//         };
+//         return prod*prod;
+//     }
+//     else
+//     {
+//         for(int i = 1; i<=(n-1)/2; i++)
+//         {
+//         // cout<<"count "<<count<<endl;
+//         // count++;
+//             prod*=a;
+//         };
+//         return prod*prod*a;
+//     }
+// };
+// int main()
+// {
+//     int a;
+//     cout<<"Enter the value of a: ";
+//     cin>>a;
+//     int n;
+//     cout<<"Enter the value of n: ";
+//     cin>>n;
+//     cout<<"method1 result "<<" = "<<method1(a,n)<<endl;
+//     cout<<"method2 result "<<" = "<<method2(a,n)<<endl;
+// }
+
+// MODULAR EXPONENTIATION (DOUBT)
+// https://www.codingninjas.com/studio/problems/modular-exponentiation_1082146
+
+// POINTER
+// int num = 5;
+// cout<<num<<endl;
+// HOW DOES NUM REFERENCE TO A PARTICULAR ADDRESS?
+// memory has a symbol table
+// symbol table is an important data structure, created, and maintained by the compiler in order to keep track of the semantics of variable
+// this symbol table stores the mapping of identifiers and the correpsonding addresses
+// and this is how we are able to print the varialbe stored at the address which is referenced using the name num
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int num = 5;
+//     cout<<num<<endl;
+//     cout<<&num<<endl;
+//     return 0;
+// };
+// & is the address of operator, using it we can see the address
+// WHY DO WE NEED POINTERS?
+// pointers are using to store addresses
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int num = 5;
+//     int *numPtr = &num;
+//     cout<<numPtr<<endl;
+//     cout<<&num<<endl;
+//     cout<<*numPtr<<endl;
+//     cout<<num<<endl;
+//     // the numPtr pointer is storing the address of the num
+//     return 0;
+// };
+// int *p is the syntax
+// - p is a pointer to an int data type
+// cout<<*p<<endl;
+// - here the * is the dereference operator
+// - so it will print the value stored at the address p
+// numPtr and &num are same
+// *numPtr and num are same
+// SIZE OF POINTER (INT)
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int num = 2345;
+//     int *ptr = &num;
+//     cout<<"size of pointer is "<<sizeof(ptr)<<endl;
+//     return 0;
+// };
+// PLAYING WITH POINTER
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     // int *p;
+//     // cout<<"address is "<<p<<endl;
+//     // cout<<"value is "<<*p<<endl;
+//     // THIS IS A BAD PRACTICE
+//     // int *p = 0;
+//     // cout<<"address is "<<p<<endl;
+//     // cout<<"value is "<<*p<<endl;
+//     // THIS WILL THROW A SEGMENTATION FAULT
+//     // int i = 2;
+//     // int *p = 0;
+//     // p = &i;
+//     // int *q = &i;
+//     // cout<<"the address that p stores is "<<p<<endl;
+//     // cout<<"the address that q stores is "<<q<<endl;
+//     // BOTH ARE SAME
+//     // int num = 5;
+//     // int a = num;
+//     // a++;
+//     // cout<<"value of num is "<<num<<endl;
+//     // cout<<"value of a is "<<a<<endl;
+//     // updating a won't update num 
+//     // int num = 5;
+//     // int *a = &num;
+//     // (*a)++;
+//     // cout<<"value of num is "<<num<<endl;
+//     // cout<<"value of a is "<<*a<<endl;
+//     // this will update the num also
+//     return 0;
+// };
+// COPYING A POINTER
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int num = 2;
+//     int *p = &num;
+//     int *q = p;
+//     cout<<"the address that p correponds to is "<<p<<endl;
+//     cout<<"the address that q correponds to is "<<q<<endl;
+//     // both p and q correspong to the same address
+//     return 0;
+// };
+// POINTER ARITHMETIC
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     // int i = 3;
+//     // int *p = &i;
+//     // cout<<(*p)++<<endl;
+//     // cout<<(*p)--<<endl;
+//     // cout<<(*p)<<endl;
+//     // SECOND EXAMPLE: 
+//     int i = 3;
+//     int *p = &i;
+//     int *q = p + 1;
+//     int *r = p - 1;
+//     cout<<"p is "<<p<<endl;
+//     cout<<"q is "<<q<<endl;
+//     cout<<"r is "<<r<<endl;
+//     return 0;
+// };
+
+// POINTERS IN ARRAY
+// the name of an array references to first element of the array
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     // BASICS
+//     // int arr[5] = {5,4,3,2,1};
+//     // cout<<"value at "<<arr<<" is "<<*(arr)<<endl;
+//     // cout<<"value at "<<arr+1<<" is "<<*(arr+1)<<endl;
+//     // cout<<"value at "<<arr+2<<" is "<<*(arr+2)<<endl;
+//     // cout<<"value at "<<arr+3<<" is "<<*(arr+3)<<endl;
+//     // cout<<"value at "<<arr+4<<" is "<<*(arr+4)<<endl;
+//     // PLAYING
+//     // int arr[5] = {5,4,3,2,1};
+//     // cout<<"value at "<<arr<<" is "<<*(arr)<<endl;
+//     // int *ptr = &(arr[0]);
+//     // cout<<"value at "<<arr<<" is "<<*(ptr)<<endl;
+//     // arr and &(arr[0]) point to same location in memory
+//     // HOW DOES ARR[I] POINT TO AN ELEMENT
+//     // arr[i] = *(arr + i)
+//     // I[ARR] = *(i + arr)
+//     // int arr[5] = {5,4,3,2,1};
+//     // cout<<0[arr]<<endl;
+//     // cout<<1[arr]<<endl;
+//     // cout<<2[arr]<<endl;
+//     // cout<<3[arr]<<endl;
+//     // cout<<4[arr]<<endl;
+//     return 0;
+// };
+
+// DIFFERENCES BETWEEN A POINTER AND AN ARRAY
+// #include <iostream>
+// using namespace std;
+// FIRST DIFFERENCE: SIZE OF 
+// int main()
+// {
+//     int arr[5] = {1,2,3,4,5};
+//     cout<<sizeof(arr)<<endl;
+//     cout<<sizeof(*arr)<<endl;
+//     cout<<sizeof(&arr)<<endl;
+//     int *ptr = &(arr[0]);
+//     cout<<sizeof(ptr)<<endl;
+//     cout<<sizeof(*ptr)<<endl;
+//     cout<<sizeof(&ptr)<<endl;
+//     // size of ptr is 4 , sizeof arr is 20
+//     return 0;
+// };
+// SECOND DIFFERENCE: & OPERATOR
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[5] = {5,4,3,2,1};
+//     cout<<"for arrays: "<<endl;
+//     cout<<&arr<<endl;
+//     cout<<arr<<endl;
+//     int *ptr = &arr[0];
+//     cout<<"for pointers: "<<endl;
+//     cout<<ptr<<endl;
+//     cout<<&ptr<<endl;
+//     return 0;
+// };
+// THIRD DIFFERENCE
+// SYMBOL TABLE CONTENT CANNOT BE CHANGED FOR ARRAYS BUT CAN BE CHANGED FOR POINTERS
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[5] = {1,2,3,4,5};
+//     // arr = arr + 1; // this will throw eror
+//     int *ptr = &arr[0];
+//     ptr = ptr + 1;
+//     cout<<ptr<<endl;
+//     return 0;
+// };
+
+// CHAR ARRAYS
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// #include <cmath>
+// using namespace std;
+// int main()
+// {
+//     char ch[6] = "abcde";
+//     cout<<ch<<endl;
+//     char *ptr = &ch[0];
+//     cout<<ptr<<endl;
+//     return 0;
+// };
+// in case of integer array arr pointed to the first element
+// in case of char array ch points to the whole string
+// in case of integer array the pointer holding &arr[0] pointed to the first array element
+// in case of char array the pointer holding &arr[0] prints the whole string
+// this happens because when we try to print the ptr, printing starts from the address of first character and goes untill it finds a null character
+// IF WE DON'T GET A NULL CHARACTER
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     char a = 'a';
+//     char *ptr = &a;
+//     cout<<ptr<<endl;
+//     return 0;
+// };
+// in this case ptr found a then some more characters and then it found null character, so it stopped
+// NEVER DO char *ptr = "abcd"
+
+// POINTERS AND FUNCTIONS
+// #include <iostream>
+// using namespace std;
+// void printFunc(int *n)
+// {
+//     cout<<*n<<endl;
+// }
+// void incrementorFunc(int *n)
+// {
+//     *n = *n + 1;
+// }
+// void updator(int *n)
+// {
+//     n = n + 1;
+// }
+// int main()
+// {
+//     int value = 5;
+//     int *ptr = &value;
+//     // printFunc(ptr);
+//     // cout<<"value is "<<value<<endl;
+//     // incrementorFunc(ptr);
+//     // cout<<"value is "<<value<<endl;
+//     cout<<"ptr is "<<ptr<<endl;
+//     updator(ptr);
+//     cout<<"ptr is "<<ptr<<endl;
+//     // we cannot update the pointer variable ptr of main function by using a function that udpates the pointer
+//     // we can update the value stored at a pointer ptr of main function by using a function that updates the pointer values
+//     return 0;
+// };
+
+// POINTERS AND ARRAYS
+// when we pass an array to a function, we are unknowingly passing a pointer (of the first array element to the function)
+// #include<iostream>
+// #include<algorithm>
+// #include<vector>
+// #include<cmath>
+// using namespace std;
+// void check1(int *arr)
+// {
+//     cout<<"arr is "<<arr<<endl;
+// };
+// void check2(int *arr)
+// {
+//     cout<<"arr is "<<arr<<endl;
+// };
+// int main()
+// {
+//     int arr[5] = {1,2,3,4,5};
+//     check1(arr);
+//     check2(arr);
+//     return 0;
+// };
+// BUT WHAT'S THE BENEFIT? IF WE PASS AN ARRAY TO A FUNCTION, AND A POINTER GET'S PASSED
+// using this, we can pass a part of array to a function
+// #include<iostream>
+// #include<algorithm>
+// #include<vector>
+// #include<cmath>
+// using namespace std;
+// void sumFrom3(int *arr, int n)
+// {
+//     int sum = 0;
+//     for(int i = 0; i<n; i++)
+//     {
+//         sum += arr[i];
+//     };
+//     cout<<"sum from 3rd element is "<<sum<<endl;
+// };
+// int main()
+// {
+//     int arr[5] = {1,2,3,4,5};
+//     sumFrom3(arr+3, 2);
+//     return 0;
+// };
+
+// MACROS
+// we define macros using #define
+// a macro is a piece of code in a program that is replaced by value of macro
+// #include <iostream>
+// #define PI 3.14
+// using namespace std;
+// int main()
+// {
+//     int r = 3;
+//     cout<<"areas is "<<PI*r*r<<endl;
+//     return 0;
+// };
+// BEHIND THE SCENES
+// before the compilation of the code starts, the PI will be replaced with the value 3.14
+// BUT DOUBLE PI = 3.14 ALSO DOES THE SAME WORK
+// - yes, but it takes space
+// - yes, but it can be changed
+// A MACRO DOES TAKE UP SPACED
+// A MACRO'S VALUE CANNOT BE UPDATED ULESS CHANGED AT THE LINE OF DEFINITION
+
+// GLOBAL VARIABLES
+// used when we want to share a variable between functions
+// BUT WE CAN USE REFERENCE VARIABLES TO SHARE VARIABLES BETWEEN FUNCTIONS
+// #include <iostream>
+// using namespace std;
+// int i = 2;
+// int main()
+// {
+//     cout<<i<<endl;
+//     {
+//         int i = 3;
+//         cout<<i<<endl;
+//         cout<<::i<<endl;
+//     }
+//     return 0;
+// };
+// to access the global variable in a space where another variable with the same name exists we need to use the :: scope resolution operator
+// using glbal variable is a bad practice, because any function can change it
+// SO WE WILL USE REFERENCE VARIABLES FOR SHARING VARIABLES
+
+// INLINE FUNCTIONS
+// are used to reduce function calls overhead
+// #include <iostream>
+// using namespace std;
+// inline void getMax(int a, int b)
+// {
+//     int ans = (a>b) ? a:b;
+//     cout<<ans<<endl;
+// };
+// int main()
+// {
+//     int a = 2;
+//     int b = 3;
+//     int ans1 = (a>b) ? a:b;
+//     // cout<<ans1<<endl;
+//     getMax(a,b);
+//     int c = 4;
+//     int d = 5;
+//     int ans2 = (c>d) ? c:d;
+//     getMax(c,d);
+//     // cout<<ans2<<endl;
+//     // but we are using (c>d) ? c:d again and again
+//     // so we will make a function that does the job
+//     // but we will we doing these function calls again and again 
+//     // and we will be creating two new variables a and b again and again
+//     // we can use reference variables to tackle the memory problem
+//     // but what about function calls problem? 
+//     // better use inline functions
+//     return 0;
+// };
+// the problem with using functions repeatedly is
+// - function calls again and again
+// - memory is used agan and again
+// - performance hit (minimal)
+// SOLUTION IS INLINE FUNCTIONS
+// WHAT DOES INLINE FUNCTIONS DO
+// - if function body is 1 liner, compiler will make it inline
+// - if functino body is more than 1 lines, then it's compiler choice whether to make the function inline or not 
+// - if functino body is more than 3 lines, then compiler won't make it inline
+// if the compiler made it inline then:
+// - then the code of the function would be replacd with the body of the function before the compilation of the code starts (similar to the case in MACROS)
+
+// DEFAULT ARGUMENTS
+// #include <iostream>
+// using namespace std;
+// void printArr(int arr[], int size, int start = 0)
+// {
+//     for(int i = start; i<size; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     };
+// };
+// int main()
+// {
+//     int arr[5] = {1,2,3,4,5};
+//     printArr(arr,5);   
+//     return 0;
+// };
+
+
+
+// HOMEWORK
+// TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
+// STABLE AND UNSTABLE ALGORITHMS (FOR BUBBLE AND SELECTION)
+// WHAT IS IN-PLACE SORTING
+// MACROS AND IT'S TYPES 
+// POINTER QUIZ ON QUIDED PATHS OF CODING NINJAS
+// CONSTANT VARIABLES
+
