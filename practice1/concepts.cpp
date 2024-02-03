@@ -1931,7 +1931,7 @@
 //     // cout<<"value at "<<arr<<" is "<<*(arr)<<endl;
 //     // int *ptr = &(arr[0]);
 //     // cout<<"value at "<<arr<<" is "<<*(ptr)<<endl;
-//     // arr and &(arr[0]) point to same location in memory
+//     // arr and &(arr[0]) and &arr point to same location in memory
 //     // HOW DOES ARR[I] POINT TO AN ELEMENT
 //     // arr[i] = *(arr + i)
 //     // I[ARR] = *(i + arr)
@@ -1943,6 +1943,11 @@
 //     // cout<<4[arr]<<endl;
 //     return 0;
 // };
+// SUMMARY 
+// arr and &arr and &arr[0] are same
+// &arr works but &(arr+1) won't work
+// arr[i] = *(arr + i) 
+// i[arr] = *(i + arr)
 
 // DIFFERENCES BETWEEN A POINTER AND AN ARRAY
 // #include <iostream>
@@ -1975,6 +1980,8 @@
 //     cout<<ptr<<endl;
 //     cout<<&ptr<<endl;
 //     return 0;
+//     arr and &arr are same 
+//     ptr and &ptr are not same
 // };
 // THIRD DIFFERENCE
 // SYMBOL TABLE CONTENT CANNOT BE CHANGED FOR ARRAYS BUT CAN BE CHANGED FOR POINTERS
@@ -1988,6 +1995,8 @@
 //     ptr = ptr + 1;
 //     cout<<ptr<<endl;
 //     return 0;
+//     ptr = ptr + 1 is allowed
+//     arr = arr + 1 is not allowed
 // };
 
 // CHAR ARRAYS
@@ -2064,7 +2073,7 @@
 // {
 //     cout<<"arr is "<<arr<<endl;
 // };
-// void check2(int *arr)
+// void check2(int arr[])
 // {
 //     cout<<"arr is "<<arr<<endl;
 // };
@@ -2197,6 +2206,451 @@
 //     return 0;
 // };
 
+// DOUBLE POINTERS
+// WHY DON'T WE HAVE SOMETHING LIKE THIS: POINTER PTR = &SOMETHING
+// because
+// - it doesn't give us an idea about the type of data that the address is holding
+// - it doesn't spcecify the amount of spaced to be taken into consideration
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 2;
+//     int *ptr1 = &a;
+//     int **ptr2 = &ptr1;
+//     cout<<endl<<"print the number in different ways: "<<endl;
+//     cout<<a<<endl;
+//     cout<<*ptr1<<endl;
+//     cout<<**ptr2<<endl;
+//     cout<<endl<<"print the address of number in different wasy: "<<endl;
+//     cout<<&a<<endl;
+//     cout<<ptr1<<endl;
+//     cout<<*ptr2<<endl;
+//     cout<<endl<<"print the address of the pointer ptr1 in different ways: "<<endl;
+//     cout<<&ptr1<<endl;
+//     cout<<ptr2<<endl;
+//     cout<<endl;
+//     return 0;
+// };
+// so a double pointer is a pointer which stores the address of another pointer
+
+// FUNCTIONS AND DOUBLE POINTERS
+// #include<iostream>
+// #include<algorithm>
+// #include<vector>
+// #include<cmath>
+// using namespace std;
+// void updator1(int **p)
+// {
+//     p = p + 1;
+// };
+// void updator2(int **p)
+// {
+//     *p = *p + 1;
+// };
+// void updator3(int **p)
+// {
+//     **p = **p + 1;
+// };
+// int main()
+// {
+//     int a = 2;
+//     int *p1 = &a;
+//     int **p2 = &p1;
+//     cout<<"a is "<<a<<endl;
+//     cout<<"p1 is "<<p1<<endl;
+//     cout<<"p2 is "<<p2<<endl;
+//     // updator1(p2);
+//     // updator2(p2);
+//     // updator3(p2);
+//     cout<<"a is "<<a<<endl;
+//     cout<<"p1 is "<<p1<<endl;
+//     cout<<"p2 is "<<p2<<endl;
+//     return 0;
+// };
+
+// MCQS
+// MCQ1
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int first = 8;
+//     int second = 18;
+//     cout<<first<<" "<<second<<endl;
+//     int *ptr = &second;
+//     *ptr = 9;
+//     cout<<first<<" "<<second<<endl;
+//     return 0;
+// };
+// MCQ2
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int first = 6;
+//     cout<<first<<endl;
+//     int *p = &first;
+//     int *q = p;
+//     (*q)++;
+//     cout<<first<<endl;
+//     return 0;
+// };
+// MCQ3
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int first = 8;
+//     cout<<first<<endl;
+//     int *p = &first;
+//     cout<<(*p)++<<" ";
+//     cout<<first<<endl;
+//     return 0;
+// };
+// MCQ4
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int *p = 0;
+//     int first = 110;
+//     *p = first; // this will give segmentation fault, so code after it won't be executed
+//     cout<<*p<<endl;  
+//     p = &first;
+//     cout<<*p<<endl;  
+//     return 0;
+// };
+// MCQ5
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int first = 8;
+//     int second = 11;
+//     int *third = &second;
+//     first = *third;
+//     *third = *third + 2;
+//     cout<<first<<" "<<second<<endl;
+//     return 0;
+// };
+// MCQ6
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     float f = 12.5;
+//     float p = 21.5;
+//     float* ptr = &f;
+//     (*ptr)++;
+//     *ptr = p;
+//     cout<<*ptr<<" "<<f<<" "<<p<<endl;
+//     return 0;
+// };
+// MCQ7
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[5];
+//     int *ptr;
+//     cout<<sizeof(arr)<<" "<<sizeof(ptr)<<endl;
+//     return 0;
+// };
+// MCQ8
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {11,21,13,14};
+//     cout<<*(arr)<<" "<<*(arr+1)<<endl;
+//     return 0;
+// };
+// MCQ9
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[6] = {11,12,31};
+//     cout<<arr<<" "<<&arr<<endl;
+//     return 0;
+// };
+// arr and &arr and &arr[0] are all same
+// MCQ10
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[6] = {11,21,13};
+//     cout<<(arr+1)<<endl;
+//     return 0;
+// };
+// MCQ11
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[6] = {11,21,31};
+//     int *p = arr;
+//     cout<<p[2]<<endl;
+//     return 0;
+// };
+// MCQ12
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[5] = {11,12,13,14,15};
+//     cout<<*(arr)<<" "<<*(arr+3);
+//     return 0;
+// };
+// MCQ13
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int arr[] = {11,12,13,14};
+//     int *ptr = arr++;
+//     cout<<*ptr<<endl;   
+//     return 0;
+//     // arr = arr + 1 this isn't possible
+//     // we can't update the symbol table for arrays
+//     // we can update the symbol table for pointers
+// };
+// MCQ14
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     char ch = 'a';
+//     char *ptr = &ch;
+//     ch++;
+//     cout<<*ptr<<endl;
+//     return 0;
+// };
+// MCQ15
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     char arr[] = "abcde";
+//     char *p1 = arr;
+//     char *p2 = &arr[0];
+//     char *p3 = &arr[1];
+//     cout<<p1<<endl;
+//     cout<<p2<<endl;
+//     cout<<p3<<endl;
+//     return 0;
+// };
+// MCQ16
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     char arr[] = "abcde";
+//     char *p = &arr[0];
+//     cout<<p<<endl;
+//     p++;
+//     cout<<p<<endl;
+//     return 0;
+// };
+// MCQ17
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     char str[] = "babbar";
+//     char *p = str;
+//     cout<<str[0]<<" "<<p[0]<<endl;
+//     return 0;
+// };
+// MCQ18
+// #include <iostream>
+// using namespace std;
+// void update(int *p)
+// {
+//     *p = *p * 2;
+// };
+// int main()
+// {
+//     int i = 10;
+//     update(&i);
+//     cout<<i<<endl;
+//     return 0;
+// };
+// MCQ19
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int first = 110;
+//     int *p = &first;
+//     int **q = &p;
+//     int second = (**q)++ + 9;
+//     cout<<first<<" "<<second<<endl;
+//     return 0;
+// };
+// MCQ20
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int first = 100;
+//     int *p = &first;
+//     int **q = &p;
+//     int second = ++(**q);
+//     int *r = *q;
+//     ++(*r);
+//     cout<<first<<" "<<second<<endl;
+//     return 0;
+// };
+// MCQ21
+// #include <iostream>
+// using namespace std;
+// void increment(int **p)
+// {
+//     ++(**p);
+// };
+// int main()
+// {
+//     int num = 110;
+//     int *ptr = &num;
+//     increment(&ptr);
+//     cout<<num<<endl;    
+//     return 0;
+// };
+
+// REFERENCE VARIABLES
+// two variables pointing to the same address in the memory
+// or two names for the same address of memory
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int a = 2;
+//     int &b = a;
+//     cout<<a<<endl;
+//     cout<<b<<endl;
+//     a = 1;
+//     cout<<a<<endl;
+//     cout<<b<<endl;
+//     return 0;
+// };
+
+// WHY DO WE NEED REFERENCE VARIABLES
+// when we supply a variable to a function it's passed by value 
+// reference variables are used for passing arguments by reference
+// WHAT'S THE PROBLEM WITH PASS BY VALUE
+// - new memroy is created because a copy of variable is created
+// RETURN BY REFERENCE
+// we can also make a function return a reference variable, but the problem with this is that the reference variable will be local to the function and if we try to return it from the function that it won't work
+// SIMILAR IS THE PROBLME WITH A FUNCTION THAT RETURNS A POINTER
+
+// ARRAYS SIZE IN RUNTIME IS A BAD PRACTICE
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     int arr[n];
+//     return 0;
+// };
+// this is a bad practice
+// why?
+// because we will get to know the size of the array in runtime
+// but we should be knowing the size of the array in compiletime
+// BUT WHAT'S THE PROBLEM IF SIZE OF ARRAY IS REVEALED IN THE RUNTIME
+// - when the program starts
+// - memory is allocated to it
+// - a stack memory and a heap memory
+// - stack is smaller than the heap
+// - if the size of the array is known in compile time then according to the needs a stack is brought
+// - if the size of the array is known in the runtime then, first program will bring a stack of particular size with it, then it will find the size of the array, if the size of array is so large that the stack cannot accomodate that, then our program will crash
+// - so size of stack is selected accroding the information that we have in the compile time
+// - runtime se pehle to stack ban chuka tha, ab stack chota pad gaya to kya karoge
+// untill now what every we were making int arr, int , char c, all used the stack memory
+
+// DYNAMIC MEMORY ALLOCATION
+// we can utilize heap also 
+// to make an array whose size will be decided in the runtime, we will use the heap memory
+// if we want to use the heap memory then we need to use the new keyword
+// if we are using the stack memory then it's called static allocation
+// if we are using the heap memory then it's called dynamic memory allocation
+// example: new char;
+// new char will return address
+// but we cannot give a name to this new char
+// we will use pointers to store the address that the dynamic memory allocation code will return
+// char *p = new char; 
+// we use this syntax to:
+// - do dynamic memory allocation
+// - to allocate memory in the heap
+// - to access that address in heap using the pointer variable
+// - the pointer varialbe will be made in the stack
+// - but it will hold the address of the memory in the heap
+// EXAMPLE 1
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int *p = new int;
+//     cout<<sizeof(p)<<endl;
+//     return 0;
+// };
+// EXAMPLE 2 (CREATING AN ARRAY IN HEAP MEMORY)
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int *arr = new int[5];
+//     return 0;
+// };
+// EXAMPLE 3 (CREATING AN ARRAY OF SIZE SUPPLIED BY THE USE)
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int size;
+//     cout<<"Specify the size: ";
+//     cin>>size;
+//     int *arr = new int[size];
+//     cout<<"Supply the elementsk: ";
+//     for(int i = 0; i<size; i++)
+//     {
+//         cin>>arr[i];
+//     };
+//     cout<<endl;
+//     cout<<"pringing"<<endl;
+//     for(int i = 0; i<size; i++)
+//     {
+//         cout<<arr[i]<<" ";
+//     };
+//     return 0;
+// };
+
+// STATIC v/s DYNAMIC MEMORY ALLOCATION
+// static: int arr[5] will take 20 bytes if an int takes 4 bytes 
+// synamic: int *arr = new int[5] will take 28 bytes if an int takes 4 bytes and an int * pointer variable takes 8 bytes
+
+// BAD PRACTICE
+// while(true)
+// {
+//     int *p = new int;
+// }
+// if it was int p = 1; then everytime a new variable would be created and deleted
+// but in this case 
+// a new variable will be made in the stack storing the address of the dynamically allocated integer,
+// when } is reached the memory in the stack is freed by the memory in the heap isn't cleared
+// this will crash our program the momentt the head memory goes full
+// in case of static memory space is cleaned autoically
+// in case of dynamic memory space is n't cleaned automatically, it needs to be handled manually
+
+// HOW TO DELETE MEMORY FROM HEAP
+// using the delete keyword
+// for int *i = new int;
+// delete i;
+// for int *arr = new int[5];
+// delete []arr;
 
 
 // HOMEWORK
@@ -2206,4 +2660,5 @@
 // MACROS AND IT'S TYPES 
 // POINTER QUIZ ON QUIDED PATHS OF CODING NINJAS
 // CONSTANT VARIABLES
-
+// VOID POINTER
+// ADDRESS TYPECASTING

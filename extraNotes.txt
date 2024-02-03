@@ -91,6 +91,9 @@ LEARNT WHILE SOLVING QUESTIONS
     cout<<"it's not empty"<<endl;
   };
 
+- finding the length of a string
+  the length() function
+
 - about leap years
   - is divisible by 4
   - is also divisible by 400 if it's divisible by 100

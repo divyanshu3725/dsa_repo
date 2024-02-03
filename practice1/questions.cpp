@@ -476,7 +476,7 @@
 //     return resVector;
 // }
 
-// 10) pair-sum (done) (codestudio)
+// 10) pair-sum (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/pair-sum_697295
 // #include <iostream>
 // #include <vector>
@@ -1296,7 +1296,7 @@
 //     }
 // }
 
-// 21) reverse-the-array (done) (codestudio)
+// 21) reverse-the-array (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/reverse-the-array_1262298
 // #include<iostream>
 // #include<vector>
@@ -1669,7 +1669,7 @@
 //     cout<<"method2 result "<<" = "<<method2(a,n)<<endl;
 // }
 
-// 25) FIND GCD USING EUCLID'S ALGORITHM
+// 25) FIND GCD USING EUCLID'S ALGORITHM ✅ 
 // gcd(a,b) = gcd(a-b,b);
 // lcm(a,b) * gcd(a,b) = a*b;
 // #include <iostream>
@@ -1747,7 +1747,7 @@
 //     return 0;
 // };
 
-// 26) CHECK IF PRIME USING SIEVE OF ERATOSTHENES
+// 26) CHECK IF PRIME USING SIEVE OF ERATOSTHENES ✅ 
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1782,4 +1782,111 @@
 // 27) MODULAR EXPONENTIATION (DOUBT)
 // https://www.codingninjas.com/studio/problems/modular-exponentiation_1082146
 
-// 28) 
+// 28) LENGTH OF A STRING
+// #include<iostream>
+// #include<algorithm>
+// #include<cmath>
+// #include<vector>
+// using namespace std;
+// int getLength(char name[])
+// {
+//     int length = 0;
+//     for(int i = 0; name[i]!='\0'; i++)
+//     {   
+//         length++;
+//     };
+//     return length;
+// };
+// int main()
+// {
+//     char name[10];
+//     cout<<"Enter the name "<<endl;
+//     cin>>name;
+//     // OBSERVATION 1
+//     cout<<getLength(name)<<endl;
+//     name[2] = '\0';
+//     // OBSERVATION 2
+//     cout<<getLength(name)<<endl;
+// };
+
+// 29) REVERSE A STRING
+// #include<iostream>
+// #include<algorithm>
+// #include<cmath>
+// #include<vector>
+// using namespace std;
+// int lengthOfString(char arr[])
+// {
+//     int length = 0;
+//     for(int i = 0; arr[i]!='\0'; arr++)
+//     {
+//         length++;
+//     };
+//     return length;
+// }
+// void reverseString(char arr[])
+// {
+//     int i = 0;
+//     int j = lengthOfString(arr)-1;
+//     while (i<j)
+//     {
+//         swap(arr[i],arr[j]);
+//         i++;
+//         j--;
+//     };
+// }
+// int main()
+// {
+//     char name[5];
+//     cout<<"enter the name: ";
+//     cin>>name;
+//     cout<<"name is "<<name<<endl;
+//     reverseString(name);
+//     cout<<"name is "<<name<<endl;
+// };
+
+// 30) reverse-string (done) (leetcode)
+// https://leetcode.com/problems/reverse-string/
+
+// 31) check-if-the-string-is-a-palindrome (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/check-if-the-string-is-a-palindrome_1062633
+// #include <bits/stdc++.h> 
+// using namespace std;
+// bool checkPalindrome(string s)
+// {
+//     vector <char> vect;
+//     for(int i = 0; i<s.length(); i++)
+//     {
+//         if((int(s[i])>=97 && int(s[i])<=122) || (int(s[i])>=48 && int(s[i])<=57))
+//         {
+//             vect.push_back(s[i]);
+//         }
+//         else if ((int(s[i])>=65) && (int(s[i]<=90)))
+//         {
+//             vect.push_back(s[i]+32);
+//         }
+//         else
+//         {
+//         };
+//     };
+//     int i = 0;
+//     int j = vect.size()-1;
+//     bool palin = true;
+//     while(i<j)
+//     {
+//         if(vect[i]!=vect[j])
+//         {
+//             palin = false;
+//             break;
+//         };
+//         i++;
+//         j--;
+//     };
+//     return palin;
+// };
+// int main()
+// {
+//     string s = "chi1@1IHC";
+//     cout<<checkPalindrome(s)<<endl;
+// }
+
