@@ -94,6 +94,34 @@ LEARNT WHILE SOLVING QUESTIONS
 - finding the length of a string
   the length() function
 
+- reversing a string
+  reverse(str.begin(), str.end())
+
+- reversing a vector
+  reverse(vect.begin(), vect.end())
+
+- the vector header file is suffice to initialize a vector
+
+- a string, bool, char, int, long, long long, float, double, long double, vector<int>, vector<char>, vector<bool> with the same value are equal (==)
+
+- an existing vector can be assigned to a new vector
+  vect1 = vect2; // won't throw any error
+
+- pop_back function for vectors
+  drops the last element
+
+- erase function for vectors
+  vect.erase(vect.begin(),vect.begin()+2);
+
+- clearing a string
+  string.clear(); 
+
+- we can sort a string using the sort function
+
+- we can find the lexicographically smalles and largest character using the max_element and min_element function on strings
+
+- we can use the distance function to calculate the distance between two iterators in string too
+
 - about leap years
   - is divisible by 4
   - is also divisible by 400 if it's divisible by 100

@@ -1328,7 +1328,7 @@
 //     cout<<endl;
 // };
 
-// 22) merge-sorted-array (done) (leetcode)
+// 22) merge-sorted-array (done) ✅ (leetcode)
 // https://leetcode.com/problems/merge-sorted-array/
 // #include <iostream>
 // #include <vector>
@@ -1611,7 +1611,7 @@
 //     };
 // };
 
-// 24) FAST EXPONENTIATE
+// 24) FAST EXPONENTIATE ✅ 
 // FAST EXPONENTIATION
 // a^b  = (a^(b/2))^2 if b is even
 // a^b = (a^((b-1)/2))^2 * a if b is odd
@@ -1890,3 +1890,8 @@
 //     cout<<checkPalindrome(s)<<endl;
 // }
 
+// 32) reverse-words-in-a-string (done) (leetcode)
+// https://leetcode.com/problems/reverse-words-in-a-string/description/
+
+// 33) maximum-occuring-character (done) (leetcode)
+// https://www.geeksforgeeks.org/problems/maximum-occuring-character-1587115620/1
