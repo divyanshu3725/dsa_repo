@@ -796,7 +796,7 @@
 //     return 0;
 // };
 
-// 14) TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY ✅
+// 14) TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -870,7 +870,7 @@
 //     return 0;
 // };
 
-// 15) peak-index-in-a-mountain-array (done) ✅ (leetcode)
+// 15) peak-index-in-a-mountain-array (done) (leetcode)
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/
 // APPROACH 1 (my approach)
 // #include <iostream>
@@ -1268,7 +1268,7 @@
 //     return 0;
 // };
 
-// 20) insertion-sort (done) (codestudio)
+// 20) insertion-sort (done) ✅ (codestudio)
 // https://www.codingninjas.com/studio/problems/insertion-sort_3155179?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2&leftPanelTabValue=SUBMISSION
 // #include <iostream>
 // #include <vector>
@@ -1782,7 +1782,7 @@
 // 27) MODULAR EXPONENTIATION (DOUBT)
 // https://www.codingninjas.com/studio/problems/modular-exponentiation_1082146
 
-// 28) LENGTH OF A STRING
+// 28) LENGTH OF A STRING ✅ 
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1809,7 +1809,7 @@
 //     cout<<getLength(name)<<endl;
 // };
 
-// 29) REVERSE A STRING
+// 29) REVERSE A STRING ✅ 
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1893,5 +1893,35 @@
 // 32) reverse-words-in-a-string (done) (leetcode)
 // https://leetcode.com/problems/reverse-words-in-a-string/description/
 
-// 33) maximum-occuring-character (done) (leetcode)
+// 33) maximum-occuring-character (done) (geeksforgeeks)
 // https://www.geeksforgeeks.org/problems/maximum-occuring-character-1587115620/1
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+// char getMaxOccuringChar(string str)
+// {
+//     vector<int> vect(26,0);
+//     for(int i = 0; i<str.length(); i++)
+//     {
+//         vect[int(str[i])-97]++;
+//     };
+//     auto it = max_element(vect.begin(),vect.end());
+//     int maxInd = distance(vect.begin(),it);
+//     return char(maxInd+97);
+// }
+// int main()
+// {
+//     string naam;
+//     cout<<"ENTER YOUR NAME: ";
+//     cin>>naam;
+//     cout<<getMaxOccuringChar(naam)<<endl;
+//     return 0;
+// };
+
+// 34) replace-spaces (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/replace-spaces_1172172?leftPanelTabValue=PROBLEM
+
+// 35) remove-all-occurrences-of-a-substring (done) (leetcode)
+// https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
