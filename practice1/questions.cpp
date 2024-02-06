@@ -796,7 +796,7 @@
 //     return 0;
 // };
 
-// 14) TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY
+// 14) TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY ✅ 
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -870,7 +870,7 @@
 //     return 0;
 // };
 
-// 15) peak-index-in-a-mountain-array (done) (leetcode)
+// 15) peak-index-in-a-mountain-array (done) ✅ (leetcode)
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/
 // APPROACH 1 (my approach)
 // #include <iostream>

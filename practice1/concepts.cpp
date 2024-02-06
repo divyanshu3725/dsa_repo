@@ -33,7 +33,7 @@
 // declaring data type of a variable gives two information to the compiler (a) what is the type of data that is going to be stored (b) what amount space in the memory will that variable take
 // the amount of space that a varaible of a particular type will take is dependent on the compiler
 // int takes 4 bytes (in our compiler)
-// <sizeof function is used for finding the size of a variable (amount of space that it's taking in the memory)
+// sizeof function is used for finding the size of a variable (amount of space that it's taking in the memory)
 // ------------------------------------------------
 // CODE for understanding DATA TYPES, VARIABLE NAMES, DECLARATIONS, INITIALIZATIONS
 // #include <iostream>
@@ -116,17 +116,67 @@
 // };
 // ------------------------------------------------
 
-// MAX AND MIN FOR UNSGINED INT
+// MAX AND MIN FOR UNSGINED INT 
 // max will be (2^32 - 1)
 // min will be 0
+// #include <iostream>
+// #include <limits>
+// using namespace std;
+// int main()
+// {
+//     cout<<numeric_limits<unsigned int>::min()<<endl;
+//     cout<<numeric_limits<unsigned int>::max()<<endl;
+//     return 0;
+// };
 
-// MAX AND MIN FOR SGINED INT
+// MAX AND MIN FOR SGINED INT  
 // max will be (2^31 - 1)
 // min will be -(2^31)
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     cout<<(INT32_MAX)<<endl;
+//     cout<<(INT32_MIN)<<endl;
+//     return 0;
+// };
 
-// MAX AND MIN FOR SIGNED CHAR
+// MAX AND MIN FOR SIGNED CHAR  
 // max will be (2^7 - 1)
 // min will be -(2^7)
+// #include <iostream>
+// #include <climits>
+// using namespace std;
+// int main()
+// {
+//     cout<<CHAR_MIN<<endl;
+//     cout<<CHAR_MAX<<endl;
+//     return 0;
+// };
+// MAX AND MIN FOR SGINED INT  
+// max will be (2^31 - 1)
+// min will be -(2^31)
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     cout<<(INT32_MAX)<<endl;
+//     cout<<(INT32_MIN)<<endl;
+//     return 0;
+// };
+
+// MAX AND MIN FOR UNSIGNED CHAR  
+// max will be (2^8 - 1)
+// min will be (0)
+// #include <iostream>
+// #include <climits>
+// using namespace std;
+// int main()
+// {
+//     cout<<static_cast<int>(0)<<endl;
+//     cout<<static_cast<int>(UCHAR_MAX)<<endl;
+//     return 0;
+// };
 
 // WHAT WILL HAPPEN IF WE TRY TO STORE 123456 IN A CHAR
 // char a = 123456;
@@ -142,15 +192,29 @@
 // using namespace std;
 // int main()
 // {
-//     char a = 123456;
-//     cout<<a<<endl;
+//     int n = 123456;
+//     cout<<"int n = "<<n<<endl;
+//     cout<<"int of char n = "<<int(char(n))<<endl;
+//     cout<<"char n = "<<char(n)<<endl;
 //     return 0;
 // };
 // ---------------------------------
 // we got a warning:  overflow in implicit constant conversion
 // understood!
 
-// 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁
+// BINARY OF AN INTEGER AND IT'S 1'S COMPLIMENT USING BUILT IN FUNCTIONS
+// #include <iostream>
+// #include <bitset>
+// using namespace std;
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the number: ";
+//     cin>>n;
+//     cout<<bitset<32>(n)<<endl;
+//     cout<<bitset<32>(~n)<<endl;
+//     return 0;
+// };
 
 // HOW ARE NEGATIVE NUMBER STORED IN MEMORY
 // int a = -6;
@@ -176,6 +240,8 @@
 // 00000000000000000000000000000110 this corresponds to 6
 // we have a -ve sign reserved
 // so -6 will be printed
+
+// 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁
 
 // WHAT PROBLEM DOES 2'S COMPLIMENT SOLVE
 // WE COULD HAVE MADE A CONVENTION THAT 0SOMETHING WILL BE +VE AND 1SOMETHING WILL BE -VE
@@ -1080,7 +1146,7 @@
 
 // VARIABLES ARE PASSED BY VALUE, BUT ARRAYS ARE PASSED BY REFERENCE
 
-// LINEAR SEARCH
+// LINEAR SEARCH ✅
 // has TC O(n)
 // bool linearSearch(int arr[], int n, int num)
 // {
@@ -1094,7 +1160,7 @@
 //     return false;
 // };
 
-// BINARY SEARCH
+// BINARY SEARCH ✅
 // for linear search the TC is O(n)
 // is applied only on monotoning functions
 // #include <iostream>
