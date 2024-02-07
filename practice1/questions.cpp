@@ -1,5 +1,7 @@
-// 1) subtract-the-product-and-sum-of-digits-of-an-integer ✅ (done) (leetcode)
+// 1) ✅🧮 subtract-the-product-and-sum-of-digits-of-an-integer (done) (leetcode)
 // https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/description/
+// time O(log10(n)) (because number is being divided by 10 continuously)
+// space O(3) (because for any input only three variables are being made)
 // #include <iostream>
 // using namespace std;
 //     int subtractProductAndSum(int n) {
@@ -23,8 +25,10 @@
 //     return 0;
 // };
 
-// 2) number-of-1-bits (done) ✅ (leetcode)
+// 2) ✅🧮 number-of-1-bits (done) (leetcode)
 // https://leetcode.com/problems/number-of-1-bits/
+// time O(log2(n)) (becuase loop runs as many time as many bits the binary of n has, and the bits that binary of n takes is log2(n))
+// space O(1)
 // #include <iostream>
 // using namespace std;
 // int hammingWeight(int n) {
@@ -1925,3 +1929,50 @@
 
 // 35) remove-all-occurrences-of-a-substring (done) (leetcode)
 // https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
+
+// 36) print-like-a-wave (done) (codingstudio)
+// https://www.codingninjas.com/studio/problems/print-like-a-wave_893268
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// vector<int> wavePrint(vector<vector<int>> arr, int nRows, int mCols)
+// {
+//     vector<int> resVector;
+//     int fromuP = 1;
+//     for (int j = 0; j < mCols; j++)
+//     {
+//         for (int i = 0; i < nRows; i++)
+//         {
+//             if (fromuP)
+//             {
+//                 resVector.push_back(arr[i][j]);
+//             }
+//             else
+//             {
+//                 resVector.push_back(arr[nRows - i - 1][j]);
+//             };
+//         };
+//         if (fromuP == 0)
+//         {
+//             fromuP = 1;
+//         }
+//         else
+//         {
+//             fromuP = 0;
+//         };
+//     }
+//     return resVector;
+// }
+// int main()
+// {
+//     vector<vector<int>> vect = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+//     int nRows = 3;
+//     int mCols = 4;
+//     vector<int> vect = wavePrint(vect, nRows, mCols);
+//     for(int i = 0; vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     return 0;
+// }

@@ -1,4 +1,4 @@
-// FIRST PROGRAM
+// ✅ FIRST PROGRAM
 // #include <iostream>
 // int main()
 // {
@@ -6,7 +6,7 @@
 //     return 0;
 // };
 
-// EXECUTION PROCESS
+// ✅ EXECUTION PROCESS
 // we need to include header files before using their functionalities
 // iostream header file is necesssary for using the cin and cout functions
 // including the "using namespace std" allows us to use cout and cin without std::
@@ -28,7 +28,7 @@
 // };
 // ------------------------------------------------
 
-// DATA TYPES
+// ✅ DATA TYPES
 // before storing some data, we need to specify what type of data we are going to store
 // declaring data type of a variable gives two information to the compiler (a) what is the type of data that is going to be stored (b) what amount space in the memory will that variable take
 // the amount of space that a varaible of a particular type will take is dependent on the compiler
@@ -69,7 +69,7 @@
 // ------------------------------------------------
 // variable names (a) can contain digits, letters and underscores (b) cannot start with digit (c) cannot be same as the name of keywords
 
-// HOW INT DATA TYPE IS STORED IN MEMORY
+// ✅ HOW INT DATA TYPE IS STORED IN MEMORY
 // int a = 8;
 // int is taking 4 bytes here
 // so integer a will be converted into binary
@@ -79,7 +79,7 @@
 // so end 4 bits will be 1000
 // the starting 28 bits will be 0
 
-// HOW CHAR DATA TYPE IS STORED IN MEMORY
+// ✅ HOW CHAR DATA TYPE IS STORED IN MEMORY
 // char a = 'a';
 // our char datatye take 1 byte
 // every character corresponds to an ascii value
@@ -88,7 +88,7 @@
 // how ?
 // 97's binary will be stored in 8 bits of memory
 
-// TYPECASTING
+//  TYPECASTING
 // changing one data type to another
 // ------------------------------------------------
 // CODE for understanding TYPECASTING
@@ -116,7 +116,7 @@
 // };
 // ------------------------------------------------
 
-// MAX AND MIN FOR UNSGINED INT 
+// ✅ MAX AND MIN FOR UNSGINED INT 
 // max will be (2^32 - 1)
 // min will be 0
 // #include <iostream>
@@ -129,9 +129,11 @@
 //     return 0;
 // };
 
-// MAX AND MIN FOR SGINED INT  
+// ✅ MAX AND MIN FOR SGINED INT  
 // max will be (2^31 - 1)
 // min will be -(2^31)
+// int is signed by default
+// we can use the signed keyword but it would be redundant
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -141,7 +143,7 @@
 //     return 0;
 // };
 
-// MAX AND MIN FOR SIGNED CHAR  
+// ✅ MAX AND MIN FOR SIGNED CHAR  
 // max will be (2^7 - 1)
 // min will be -(2^7)
 // #include <iostream>
@@ -165,7 +167,7 @@
 //     return 0;
 // };
 
-// MAX AND MIN FOR UNSIGNED CHAR  
+// ✅ MAX AND MIN FOR UNSIGNED CHAR  
 // max will be (2^8 - 1)
 // min will be (0)
 // #include <iostream>
@@ -178,7 +180,7 @@
 //     return 0;
 // };
 
-// WHAT WILL HAPPEN IF WE TRY TO STORE 123456 IN A CHAR
+// ✅ WHAT WILL HAPPEN IF WE TRY TO STORE 123456 IN A CHAR
 // char a = 123456;
 // the binary of 123456 is 11110001001000000
 // but char has been assigned a space of 8 bits
@@ -202,7 +204,7 @@
 // we got a warning:  overflow in implicit constant conversion
 // understood!
 
-// BINARY OF AN INTEGER AND IT'S 1'S COMPLIMENT USING BUILT IN FUNCTIONS
+// ✅ BINARY OF AN INTEGER AND IT'S 1'S COMPLIMENT USING BUILT IN FUNCTIONS
 // #include <iostream>
 // #include <bitset>
 // using namespace std;
@@ -216,7 +218,7 @@
 //     return 0;
 // };
 
-// HOW ARE NEGATIVE NUMBER STORED IN MEMORY
+// ✅ HOW ARE NEGATIVE NUMBER STORED IN MEMORY
 // int a = -6;
 // first: we will ignore -ve sign
 // second: get binary of integer (get binary of 6)
@@ -230,7 +232,7 @@
 // if an integer is -ve then the MSB in memory is -ve
 // 11111111111111111111111111111010 has MSB as -ve
 
-// HOW ARE NEGATIVE NUMBERS PRINTIED
+// ✅ HOW ARE NEGATIVE NUMBERS PRINTIED
 // int a = -6;
 // 11111111111111111111111111111010 is storing in memory
 // MSB is 1 so we will keep a -ve sign reserved
@@ -241,9 +243,7 @@
 // we have a -ve sign reserved
 // so -6 will be printed
 
-// 🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁🏁
-
-// WHAT PROBLEM DOES 2'S COMPLIMENT SOLVE
+// ✅ WHAT PROBLEM DOES 2'S COMPLIMENT SOLVE 🟥 
 // WE COULD HAVE MADE A CONVENTION THAT 0SOMETHING WILL BE +VE AND 1SOMETHING WILL BE -VE
 // max would be 2^31-1
 // min would be - (2^31 - 1)
@@ -254,11 +254,11 @@
 // we will use this representation to store a negative number at the extreme end
 // so range would be from - (2^31) to (2^31 - 1)
 
-// SIGNED AND UNSIGNED
+// ✅ SIGNED AND UNSIGNED
 // for making unsigned we will do unsigned int a = 23;
 // this will increase the range of the int (in +ve region)
 
-// WHAT IF WE TRY TO STORE NEGATIVE VALUE IN UNSIGNED INT
+// ✅ WHAT IF WE TRY TO STORE NEGATIVE VALUE IN UNSIGNED INT
 // unsigned int a = -2;
 // 2 correpsonds to 00000000000000000000000000000010
 // 1's compliment:  11111111111111111111111111111101
@@ -281,7 +281,11 @@
 // ----------------------------
 // this will print 4294967294
 
-// OPERATORS
+// ✅ RANGE OF SHORT DATATYPE
+// min is -(2^15)
+// max is 2^15 - 1
+
+// ✅ OPERATORS
 // + - * / % && || ! > < >= <= != ==
 // ------------------------------------------------
 // CODE for understading the DIVISION OPERATOR
@@ -289,16 +293,23 @@
 // using namespace std;
 // int main()
 // {
-//     int a = 2.4/2;
-//     float b = 2.4/2;
-//     cout<<a<<endl;
-//     cout<<b<<endl;
-//     cout<<2.4/2<<endl;
+//     int a = 3;
+//     float b = 3;
+//     double c = 3;
+//     long d = 3;
+//     long long e = 3;
+//     long double f = 3;
+//     cout<<"int 3 by 2 is "<<a/2<<endl;
+//     cout<<"float 3 by 2 is "<<b/2<<endl;
+//     cout<<"double 3 by 2 is "<<c/2<<endl;
+//     cout<<"long 3 by 2 is "<<d/2<<endl;
+//     cout<<"long long 3 by 2 is "<<e/2<<endl;
+//     cout<<"long double 3 by 2 is "<<f/2<<endl;
 //     return 0;
 // };
 // ------------------------------------------------
 
-// GUESS THE OUTPUT (IF ELSE CONDITIONALS)
+// ✅ GUESS THE OUTPUT (IF ELSE CONDITIONALS)
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -316,34 +327,34 @@
 //     return 0;
 // };
 
-// QUESTION 1 SUPPLIED CHARACTER UPPERCASE OR LOWERCASE OR DIGIT
+// ✅ QUESTION 1 SUPPLIED CHARACTER UPPERCASE OR LOWERCASE OR DIGIT
 // #include <iostream>
 // using namespace std;
 // int main()
 // {
-//     char firstChar;
-//     cout<<"Enter the character: "<<endl;
-//     cin>>firstChar;
-//     cout<<int(firstChar)<<endl;
-//     if(48<=firstChar && firstChar<=57)
-//     {
-//         cout<<"digit"<<endl;
-//     }
-//     else if (65<=firstChar && firstChar<=90)
-//     {
-//         cout<<"upper case"<<endl;
-//     }
-//     else if (97<=firstChar && firstChar<=122)
+//     char a;
+//     cout<<"Enter the character: ";
+//     cin>>a;
+//     if(a>='a' && a<='z')
 //     {
 //         cout<<"lower case"<<endl;
 //     }
+//     else if (a>='A' && a<='Z')
+//     {
+//         cout<<"upper case"<<endl;
+//     }
+//     else if(a>='0' && a<='9')
+//     {
+//         cout<<"integer"<<endl;
+//     }
 //     else
 //     {
-//         cout<<"neither uppercase nor lowercase nor digit"<<endl;
-//     };
+//         cout<<"neither upper case nor lowercase nor integer"<<endl;
+//     }
+//     return 0;
 // };
 
-// QUESTION 2 FIND SUM OF ALL EVEN NUMBERS FROM 1 TO N
+// ✅ QUESTION 2 FIND SUM OF ALL EVEN NUMBERS FROM 1 TO N
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -363,7 +374,7 @@
 //     return 0;
 // };
 
-// QUESTION 3 PRIME OR NOT
+// ✅ QUESTION 3 PRIME OR NOT
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -402,7 +413,7 @@
 //     return 0;
 // };
 
-// AND
+// ✅ AND
 // a = 2 010
 // b = 3 011
 // a&b = 010 = 2
@@ -416,7 +427,7 @@
 //     return 0;
 // };
 
-// OR
+// ✅ OR
 // a = 2 010
 // b = 3 011
 // a|b = 011 = 3
@@ -430,7 +441,7 @@
 //     return 0;
 // };
 
-// NOT
+// ✅ NOT
 // int a = ~2;
 // 2 is  00000000000000000000000000000010
 // ~2 is 11111111111111111111111111111101
@@ -448,7 +459,7 @@
 //     return 0;
 // };
 
-// XOR
+// ✅ XOR
 // 0 ^ 1 1
 // 1 ^ 0 1
 // 1 ^ 1 0
@@ -468,7 +479,7 @@
 //     return 0;
 // };
 
-// LEFT SHIFT OPERATOR
+// ✅ LEFT SHIFT OPERATOR
 // 2<<1
 // 2 is 010
 // 100 is 4
@@ -483,7 +494,7 @@
 //     return 0;
 // };
 
-// RIGHT SHIFT OPERATOR
+// ✅ RIGHT SHIFT OPERATOR
 // 2>>1
 // 2 is 010
 // 001 is 1
@@ -496,25 +507,25 @@
 //     return 0;
 // };
 
-// DOING LEFT SHIFT ON LARGER NUMBERS WILL RETURN -VE NUMBERS
+// ✅ DOING LEFT SHIFT ON LARGER NUMBERS WILL RETURN -VE NUMBERS
 
-// IF WE DO SHIFTING WITH +VE NUMBER THEN PADDING IS DONE WITH 0
+// ✅ IF WE DO SHIFTING WITH +VE NUMBER THEN PADDING IS DONE WITH 0
 
-// FOR SHIFTING WITH NEGATIVE NUMBER PADDING IS DEPENDENT ON COMPILER
+// ✅ FOR SHIFTING WITH NEGATIVE NUMBER PADDING IS DEPENDENT ON COMPILER
 
-// POST INCREMENT
+// ✅ POST INCREMENT
 // use then increment
 
-// PRE INCREMENT
+// ✅ PRE INCREMENT
 // increment then use
 
-// POST DECREMENT
+// ✅ POST DECREMENT
 // use then decrement
 
-// PRE DECREMENT
+// ✅ PRE DECREMENT
 // use then decrement
 
-// GUESS THE OUTPUT1
+// ✅ GUESS THE OUTPUT1
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -534,7 +545,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT2
+// ✅ GUESS THE OUTPUT2
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -554,7 +565,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT3
+// ✅ GUESS THE OUTPUT3
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -564,7 +575,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT4
+// ✅ GUESS THE OUTPUT4
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -577,7 +588,7 @@
 //     return 0;
 // };
 
-// SUM FROM 1 TO N
+// ✅ SUM FROM 1 TO N
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -594,7 +605,7 @@
 //     return 0;
 // };
 
-// FIBONACCI SERIES
+// ✅ FIBONACCI SERIES
 // #include <iostream>
 // using namespace std;
 // void fibo(int n)
@@ -631,7 +642,7 @@
 //     };
 // };
 
-// WHETHER N IS PRINE NUMBER OR NOT
+// ✅ WHETHER N IS PRINE NUMBER OR NOT
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -662,7 +673,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT 1
+// ✅ GUESS THE OUTPUT 1
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -675,7 +686,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT 2
+// ✅ GUESS THE OUTPUT 2
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -688,7 +699,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT 3
+// ✅ GUESS THE OUTPUT 3
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -705,7 +716,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT 4
+// ✅ GUESS THE OUTPUT 4
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -721,7 +732,7 @@
 //     return 0;
 // };
 
-// GUESS THE OUTPUT 5
+// ✅ GUESS THE OUTPUT 5
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -740,7 +751,7 @@
 //     return 0;
 // };
 
-// DECIMAL TO BINARY
+// ✅ DECIMAL TO BINARY
 // DIVISION BY 2
 // 2 4 0
 // 2 2 0
@@ -782,27 +793,23 @@
 // };
 // SECOND WAY (using division by 2 method) (without using the pow function)
 // #include <iostream>
-// #include <algorithm>
-// #include <vector>
-// #include <cmath>
 // using namespace std;
 // int binaryOf(int n)
 // {
+//     int count = 1;
 //     int result = 0;
-//     int count = 0;
 //     while(n!=0)
 //     {
 //         int remainder = n%2;
-//         if(count==0)
+//         if(count==1)
 //         {
-//             result += remainder;
-//             count=1;
+//             result += count*remainder;
 //         }
 //         else
 //         {
-//             result += 10*count*remainder;
-//             count*=10;
+//             result += count*remainder;
 //         };
+//         count*=10;
 //         n/=2;
 //     };
 //     return result;
@@ -810,37 +817,41 @@
 // int main()
 // {
 //     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
+//     cout<<"Enter the number: ";
+//     cin>>n;  
 //     cout<<binaryOf(n)<<endl;
 //     return 0;
 // };
 // THIRD WAY (using the bit manipulation method) (without using the pow function)
 // #include <iostream>
-// #include <algorithm>
-// #include <vector>
-// #include <cmath>
 // using namespace std;
 // int binaryOf(int n)
 // {
+//     int count = 1;
 //     int result = 0;
-//     int count = 0;
 //     while(n!=0)
 //     {
-//         int lastBit = n&1;
-//         if(count==0)
+//         int lastVBit = n&1;;
+//         if(count==1)
 //         {
-//             result += lastBit;
-//             count=1;
+//             result += count*lastVBit;
 //         }
 //         else
 //         {
-//             result += 10*count*lastBit;
-//             count*=10;
+//             result += count*lastVBit;
 //         };
+//         count*=10;
 //         n>>=1;
 //     };
 //     return result;
+// };
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the number: ";
+//     cin>>n;  
+//     cout<<binaryOf(n)<<endl;
+//     return 0;
 // };
 // FOURTH WAY (using the bit manipulation method) (using pow function)
 // #include <iostream>
@@ -870,7 +881,7 @@
 //     return 0;
 // };
 
-// BINARY TO DECIMAL
+// ✅ BINARY TO DECIMAL
 // #include <iostream>
 // #include <algorithm>
 // #include <cmath>
@@ -898,7 +909,7 @@
 //     return 0;
 // };
 
-// TIME COMPLEXITY
+// ✅ TIME COMPLEXITY
 // amount of time taken by an algorithm to run as a function of length of input
 // why do we need complexities:
 // - to compare algorithm
@@ -942,7 +953,7 @@
 // TC for max in array and min in array will be O(n)
 // TC for isPrime function will be O(n) (actually n-2)
 
-// TLE
+// ✅ TLE
 // Most modern machines can perform 10^8 operations/second
 // n < 11 : O(n!) , O(n^6)
 // n < 18: O((2^n)*(n^2))
@@ -953,7 +964,7 @@
 // n < 10^6 : O(n*log(n))
 // n < 10^8 : O(n) , O(logn)
 
-// SPACE COMPLEXITY
+// ✅ SPACE COMPLEXITY
 // amount of time taken by an algorithm to run as a function of length of input
 // example 1
 // int a = 0, b = 0;
@@ -1146,7 +1157,7 @@
 
 // VARIABLES ARE PASSED BY VALUE, BUT ARRAYS ARE PASSED BY REFERENCE
 
-// LINEAR SEARCH ✅
+// ✅ LINEAR SEARCH 
 // has TC O(n)
 // bool linearSearch(int arr[], int n, int num)
 // {
@@ -1160,7 +1171,7 @@
 //     return false;
 // };
 
-// BINARY SEARCH ✅
+// ✅ BINARY SEARCH 
 // for linear search the TC is O(n)
 // is applied only on monotoning functions
 // #include <iostream>
@@ -2871,7 +2882,293 @@
 //     return 0;
 // };
 
+// 2D ARRAYS
+//  // in the memory the 2D array is being stored as a linear array only
 
+// // TAKING INPUT FOR 2D ARRAY ELEMENT AND PRINTING THE ELEMENTS
+// // #include <iostream>
+// // using namespace std;
+// // int main()
+// // {
+// //     int m;
+// //     int n;
+// //     cout<<"Enter the value of m and n: ";
+// //     cin>>m>>n;
+// //     cout<<"m is "<<m<<endl;
+// //     cout<<"n is "<<n<<endl;
+// //     char arr[m][n];
+// //     cout<<"Now Enter the Elements: "<<endl;
+// //     // ROW WISE INPUT
+// //     // for(int i = 0; i<m; i++)
+// //     // {
+// //     //     for(int j = 0; j<n; j++)
+// //     //     {
+// //     //         cin>>arr[i][j]; 
+// //     //     };
+// //     // };
+// //     // COLUMN WISE INPUT
+// //     for(int i = 0; i<n; i++)
+// //     {
+// //         for(int j = 0; j<m; j++)
+// //         {
+// //             cin>>arr[j][i]; 
+// //         };
+// //     };
+// //     cout<<"printing the element: "<<endl;
+// //     for(int i = 0; i<m; i++)
+// //     {
+// //         for(int j = 0; j<n; j++)
+// //         {
+// //             cout<<arr[i][j]<<" ";
+// //         };
+// //         cout<<endl;
+// //     };
+// //     return 0;
+// // };
+
+// // INTIALIZING A 2D ARRAY
+// // #include <iostream>
+// // using namespace std;
+// // int main()
+// // {
+// //     // first way
+// //     // char arr [3][3] = {'a','b','c','d','e','f','g','h','i'};
+// //     // second way
+// //     char arr [3][4] = {{'a','d','g','j'},{'b','e','h','k'},{'c','f','i','l'}};
+// //     for(int i = 0; i<3; i++)
+// //     {
+// //         for(int j = 0; j<4; j++)
+// //         {
+// //             cout<<arr[i][j]<<" ";
+// //         };
+// //         cout<<endl;
+// //     };
+// //     return 0;
+// // };
+
+// // LINEAR SEARCH IN ARRAYS
+// // time O(m*n)
+// // space O(1)
+// // #include <iostream>
+// // using namespace std;
+// // void print2DArray(char arr[][4], int rows, int cols)
+// // {
+// //     cout<<"printing the 2D array"<<endl;
+// //     for(int i = 0; i<rows; i++)
+// //     {
+// //         for(int j = 0; j<cols; j++)
+// //         {
+// //             cout<<arr[i][j]<<" ";
+// //         };
+// //         cout<<endl;
+// //     };
+// // };
+// // bool linearSearch(char arr[][4], int rows, int cols, int element)
+// // {
+// //     for(int i = 0; i<rows; i++)
+// //     {
+// //         for(int j = 0; j<cols; j++)
+// //         {
+// //             if(arr[i][j]==element)
+// //             {
+// //                 return 1;
+// //             };
+// //         };
+// //     };
+// //     return 0;
+// // };
+// // int main()
+// // {
+// //     char arr[3][4];
+// //     cout<<endl;
+// //     cout<<"Enter the elements: ";
+// //     for(int i = 0; i<3; i++)
+// //     {
+// //         for(int j = 0; j<4; j++)
+// //         {
+// //             cin>>arr[i][j];
+// //         };
+// //     };
+// //     cout<<endl;
+// //     print2DArray(arr,3,4);
+// //     cout<<endl;
+// //     char element;
+// //     cout<<"Enter the element you want to search ";
+// //     cin>>element;
+// //     cout<<endl;
+// //     bool present = linearSearch(arr,3,4,element);
+// //     if(present)
+// //     {
+// //         cout<<element<<" is present"<<endl;
+// //     }
+// //     else
+// //     {
+// //         cout<<element<<" is not present"<<endl;
+// //     };
+// //     cout<<endl;
+// //     return 0;
+// // };
+
+// // ROW-WISE SUM AND COLUMN-WISE SUM
+// // #include <iostream>
+// // #include <vector>
+// // using namespace std;
+// // void print2DArray(int arr[][4], int rows, int cols)
+// // {
+// //     cout<<"printing the 2D array"<<endl;
+// //     for(int i = 0; i<rows; i++)
+// //     {
+// //         for(int j = 0; j<cols; j++)
+// //         {
+// //             cout<<arr[i][j]<<" ";
+// //         };
+// //         cout<<endl;
+// //     };
+// // };
+// // vector<int> rowWiseSum(int arr[][4], int rows, int cols){
+// //     vector<int> resultantVector;
+// //     for(int i = 0; i<rows; i++)
+// //     {
+// //         int sum = 0;
+// //         for(int j = 0; j<cols; j++)
+// //         {
+// //             sum+=arr[i][j];
+// //         };
+// //         resultantVector.push_back(sum);
+// //     };
+// //     return resultantVector;
+// // };
+// // vector<int> colWiseSum(int arr[][4], int rows, int cols){
+// //     vector<int> resultantVector;
+// //     for(int i = 0; i<cols; i++)
+// //     {
+// //         int sum = 0;
+// //         for(int j = 0; j<rows; j++)
+// //         {
+// //             sum+=arr[j][i];
+// //         };
+// //         resultantVector.push_back(sum);
+// //     };
+// //     return resultantVector;
+// // };
+// // int main()
+// // {
+// //     int arr[3][4];
+// //     cout<<endl;
+// //     cout<<"Enter the elements: ";
+// //     for(int i = 0; i<3; i++)
+// //     {
+// //         for(int j = 0; j<4; j++)
+// //         {
+// //             cin>>arr[i][j];
+// //         };
+// //     };
+// //     cout<<endl;
+// //     print2DArray(arr,3,4);
+// //     cout<<endl;
+// //     vector<int> rowSum = rowWiseSum(arr,3,4);
+// //     cout<<"row wise sum is: ";
+// //     for(int i = 0; i<rowSum.size(); i++)
+// //     {
+// //         cout<<rowSum[i]<<" ";
+// //     };
+// //     cout<<endl;
+// //     vector<int> colSum = colWiseSum(arr,3,4);
+// //     cout<<"col wise sum is: ";
+// //     for(int i = 0; i<colSum.size(); i++)
+// //     {
+// //         cout<<colSum[i]<<" ";
+// //     };
+// //     cout<<endl;
+// //     cout<<endl;
+// //     return 0;
+// // };
+
+// // LARGEST ROW SUM AND LARGEST COLUMN SUM
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// void print2DArray(int arr[][4], int rows, int cols)
+// {
+//     cout<<"printing the 2D array"<<endl;
+//     for(int i = 0; i<rows; i++)
+//     {
+//         for(int j = 0; j<cols; j++)
+//         {
+//             cout<<arr[i][j]<<" ";
+//         };
+//         cout<<endl;
+//     };
+// };
+// pair<int,int> largestRowSum(int arr[][4], int rows, int cols){
+//     pair<int,int> resultantPair;
+//     int minSum = INT32_MIN;
+//     int minRow = -1;
+//     for(int i = 0; i<rows; i++)
+//     {
+//         int sum = 0;
+//         for(int j = 0; j<cols; j++)
+//         {
+//             cout<<arr[i][j]<<" ";
+//             sum+=arr[i][j];
+//         };
+//         cout<<endl;
+//         if(sum>minSum)
+//         {
+//             minRow = i;
+//             minSum = sum;
+//         };
+//     };
+//     resultantPair.first = minRow;
+//     resultantPair.second = minSum;
+//     return resultantPair;
+// };
+// pair<int,int> largestColSum(int arr[][4], int rows, int cols){
+//     pair<int,int> resultantPair;
+//     int minSum = INT32_MIN;
+//     int minCol = -1;
+//     for(int i = 0; i<cols; i++)
+//     {
+//         int sum = 0;
+//         for(int j = 0; j<rows; j++)
+//         {
+//             cout<<arr[j][i]<<" ";
+//             sum+=arr[j][i];
+//         };
+//         cout<<endl;
+//         if(sum>minSum)
+//         {
+//             minCol = i;
+//             minSum = sum;
+//         };
+//     };
+//     resultantPair.first = minCol;
+//     resultantPair.second = minSum;
+//     return resultantPair;
+// };
+// int main()
+// {
+//     int arr[3][4];
+//     cout<<endl;
+//     cout<<"Enter the elements: ";
+//     for(int i = 0; i<3; i++)
+//     {
+//         for(int j = 0; j<4; j++)
+//         {
+//             cin>>arr[i][j];
+//         };
+//     };
+//     cout<<endl;
+//     pair<int,int> largestRowSumPair = largestRowSum(arr,3,4);
+//     cout<<endl;
+//     cout<<largestRowSumPair.first<<" row has largest sum which is equal to "<<largestRowSumPair.second<<endl;
+//     cout<<endl;
+//     pair<int,int> largestColSumPair = largestColSum(arr,3,4);
+//     cout<<endl;
+//     cout<<largestColSumPair.first<<" col has largest sum which is equal to "<<largestColSumPair.second<<endl;
+//     cout<<endl;
+//     return 0;
+// };
 
 // HOMEWORK
 // TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
