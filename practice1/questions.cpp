@@ -53,7 +53,7 @@
 //     return 0;
 // };
 
-// 3) reverse-integer (done) ✅ (leetcode)
+// 3) ✅🧮 reverse-integer (done) (leetcode)
 // https://leetcode.com/problems/reverse-integer/description/
 // #include <iostream>
 // using namespace std;
@@ -79,7 +79,7 @@
 //     return 0;
 // };
 
-// 4) complement-of-base-10-integer (done) ✅ (leetcode)
+// 4) ✅ complement-of-base-10-integer (done) (leetcode)
 // https://leetcode.com/problems/complement-of-base-10-integer/
 // #include <iostream>
 // using namespace std;
@@ -106,7 +106,7 @@
 //     return 0;
 // };
 
-// 5) find-unique (done) ✅ (codestudio)
+// 5) ✅ find-unique (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/find-unique_625159
 // one way (better solution) (using xor)
 // #include <iostream>
@@ -204,7 +204,7 @@
 //     return 0;
 // };
 
-// XAMPLE) SWAP ALTERNATE ✅
+// x) ✅  SWAP ALTERNATE 
 // #include <iostream>
 // using namespace std;
 // void swapAlternate(int arr[], int size)
@@ -284,7 +284,7 @@
 //     return 0;
 // };
 
-// 7) duplicate-in-array (done) ✅ (codestudio)
+// 7) ✅ duplicate-in-array (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/duplicate-in-array_893397
 // one way (using xor)
 // #include <iostream>
@@ -345,7 +345,7 @@
 //     return 0;
 // };
 
-// FORGOT) triplets-with-given-sum (TLE) (codestudio)
+// x) triplets-with-given-sum (TLE) (codestudio)
 // https://www.codingninjas.com/studio/problems/triplets-with-given-sum_893028
 // #include <iostream>
 // #include <algorithm>
@@ -446,7 +446,7 @@
 //     return 0;
 // };
 
-// 9) intersection-of-2-arrays (done) ✅ (codestudio)
+// 9) ✅ intersection-of-2-arrays (done)  (codestudio)
 // https://www.codingninjas.com/studio/problems/intersection-of-2-arrays_1082149
 // #include <iostream>
 // #include <algorithm>
@@ -480,7 +480,7 @@
 //     return resVector;
 // }
 
-// 10) pair-sum (done) ✅ (codestudio)
+// 10) ✅ pair-sum (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/pair-sum_697295
 // #include <iostream>
 // #include <vector>
@@ -610,7 +610,7 @@
 //     };
 // };
 
-// 12) sort-0-1-2 (done) ✅ (codestudio)
+// 12) ✅ sort-0-1-2 (done)  (codestudio)
 // https://www.codingninjas.com/studio/problems/sort-0-1-2_631055
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -666,7 +666,7 @@
 //     };
 // }
 
-// FORGOT) sort-0-1 ✅ (codestudio)
+// x) ✅ sort-0-1 (codestudio)
 // https://www.codingninjas.com/studio/problems/sort-0-1_624379?leftPanelTabValue=PROBLEM
 // #include<iostream>
 // #include<vector>
@@ -729,7 +729,7 @@
 //     };
 // };
 
-// 13) first-and-last-position-of-an-element-in-sorted-array (done) ✅ (codestudio)
+// 13) ✅ first-and-last-position-of-an-element-in-sorted-array (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549
 // #include <iostream>
 // #include <vector>
@@ -800,7 +800,7 @@
 //     return 0;
 // };
 
-// 14) TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY ✅ 
+// 14) ✅ TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY 
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -874,7 +874,7 @@
 //     return 0;
 // };
 
-// 15) peak-index-in-a-mountain-array (done) ✅ (leetcode)
+// 15) ✅ peak-index-in-a-mountain-array (done) (leetcode)
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/
 // APPROACH 1 (my approach)
 // #include <iostream>
@@ -949,7 +949,7 @@
 //     cout<<peakIndexInMountainArray(vect)<<endl;
 // };
 
-// XAMPLE) PIVOTE IN A ROTATED SORTED ARRAY
+// x) ✅ PIVOTE IN A ROTATED SORTED ARRAY
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -987,7 +987,7 @@
 //     cout << pivot(vect) << endl;
 // };
 
-// 16) search-in-rotated-sorted-array (TLE) (codestudio)
+// 16) ✅ search-in-rotated-sorted-array (PARTIALLY ACCEPTED) (all solutions are partially accepted) (codestudio)
 // https://www.codingninjas.com/studio/problems/search-in-rotated-sorted-array_1082554?leftPanelTabValue=PROBLEM
 // #include <iostream>
 // #include <vector>
@@ -1068,7 +1068,7 @@
 //     cout<<search(vect, vect.size(), 7) << endl;
 // };
 
-// 17) square-root-of-a-number (TLE) (leetcode)
+// 17) ✅ square-root-of-a-number (TLE for binary search method) (no TLE for linear search method) (codestudio)
 // https://www.codingninjas.com/studio/problems/square-root-integral_893351
 // #include <iostream>
 // #include <vector>
@@ -1187,7 +1187,7 @@
 //     return 0;
 // };
 
-// 18) selection-sort (done) ✅ (codestudio)
+// 18) ✅ selection-sort (done) (codestudio)
 // "Iteratively select the minimum element and place it at the beginning of the unsorted portion by swapping."
 // after each step the smallest element in the unsorted part of the array goes to it's correct position
 // https://www.codingninjas.com/studio/problems/selection-sort_624469?leftPanelTabValue=SUBMISSION
@@ -1233,7 +1233,7 @@
 //     return 0;
 // };
 
-// 19) bubble-sort (done) ✅ (codestudio)
+// 19) ✅ bubble-sort (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/bubble-sort_980524
 // #include <iostream>
 // #include <vector>
@@ -1272,7 +1272,7 @@
 //     return 0;
 // };
 
-// 20) insertion-sort (done) ✅ (codestudio)
+// 20) ✅ insertion-sort (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/insertion-sort_3155179?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2&leftPanelTabValue=SUBMISSION
 // #include <iostream>
 // #include <vector>
@@ -1300,7 +1300,7 @@
 //     }
 // }
 
-// 21) reverse-the-array (done) ✅ (codestudio)
+// 21) ✅ reverse-the-array (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/reverse-the-array_1262298
 // #include<iostream>
 // #include<vector>
@@ -1332,7 +1332,7 @@
 //     cout<<endl;
 // };
 
-// 22) merge-sorted-array (done) ✅ (leetcode)
+// 22) ✅ merge-sorted-array (done) (leetcode)
 // https://leetcode.com/problems/merge-sorted-array/
 // #include <iostream>
 // #include <vector>
@@ -1615,7 +1615,7 @@
 //     };
 // };
 
-// 24) FAST EXPONENTIATE ✅ 
+// 24) ✅ FAST EXPONENTIATE  
 // FAST EXPONENTIATION
 // a^b  = (a^(b/2))^2 if b is even
 // a^b = (a^((b-1)/2))^2 * a if b is odd
@@ -1673,7 +1673,7 @@
 //     cout<<"method2 result "<<" = "<<method2(a,n)<<endl;
 // }
 
-// 25) FIND GCD USING EUCLID'S ALGORITHM ✅ 
+// 25) ✅ FIND GCD USING EUCLID'S ALGORITHM  
 // gcd(a,b) = gcd(a-b,b);
 // lcm(a,b) * gcd(a,b) = a*b;
 // #include <iostream>
@@ -1751,7 +1751,7 @@
 //     return 0;
 // };
 
-// 26) CHECK IF PRIME USING SIEVE OF ERATOSTHENES ✅ 
+// 26) ✅ CHECK IF PRIME USING SIEVE OF ERATOSTHENES  
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1786,7 +1786,7 @@
 // 27) MODULAR EXPONENTIATION (DOUBT)
 // https://www.codingninjas.com/studio/problems/modular-exponentiation_1082146
 
-// 28) LENGTH OF A STRING ✅ 
+// 28) ✅ LENGTH OF A STRING  
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1813,7 +1813,7 @@
 //     cout<<getLength(name)<<endl;
 // };
 
-// 29) REVERSE A STRING ✅ 
+// 29) ✅ REVERSE A STRING  
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1930,7 +1930,7 @@
 // 35) remove-all-occurrences-of-a-substring (done) (leetcode)
 // https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
 
-// 36) print-like-a-wave (done) (codingstudio)
+// 36) print-like-a-wave (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/print-like-a-wave_893268
 // #include <iostream>
 // #include <vector>
@@ -1976,3 +1976,63 @@
 //     cout<<endl;
 //     return 0;
 // }
+
+// 37) allocate-books (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/allocate-books_1090540?leftPanelTabValue=PROBLEM
+// bool allowed(int midElem, vector<int> &arr, int n, int m)
+// {
+//     // cout<<"allowed function called"<<endl;
+//     int studentCount = 1;
+//     int pageSum = 0;
+//     for(int i = 0; i<n; i++)
+//     {
+//         if(pageSum+arr[i]<=midElem)
+//         {
+//             pageSum+=arr[i];
+//         }
+//         else
+//         {
+//             studentCount++;
+//             if((studentCount>m) || (arr[i]>midElem))
+//             {
+//                 return false;
+//             };
+//             pageSum = arr[i];
+//         };
+//     };
+//     return true;
+// };
+// int findPages(vector<int> &arr, int n, int m)
+// {
+//     if(m>n)
+//     {
+//         return -1;
+//     };
+//     int totalSum = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         totalSum += arr[i];
+//     };
+//     int start = 0;
+//     int end = totalSum;
+//     int answer;
+//     int count = 0;
+//     while (start <= end)
+//     {
+//         count++;
+//         int midElem = start + (end - start) / 2;
+//         if (allowed(midElem, arr, n, m))
+//         {
+//             answer = midElem;
+//             end = midElem - 1;
+//         }
+//         else
+//         {
+//             start = midElem + 1;
+//         };
+//     };
+//     return answer;
+// };
+
+// 38) painter-s-partition-problem (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/painter-s-partition-problem_1089557

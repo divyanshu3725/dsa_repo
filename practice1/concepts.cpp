@@ -1028,29 +1028,30 @@
 // TC calculate karte wakt vector ke size ko nahi dekhne ka
 // SC calculate karte wakt for ke limit ko nahi dekhne ka
 
-// ARRAYS
+// ✅ ARRAYS
 // arrays in c++ can store only similar type of items
 // elements in an array are stored in contagious memory locations
 // #include <iostream>
 // using namespace std;
 // int main()
 // {
-//     // char arr[5] = {'a','b','c','d','e'};
+//     // char arr[6] = {'a','b','c','d','e'};
 //     // or
-//     // char arr[] = {'a','b','c','d','e'};
 //     // cout<<"value at address "<<"arr"<<" ("<<arr<<")"<<" is "<<*(arr)<<endl;
 //     // cout<<"value at address "<<"arr+1"<<" ("<<arr+1<<")"<<" is "<<*(arr+1)<<endl;
 //     // cout<<"value at address "<<"arr+2"<<" ("<<arr+2<<")"<<" is "<<*(arr+2)<<endl;
 //     // cout<<"value at address "<<"arr+3"<<" ("<<arr+3<<")"<<" is "<<*(arr+3)<<endl;
 //     // cout<<"value at address "<<"arr+4"<<" ("<<arr+4<<")"<<" is "<<*(arr+4)<<endl;
-//     // return 0;
 //     char arr[3] = {'a'};
 //     cout<<arr[0]<<endl;
 //     cout<<arr[1]<<endl;
 //     cout<<arr[2]<<endl;
+//     return 0;
 // };
 
-// ARRAY UTILITY FUNCTIONS
+// ✅ ARRAY UTILITY FUNCTIONS
+
+// ✅ PRINT ARRAY
 // #include <iostream>
 // using namespace std;
 // void printArray(int arr[], int n)
@@ -1061,6 +1062,8 @@
 //     };
 //     cout<<endl;
 // };
+
+// ✅ MAXELEMENT
 // int maxElement(int arr[], int n)
 // {
 //     int maxElem = INT32_MIN;
@@ -1073,6 +1076,8 @@
 //     };
 //     return maxElem;
 // };
+
+// ✅ MINELEMENT
 // int minElement(int arr[], int n)
 // {
 //     int minElem = INT32_MAX;
@@ -1085,6 +1090,8 @@
 //     };
 //     return minElem;
 // };
+
+// ✅ INPUTARRAYELEMENTS
 // void inputArrayElement(int arr[], int n)
 // {
 //     for(int i = 0; i<n; i++)
@@ -1092,6 +1099,8 @@
 //         cin>>arr[i];
 //     }
 // };
+
+// ✅ SUMOFELEMENTS
 // int sumOfElements(int arr[], int n)
 // {
 //     int sum = 0;
@@ -1101,6 +1110,8 @@
 //     };
 //     return sum;
 // }
+
+// ✅ REVERSE ARRAY BRUTEFORCE
 // void reverseArray1(int arr[], int n)
 // {
 //     int limit = n/2;
@@ -1111,6 +1122,8 @@
 //         arr[n-i-1] = temp;
 //     };
 // };
+
+// ✅ REVERSE ARRAY OPTIIZED
 // void reverseArray2(int arr[], int n)
 // {
 //     int start = 0;
@@ -1123,7 +1136,7 @@
 //     };
 // };
 
-// INBUILT FUNCTIONS:
+// ✅ INBUILT FUNCTIONS:
 // MIN_ELEMENT and MAX_ELEMENT (belong to the algorithm header file)
 // #include <iostream>
 // #include <algorithm>
@@ -1137,7 +1150,7 @@
 //     return 0;
 // };
 
-// MAX and MIN functions
+// ✅ MAX and MIN functions
 // #include <iostream>
 // #include <algorithm>
 // using namespace std;
@@ -1147,15 +1160,15 @@
 //     cout<<min(1,2)<<endl;
 // };
 
-// INSIDER INFORMATION ABOUT ARRAYS
+// ✅ INSIDER INFORMATION ABOUT ARRAYS
 // if array has 5 elements, but we have initialized only 3 values, then accessing the 4th of 5th element of an array using cout<<arr[4]<<endl; will print garbage value
 // but if we pass this array to the printArray function, then 0s are printed
 
-// WHY DO WE NEED TO PASS SIZE OF ARRAY EXPLICTLY
+// ✅ WHY DO WE NEED TO PASS SIZE OF ARRAY EXPLICTLY
 // because amount of space alloted to an array might be larger than the space used
 // while printing the array we need to specify the amount of space used by the array and not the amount of space alloted to the array
 
-// VARIABLES ARE PASSED BY VALUE, BUT ARRAYS ARE PASSED BY REFERENCE
+// ✅ VARIABLES ARE PASSED BY VALUE, BUT ARRAYS ARE PASSED BY REFERENCE
 
 // ✅ LINEAR SEARCH 
 // has TC O(n)
@@ -1215,7 +1228,7 @@
 // so we need to use s + (e-s)/2
 // for binary search TC is logN (base 2)
 
-// SELECTION SORT
+// ✅ SELECTION SORT
 // in selection sort we select the smallest element and send them to their original position
 // #include <iostream>
 // #include <vector>
@@ -1261,7 +1274,7 @@
 // USE CASES
 // - use it for sorting arrays and vector of small size
 
-// BUBBLE SORT
+// ✅ BUBBLE SORT
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1318,7 +1331,7 @@
 // we will be running n-1 times so O(n) will be the complexity for best case scenario
 // USE CASES
 
-// INSERTION SORT
+// ✅ INSERTION SORT
 // EXAMPLE
 // 11 1 7 4 8 2 10
 // 1 11 7 4 8 2 10
@@ -1412,79 +1425,193 @@
 //     return 0;
 // };
 
-// STL VECTOR
+// ✅ STL VECTOR
 // needs the vector header file
 // VECTOR IS DYNAMIC
 // it's size can be reduced and increased
 // if we try to store more elements than the size it can hold
 // it will make a new vector of double size
-// copy the element of this vector into the new vector
-// and the new element will be added to the new vector
+// then the contents of the older vector (whose size wasn't sufficient to hold another element) will be copied inside the new vector
+// and then the new element will be added to the new vector
+// time complexity for accessing an element is O(1)
+
+// ✅ CAPACITY FUNCTION (STL VECTOR)
+// for finding the space occupied by a function
 // #include <iostream>
 // #include <vector>
 // using namespace std;
 // int main()
 // {
-//     // vector<int> vect;
-//     // CAPACITY FUNCTION
-//     // tells us how much space has been assigned to the vector
-//     // cout<<"capacity of vect is "<<vect.capacity()<<endl;
-//     // vect.push_back(1);
-//     // cout<<"capacity of vect is "<<vect.capacity()<<endl;
-//     // vect.push_back(2);
-//     // cout<<"capacity of vect is "<<vect.capacity()<<endl;
-//     // vect.push_back(3);
-//     // cout<<"capacity of vect is "<<vect.capacity()<<endl;
-//     // SIZE FUNCION
-//     // tells us how many elements has been stored in the vector
-//     // cout<<"size of vect is "<<vect.size()<<endl;
-//     // FRONT AND BACK OPERATION
-//     // vect.push_back(1);
-//     // vect.push_back(2);
-//     // vect.push_back(3);
-//     // cout<<vect.front()<<endl;
-//     // cout<<vect.back()<<endl;
-//     // POP BACK OPERATION
-//     // drops the last element
-//     // vect.push_back(1);
-//     // vect.push_back(2);
-//     // vect.push_back(3);
-//     // cout<<vect.size()<<endl;
-//     // vect.pop_back();
-//     // cout<<vect.size()<<endl;
-//     // CLEAR FUNCTION
-//     // size is set to 0
-//     // capacity remains the same
-//     // vect.push_back(1);
-//     // vect.push_back(2);
-//     // vect.push_back(3);
-//     // cout<<"size is "<<vect.size()<<endl;
-//     // cout<<"capacity is "<<vect.capacity()<<endl;
-//     // vect.clear();
-//     // cout<<"size is "<<vect.size()<<endl;
-//     // cout<<"capacity is "<<vect.capacity()<<endl;
-//     // BEGIN AND END ITERATORS
-//     // vect.push_back(1);
-//     // vect.push_back(2);
-//     // vect.push_back(3);
-//     // cout<<"begin iterator is "<<*(vect.begin())<<endl;
-//     // cout<<"end iterator is "<<*(vect.end()-1)<<endl;
-//     // TIME COMPLEXITY FOR ACCESSING AN ELEMENT IS O(1)
-//     // INITIALIZING A VECTOR WITH ALL ELEMENT SET TO 2
-//     // vector<int> vect(5,1);
-//     // for(int i = 0; i<vect.size(); i++)
-//     // {
-//     //     cout<<vect[i]<<" ";
-//     // };
-//     // cout<<endl;
-//     // COPYING A VECTOR INTO ANOTHER VECTOR
-//     // vector<int> vect = {1,2,3,4};
-//     // vector<int> vect2(vect);
-//     // for(int i = 0; i<vect2.size(); i++)
-//     // {
-//     //     cout<<vect2[i]<<" ";
-//     // };
-//     // cout<<endl;
+//     vector<int> vect;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(1);
+//     cout<<"after pushing 1"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(2);
+//     cout<<"after pushing 2"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(3);
+//     cout<<"after pushing 3"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(4);
+//     cout<<"after pushing 4"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(5);
+//     cout<<"after pushing 5"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(6);
+//     cout<<"after pushing 6"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(7);
+//     cout<<"after pushing 7"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(8);
+//     cout<<"after pushing 8"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     vect.push_back(9);
+//     cout<<"after pushing 9"<<endl;
+//     cout<<vect.capacity()<<endl;
+//     return 0;
+// };
+
+// ✅ SIZE FUNCTION (STL VECTOR)
+// for finding the size of a function
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int> vect = {1,2,3,4};
+//     cout<<vect.size()<<endl;
+//     return 0;
+// };
+
+// ✅ PUSH_BACK FUNCTION(STL VECTOR)
+// for inserting a new element at the end of a vector
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int> vect = {1,2,3,4};
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     vect.push_back(9);
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     return 0;
+// };
+
+// ✅ FRONT & BACK FUNCTIONS (STL VECTOR)
+// for getting the first and last element
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int> vect = {1,2,3,4};
+//     cout<<vect.front()<<endl;
+//     cout<<vect.back()<<endl;
+//     return 0;
+// };
+
+// ✅ POP_BACK FUNCTION (STL VECTOR)
+// for dropping the last element
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int> vect = {1,2,3,4};
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     vect.pop_back();
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     return 0;
+// };
+
+// ✅ CLEAR FUNCTION (STL VECTOR)
+// for clearing a vector
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int> vect = {1,2,3,4};
+//     cout<<"capacity is "<<vect.capacity()<<endl;
+//     cout<<"size is "<<vect.size()<<endl;
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     vect.clear();
+//     cout<<"capacity is "<<vect.capacity()<<endl;
+//     cout<<"size is "<<vect.size()<<endl;
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     return 0;
+// };
+
+// ✅ BEGIN AND END ITERATORS (STL VECTOR)
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int> vect = {1,2,3,4};
+//     auto beginIter = vect.begin();
+//     auto endIter = vect.end();
+//     cout<<"begin iterator points to "<<*(beginIter)<<endl;
+//     cout<<"end iterator points to "<<*(endIter)<<endl;
+//     cout<<"end iterator - 1 points to "<<*(endIter-1)<<endl;
+//     return 0;
+// };
+
+// ✅ INITIALIZING A VECTOR IN WHICH ALL THE ELEMENTS ARE SET TO n (STL VECTOR)
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int> vect(5,2);
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     cout<<endl;
+//     return 0;
+// };
+
+// ✅ COPYING A VECTOR INTO ANOTHER VECTOR
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// int main()
+// {
+//     vector<int> vect1 = {1,2,3,4};
+//     vector<int> vect2(vect1);
+//     for(int i = 0; i<vect2.size(); i++)
+//     {
+//         cout<<vect2[i]<<" ";
+//     };
+//     cout<<endl;
 //     return 0;
 // };
 
@@ -1696,12 +1823,6 @@
 //     cout<<"is it empty "<<q.empty()<<endl;
 //     return 0;
 // };
-
-// RESEARCH TO BE DONE
-// about the auto keyword
-
-// PROBLEMS TO BE SORTED OUT
-// slow compilation of c++ code
 
 // MATHS FOR DSA
 
@@ -2886,45 +3007,45 @@
 //  // in the memory the 2D array is being stored as a linear array only
 
 // // TAKING INPUT FOR 2D ARRAY ELEMENT AND PRINTING THE ELEMENTS
-// // #include <iostream>
-// // using namespace std;
-// // int main()
-// // {
-// //     int m;
-// //     int n;
-// //     cout<<"Enter the value of m and n: ";
-// //     cin>>m>>n;
-// //     cout<<"m is "<<m<<endl;
-// //     cout<<"n is "<<n<<endl;
-// //     char arr[m][n];
-// //     cout<<"Now Enter the Elements: "<<endl;
-// //     // ROW WISE INPUT
-// //     // for(int i = 0; i<m; i++)
-// //     // {
-// //     //     for(int j = 0; j<n; j++)
-// //     //     {
-// //     //         cin>>arr[i][j]; 
-// //     //     };
-// //     // };
-// //     // COLUMN WISE INPUT
-// //     for(int i = 0; i<n; i++)
-// //     {
-// //         for(int j = 0; j<m; j++)
-// //         {
-// //             cin>>arr[j][i]; 
-// //         };
-// //     };
-// //     cout<<"printing the element: "<<endl;
-// //     for(int i = 0; i<m; i++)
-// //     {
-// //         for(int j = 0; j<n; j++)
-// //         {
-// //             cout<<arr[i][j]<<" ";
-// //         };
-// //         cout<<endl;
-// //     };
-// //     return 0;
-// // };
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int m;
+//     int n;
+//     cout<<"Enter the value of m and n: ";
+//     cin>>m>>n;
+//     cout<<"m is "<<m<<endl;
+//     cout<<"n is "<<n<<endl;
+//     char arr[m][n];
+//     cout<<"Now Enter the Elements: "<<endl;
+//     // ROW WISE INPUT
+//     // for(int i = 0; i<m; i++)
+//     // {
+//     //     for(int j = 0; j<n; j++)
+//     //     {
+//     //         cin>>arr[i][j]; 
+//     //     };
+//     // };
+//     // COLUMN WISE INPUT
+//     for(int j = 0; j<n; j++)
+//     {
+//         for(int i = 0; i<m; i++)
+//         {
+//             cin>>arr[i][j]; 
+//         };
+//     };
+//     cout<<"printing the element: "<<endl;
+//     for(int i = 0; i<m; i++)
+//     {
+//         for(int j = 0; j<n; j++)
+//         {
+//             cout<<arr[i][j]<<" ";
+//         };
+//         cout<<endl;
+//     };
+//     return 0;
+// };
 
 // // INTIALIZING A 2D ARRAY
 // // #include <iostream>
@@ -3040,12 +3161,12 @@
 // // };
 // // vector<int> colWiseSum(int arr[][4], int rows, int cols){
 // //     vector<int> resultantVector;
-// //     for(int i = 0; i<cols; i++)
+// //     for(int j = 0; j<cols; j++)
 // //     {
 // //         int sum = 0;
-// //         for(int j = 0; j<rows; j++)
+// //         for(int i = 0; i<rows; i++)
 // //         {
-// //             sum+=arr[j][i];
+// //             sum+=arr[i][j];
 // //         };
 // //         resultantVector.push_back(sum);
 // //     };
@@ -3127,13 +3248,13 @@
 //     pair<int,int> resultantPair;
 //     int minSum = INT32_MIN;
 //     int minCol = -1;
-//     for(int i = 0; i<cols; i++)
+//     for(int j = 0; j<cols; j++)
 //     {
 //         int sum = 0;
-//         for(int j = 0; j<rows; j++)
+//         for(int i = 0; i<rows; i++)
 //         {
-//             cout<<arr[j][i]<<" ";
-//             sum+=arr[j][i];
+//             cout<<arr[i][j]<<" ";
+//             sum+=arr[i][j];
 //         };
 //         cout<<endl;
 //         if(sum>minSum)
@@ -3170,6 +3291,9 @@
 //     return 0;
 // };
 
+// RESEARCH TO BE DONE
+// about the auto keyword
+
 // HOMEWORK
 // TASK (INITIALIZE AN ARRAY OF SIZE N WITH EVERY ELEMENT AS x)
 // STABLE AND UNSTABLE ALGORITHMS (FOR BUBBLE AND SELECTION)
@@ -3183,3 +3307,6 @@
 
 // REFERENCES
 // https://www.cplusplus.com
+
+// PROBLEMS TO BE SORTED OUT
+// slow compilation of c++ code
