@@ -55,6 +55,7 @@
 
 // 3) ✅🧮 reverse-integer (done) (leetcode)
 // https://leetcode.com/problems/reverse-integer/description/
+// time O(n) (because the number of iterations the loop will go through depends upon the number of digits in it actually n/10)
 // #include <iostream>
 // using namespace std;
 // int reverse(int x) {
@@ -79,8 +80,10 @@
 //     return 0;
 // };
 
-// 4) ✅ complement-of-base-10-integer (done) (leetcode)
+// 4) ✅🧮 complement-of-base-10-integer (done) (leetcode)
 // https://leetcode.com/problems/complement-of-base-10-integer/
+// time O(log n) for the method below  
+// space O(1)
 // #include <iostream>
 // using namespace std;
 // int bitwiseComplement(int n) {
@@ -106,7 +109,9 @@
 //     return 0;
 // };
 
-// 5) ✅ find-unique (done) (codestudio)
+// 5) ✅🧮 find-unique (done) (codestudio)
+// time O(n)
+// spance O(1)
 // https://www.codingninjas.com/studio/problems/find-unique_625159
 // one way (better solution) (using xor)
 // #include <iostream>
@@ -204,7 +209,9 @@
 //     return 0;
 // };
 
-// x) ✅  SWAP ALTERNATE 
+// x) ✅🧮 SWAP ALTERNATE
+// time is O(n)
+// space is O(1) 
 // #include <iostream>
 // using namespace std;
 // void swapAlternate(int arr[], int size)
@@ -284,7 +291,9 @@
 //     return 0;
 // };
 
-// 7) ✅ duplicate-in-array (done) (codestudio)
+// 7) ✅🧮duplicate-in-array (done) (codestudio)
+// time is O(n) 
+// space is O(1)
 // https://www.codingninjas.com/studio/problems/duplicate-in-array_893397
 // one way (using xor)
 // #include <iostream>

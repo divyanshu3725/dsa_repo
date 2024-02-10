@@ -1831,7 +1831,7 @@
 // n(SUM of hp of prime numbers)
 // n*log(logN)
 
-// FIND GCD USING EUCLID'S ALGORITHM)
+// ✅ FIND GCD USING EUCLID'S ALGORITHM)
 // EUCLID'S ALGORITHM
 // gcd(a,b) = gcd(a-b,b);
 // lcm(a,b) * gcd(a,b) = a*b;
@@ -1916,7 +1916,7 @@
 // (a*b)%m = a%m * b%m
 // (a*b)%m = a%m * b%m
 
-// FAST EXPONENTIATION
+// ✅ FAST EXPONENTIATION
 // a^b  = (a^(b/2))^2 if b is even
 // a^b = (a^((b-1)/2))^2 * a if b is odd
 // #include<iostream>
@@ -1976,7 +1976,7 @@
 // MODULAR EXPONENTIATION (DOUBT)
 // https://www.codingninjas.com/studio/problems/modular-exponentiation_1082146
 
-// POINTER
+// ✅ POINTER
 // int num = 5;
 // cout<<num<<endl;
 // HOW DOES NUM REFERENCE TO A PARTICULAR ADDRESS?
@@ -2094,7 +2094,7 @@
 //     return 0;
 // };
 
-// POINTERS IN ARRAY
+// ✅ POINTERS IN ARRAY
 // the name of an array references to first element of the array
 // #include <iostream>
 // using namespace std;
