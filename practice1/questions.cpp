@@ -1,58 +1,32 @@
-// 1) ✅🧮 subtract-the-product-and-sum-of-digits-of-an-integer (done) (leetcode)
+// 1) ✅🧮⚡ subtract-the-product-and-sum-of-digits-of-an-integer (done) (leetcode)
 // https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/description/
-// time O(log10(n)) (because number is being divided by 10 continuously)
-// space O(3) (because for any input only three variables are being made)
-// #include <iostream>
-// using namespace std;
-//     int subtractProductAndSum(int n) {
-//     int sum = 0;
-//     int prod = 1;
-//     while(n!=0)
-//     {
-//         int lastDigit = n%10;
-//         sum+=lastDigit;
-//         prod*=lastDigit;
-//         n=n/10;
-//     };
-//     return prod-sum;
-// };
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
-//     cout<<subtractProductAndSum(n)<<endl;
-//     return 0;
-// };
-
-// 2) ✅🧮 number-of-1-bits (done) (leetcode)
-// https://leetcode.com/problems/number-of-1-bits/
-// time O(log2(n)) (becuase loop runs as many time as many bits the binary of n has, and the bits that binary of n takes is log2(n))
-// space O(1)
-// #include <iostream>
-// using namespace std;
-// int hammingWeight(int n) {
-//     int val = 0;
-//     while (n!=0)
-//     {
-//         int lastBit = n&1;
-//         if(lastBit)
-//         {
-//             val++;
+// time complexity is O(log10(n))
+// space complextiy is O(1)
+// int subtractProductAndSum(int n) {
+//         int sum = 0;
+//         int prod = 1;
+//         while (n) {
+//             int lastDigit = n % 10;
+//             sum += lastDigit;
+//             prod *= lastDigit;
+//             n /= 10;
 //         };
-//         n>>=1;
+//         return prod - sum;
 //     };
-//     return val;
-// };
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
-//     cout<<hammingWeight(n)<<endl;
-//     return 0;
-// };
 
+// 2) ✅🧮⚡ number-of-1-bits (done) (leetcode)
+// https://leetcode.com/problems/number-of-1-bits/
+// time complexity is O(1)
+// space complexity is O(1)
+// int hammingWeight(uint32_t n) {
+//         int count = 0;
+//         while(n>0)
+//         {
+//             count += n&1;
+//             n>>=1;
+//         };
+//         return count;
+//     }
 // 3) ✅🧮 reverse-integer (done) (leetcode)
 // https://leetcode.com/problems/reverse-integer/description/
 // time O(n) (because the number of iterations the loop will go through depends upon the number of digits in it actually n/10)
@@ -80,38 +54,29 @@
 //     return 0;
 // };
 
-// 4) ✅🧮 complement-of-base-10-integer (done) (leetcode)
+// 4) ✅🧮⚡ complement-of-base-10-integer (done) (leetcode)
 // https://leetcode.com/problems/complement-of-base-10-integer/
-// time O(log n) for the method below  
-// space O(1)
-// #include <iostream>
-// using namespace std;
-// int bitwiseComplement(int n) {
-//     if(n==0)
+// time complexity is O(1)
+// space complexity is O(1)
+// int bitwiseComplement(int n)
+// {
+//     if (n == 0)
 //     {
 //         return 1;
 //     }
 //     int m = n;
 //     int mask = 0;
-//     while(m!=0)
+//     while (m != 0)
 //     {
-//         mask = (mask<<1) | 1;
-//         m>>=1;
+//         mask = (mask << 1) | 1;
+//         m >>= 1;
 //     };
-//     return mask&(~n);
-// };
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
-//     cout<<bitwiseComplement(n)<<endl;
-//     return 0;
-// };
+//     return (~n) & mask;
+// }
 
-// 5) ✅🧮 find-unique (done) (codestudio)
-// time O(n)
-// spance O(1)
+// 5) ✅🧮⚡ find-unique (done) (codestudio)
+// time complexity O(n)
+// spance complexity O(1)
 // https://www.codingninjas.com/studio/problems/find-unique_625159
 // one way (better solution) (using xor)
 // #include <iostream>
@@ -125,93 +90,10 @@
 //     };
 //     return result;
 // };
-// int main()
-// {
-//     int arr[5] = {1,2,1,3,2};
-//     cout<<findUnique(arr,5)<<endl;
-//     return 0;
-// };
-// second way (using vector)
-// #include <iostream>
-// #include <vector>
-// #include <algorithm>
-// using namespace std;
-// int findUnique(int *arr, int size)
-// {
-//     int result = 0;
-//     vector<int> vect;
-//     for (int i = 0; i < size; i++)
-//     {
-//         int elem = arr[i];
-//         bool found = false;
-//         for (int j = i + 1; j < size; j++)
-//         {
-//             if (arr[j] == elem)
-//             {
-//                 found = true;
-//             };
-//         };
-//         if (found)
-//         {
-//             vect.push_back(-(elem));
-//         }
-//         else
-//         {
-//             vect.push_back(elem);
-//         }
-//     };
-//     for (int i = 0; i < vect.size(); i++)
-//     {
-//         result += vect[i];
-//     };
-//     return result;
-// }
-// int main()
-// {
-//     int arr[] = {1, 2, 1, 2, 11, 4 ,4};
-//     int size = sizeof(arr) / sizeof(arr[0]);
-//     cout << findUnique(arr, size) << endl;
-//     return 0;
-// };
-// third ways (without using vector) (without using xor)
-// #include <iostream>
-// using namespace std;
-// int findUnique(int *arr, int size)
-// {
-//     int result = 0;
-//     for (int i = 0; i < size; i++)
-//     {
-//         int elem = arr[i];
-//         bool found = false;
-//         for (int j = i + 1; j < size; j++)
-//         {
-//             if (arr[j] == elem)
-//             {
-//                 found = true;
-//             };
-//         };
-//         if (found)
-//         {
-//             arr[i] = -arr[i];
-//         };
-//     };
-//     for (int i = 0; i < size; i++)
-//     {
-//         result += arr[i];
-//     };
-//     return result;
-// }
-// int main()
-// {
-//     int arr[] = {1, 2, 1, 2, 11, 4 ,4};
-//     int size = sizeof(arr) / sizeof(arr[0]);
-//     cout << findUnique(arr, size) << endl;
-//     return 0;
-// };
 
 // x) ✅🧮 SWAP ALTERNATE
 // time is O(n)
-// space is O(1) 
+// space is O(1)
 // #include <iostream>
 // using namespace std;
 // void swapAlternate(int arr[], int size)
@@ -292,7 +174,7 @@
 // };
 
 // 7) ✅🧮duplicate-in-array (done) (codestudio)
-// time is O(n) 
+// time is O(n)
 // space is O(1)
 // https://www.codingninjas.com/studio/problems/duplicate-in-array_893397
 // one way (using xor)
@@ -489,7 +371,7 @@
 //     return resVector;
 // }
 
-// 10) ✅ pair-sum (done) (codestudio)
+// 10) ✅🧮 pair-sum (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/pair-sum_697295
 // #include <iostream>
 // #include <vector>
@@ -619,7 +501,7 @@
 //     };
 // };
 
-// 12) ✅ sort-0-1-2 (done)  (codestudio)
+// 12) sort-0-1-2 (done)  (codestudio)
 // https://www.codingninjas.com/studio/problems/sort-0-1-2_631055
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -809,7 +691,7 @@
 //     return 0;
 // };
 
-// 14) ✅ TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY 
+// 14) ✅ TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1624,7 +1506,7 @@
 //     };
 // };
 
-// 24) ✅ FAST EXPONENTIATE  
+// 24) ✅ FAST EXPONENTIATE
 // FAST EXPONENTIATION
 // a^b  = (a^(b/2))^2 if b is even
 // a^b = (a^((b-1)/2))^2 * a if b is odd
@@ -1682,7 +1564,7 @@
 //     cout<<"method2 result "<<" = "<<method2(a,n)<<endl;
 // }
 
-// 25) ✅ FIND GCD USING EUCLID'S ALGORITHM  
+// 25) ✅ FIND GCD USING EUCLID'S ALGORITHM
 // gcd(a,b) = gcd(a-b,b);
 // lcm(a,b) * gcd(a,b) = a*b;
 // #include <iostream>
@@ -1760,7 +1642,7 @@
 //     return 0;
 // };
 
-// 26) ✅ CHECK IF PRIME USING SIEVE OF ERATOSTHENES  
+// 26) ✅ CHECK IF PRIME USING SIEVE OF ERATOSTHENES
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1795,7 +1677,7 @@
 // 27) MODULAR EXPONENTIATION (DOUBT)
 // https://www.codingninjas.com/studio/problems/modular-exponentiation_1082146
 
-// 28) ✅ LENGTH OF A STRING  
+// 28) ✅ LENGTH OF A STRING
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1805,7 +1687,7 @@
 // {
 //     int length = 0;
 //     for(int i = 0; name[i]!='\0'; i++)
-//     {   
+//     {
 //         length++;
 //     };
 //     return length;
@@ -1822,7 +1704,7 @@
 //     cout<<getLength(name)<<endl;
 // };
 
-// 29) ✅ REVERSE A STRING  
+// 29) ✅ REVERSE A STRING
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -1863,7 +1745,7 @@
 
 // 31) check-if-the-string-is-a-palindrome (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/check-if-the-string-is-a-palindrome_1062633
-// #include <bits/stdc++.h> 
+// #include <bits/stdc++.h>
 // using namespace std;
 // bool checkPalindrome(string s)
 // {
@@ -2045,3 +1927,12 @@
 
 // 38) painter-s-partition-problem (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/painter-s-partition-problem_1089557
+
+// 39) spiral-matrix (done) (leetcode)
+// time complexity is O(n*m)
+// https://leetcode.com/problems/spiral-matrix/description/
+
+// 40) rotate-image (done) (leetcode)
+// time complexity is (n^2)
+// https://leetcode.com/problems/rotate-image/description/
+

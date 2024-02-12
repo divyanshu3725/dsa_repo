@@ -2130,26 +2130,24 @@
 // arr[i] = *(arr + i) 
 // i[arr] = *(i + arr)
 
-// DIFFERENCES BETWEEN A POINTER AND AN ARRAY
+// ✅ DIFFERENCES BETWEEN A POINTER AND AN ARRAY
 // #include <iostream>
 // using namespace std;
 // FIRST DIFFERENCE: SIZE OF 
 // int main()
 // {
 //     int arr[5] = {1,2,3,4,5};
-//     cout<<sizeof(arr)<<endl;
-//     cout<<sizeof(*arr)<<endl;
-//     cout<<sizeof(&arr)<<endl;
-//     int *ptr = &(arr[0]);
-//     cout<<sizeof(ptr)<<endl;
-//     cout<<sizeof(*ptr)<<endl;
-//     cout<<sizeof(&ptr)<<endl;
+//     cout<<sizeof(arr)<<endl; // size is 20
+//     cout<<sizeof(*arr)<<endl; // size is 4
+//     cout<<sizeof(&arr)<<endl; // size is 4
+//     int *ptr = &(arr[0]); 
+//     cout<<sizeof(ptr)<<endl; // size is 4
+//     cout<<sizeof(*ptr)<<endl; // size is 4
+//     cout<<sizeof(&ptr)<<endl; // size is 4
 //     // size of ptr is 4 , sizeof arr is 20
 //     return 0;
 // };
 // SECOND DIFFERENCE: & OPERATOR
-// #include <iostream>
-// using namespace std;
 // int main()
 // {
 //     int arr[5] = {5,4,3,2,1};
@@ -2161,8 +2159,8 @@
 //     cout<<ptr<<endl;
 //     cout<<&ptr<<endl;
 //     return 0;
-//     arr and &arr are same 
-//     ptr and &ptr are not same
+//     // arr and &arr are same 
+//     // ptr and &ptr are not same
 // };
 // THIRD DIFFERENCE
 // SYMBOL TABLE CONTENT CANNOT BE CHANGED FOR ARRAYS BUT CAN BE CHANGED FOR POINTERS
@@ -2171,27 +2169,43 @@
 // int main()
 // {
 //     int arr[5] = {1,2,3,4,5};
+//     cout<<arr<<endl;
 //     // arr = arr + 1; // this will throw eror
 //     int *ptr = &arr[0];
+//     cout<<ptr<<endl;
 //     ptr = ptr + 1;
 //     cout<<ptr<<endl;
 //     return 0;
-//     ptr = ptr + 1 is allowed
-//     arr = arr + 1 is not allowed
+//     // ptr = ptr + 1 is allowed
+//     // arr = arr + 1 is not allowed
 // };
 
-// CHAR ARRAYS
-// #include <iostream>
-// #include <vector>
-// #include <algorithm>
-// #include <cmath>
-// using namespace std;
+// ✅ CHAR ARRAYS
 // int main()
 // {
 //     char ch[6] = "abcde";
-//     cout<<ch<<endl;
-//     char *ptr = &ch[0];
+//     // cout<<&ch[0]<<endl;
+//     // cout<<&ch[1]<<endl;
+//     // cout<<&ch[2]<<endl;
+//     // cout<<&ch[3]<<endl;
+//     // cout<<&ch[4]<<endl;
+//     // cout<<ch<<endl;
+//     // cout<<ch+1<<endl;
+//     // cout<<ch+2<<endl;
+//     // cout<<ch+3<<endl;
+//     // cout<<ch+4<<endl;
+//     char *ptr = ch;
 //     cout<<ptr<<endl;
+//     char *ptr0 = &ch[0];
+//     cout<<ptr0<<endl;
+//     char *ptr1 = &ch[1];
+//     cout<<ptr1<<endl;
+//     char *ptr2 = &ch[2];
+//     cout<<ptr2<<endl;
+//     char *ptr3 = &ch[3];
+//     cout<<ptr3<<endl;
+//     char *ptr4 = &ch[4];
+//     cout<<ptr4<<endl;
 //     return 0;
 // };
 // in case of integer array arr pointed to the first element
@@ -2204,51 +2218,50 @@
 // using namespace std;
 // int main()
 // {
-//     char a = 'a';
-//     char *ptr = &a;
-//     cout<<ptr<<endl;
+//     char b = 'b';
+//     char c = 'c';
+//     char *ptr1 = &b;
+//     cout<<ptr1<<endl;
+//     char *ptr2 = &c;
+//     cout<<ptr2<<endl;
 //     return 0;
 // };
 // in this case ptr found a then some more characters and then it found null character, so it stopped
 // NEVER DO char *ptr = "abcd"
 
-// POINTERS AND FUNCTIONS
-// #include <iostream>
-// using namespace std;
-// void printFunc(int *n)
-// {
-//     cout<<*n<<endl;
-// }
-// void incrementorFunc(int *n)
-// {
-//     *n = *n + 1;
-// }
-// void updator(int *n)
-// {
-//     n = n + 1;
-// }
+// ✅ POINTERS AND FUNCTIONS
 // int main()
 // {
 //     int value = 5;
 //     int *ptr = &value;
+//     // PART1 (SILLY)
+//     // cout<<"value is "<<value<<endl;
+//     // cout<<"ptr is "<<ptr<<endl;
 //     // printFunc(ptr);
+//     // printFunc(&value);
 //     // cout<<"value is "<<value<<endl;
+//     // cout<<"ptr is "<<ptr<<endl;
+//     // PART2
+//     // cout<<"value is "<<value<<endl;
+//     // cout<<"ptr is "<<ptr<<endl;
+//     // updator(ptr);
+//     // updator(&value);
+//     // cout<<"value is "<<value<<endl;
+//     // cout<<"ptr is "<<ptr<<endl;
+//     // PART 3
+//     // cout<<"value is "<<value<<endl;
+//     // cout<<"ptr is "<<ptr<<endl;
+//     // *ptr = *ptr + 1;
 //     // incrementorFunc(ptr);
+//     // incrementorFunc(&value);
 //     // cout<<"value is "<<value<<endl;
-//     cout<<"ptr is "<<ptr<<endl;
-//     updator(ptr);
-//     cout<<"ptr is "<<ptr<<endl;
-//     // we cannot update the pointer variable ptr of main function by using a function that udpates the pointer
-//     // we can update the value stored at a pointer ptr of main function by using a function that updates the pointer values
+//     // cout<<"ptr is "<<ptr<<endl;
 //     return 0;
 // };
 
-// POINTERS AND ARRAYS
+// ✅ POINTERS AND ARRAYS
 // when we pass an array to a function, we are unknowingly passing a pointer (of the first array element to the function)
-// #include<iostream>
-// #include<algorithm>
-// #include<vector>
-// #include<cmath>
+// #include <iostream>
 // using namespace std;
 // void check1(int *arr)
 // {
@@ -2261,6 +2274,9 @@
 // int main()
 // {
 //     int arr[5] = {1,2,3,4,5};
+//     cout<<arr<<endl;
+//     cout<<&arr<<endl;
+//     cout<<&arr[0]<<endl;
 //     check1(arr);
 //     check2(arr);
 //     return 0;
@@ -2288,7 +2304,7 @@
 //     return 0;
 // };
 
-// MACROS
+// ✅ MACROS
 // we define macros using #define
 // a macro is a piece of code in a program that is replaced by value of macro
 // #include <iostream>
@@ -2308,7 +2324,7 @@
 // A MACRO DOES TAKE UP SPACED
 // A MACRO'S VALUE CANNOT BE UPDATED ULESS CHANGED AT THE LINE OF DEFINITION
 
-// GLOBAL VARIABLES
+// ✅ GLOBAL VARIABLES
 // used when we want to share a variable between functions
 // BUT WE CAN USE REFERENCE VARIABLES TO SHARE VARIABLES BETWEEN FUNCTIONS
 // #include <iostream>
@@ -2328,7 +2344,7 @@
 // using glbal variable is a bad practice, because any function can change it
 // SO WE WILL USE REFERENCE VARIABLES FOR SHARING VARIABLES
 
-// INLINE FUNCTIONS
+// ✅ INLINE FUNCTIONS
 // are used to reduce function calls overhead
 // #include <iostream>
 // using namespace std;
@@ -2370,7 +2386,7 @@
 // if the compiler made it inline then:
 // - then the code of the function would be replacd with the body of the function before the compilation of the code starts (similar to the case in MACROS)
 
-// DEFAULT ARGUMENTS
+// ✅ DEFAULT ARGUMENTS
 // #include <iostream>
 // using namespace std;
 // void printArr(int arr[], int size, int start = 0)
@@ -2387,7 +2403,7 @@
 //     return 0;
 // };
 
-// DOUBLE POINTERS
+// ✅ DOUBLE POINTERS
 // WHY DON'T WE HAVE SOMETHING LIKE THIS: POINTER PTR = &SOMETHING
 // because
 // - it doesn't give us an idea about the type of data that the address is holding
@@ -2415,7 +2431,7 @@
 // };
 // so a double pointer is a pointer which stores the address of another pointer
 
-// FUNCTIONS AND DOUBLE POINTERS
+// ✅ FUNCTIONS AND DOUBLE POINTERS
 // #include<iostream>
 // #include<algorithm>
 // #include<vector>
@@ -2701,7 +2717,7 @@
 //     return 0;
 // };
 
-// REFERENCE VARIABLES
+// ✅ REFERENCE VARIABLES
 // two variables pointing to the same address in the memory
 // or two names for the same address of memory
 // #include <iostream>
@@ -2718,7 +2734,7 @@
 //     return 0;
 // };
 
-// WHY DO WE NEED REFERENCE VARIABLES
+// ✅ WHY DO WE NEED REFERENCE VARIABLES
 // when we supply a variable to a function it's passed by value 
 // reference variables are used for passing arguments by reference
 // WHAT'S THE PROBLEM WITH PASS BY VALUE
@@ -2727,7 +2743,7 @@
 // we can also make a function return a reference variable, but the problem with this is that the reference variable will be local to the function and if we try to return it from the function that it won't work
 // SIMILAR IS THE PROBLME WITH A FUNCTION THAT RETURNS A POINTER
 
-// ARRAYS SIZE IN RUNTIME IS A BAD PRACTICE
+// ✅ ARRAYS SIZE IN RUNTIME IS A BAD PRACTICE
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -2747,12 +2763,12 @@
 // - a stack memory and a heap memory
 // - stack is smaller than the heap
 // - if the size of the array is known in compile time then according to the needs a stack is brought
-// - if the size of the array is known in the runtime then, first program will bring a stack of particular size with it, then it will find the size of the array, if the size of array is so large that the stack cannot accomodate that, then our program will crash
+// - if the size of the array is not known in the runtime then, first program will bring a stack of particular size with it, then it will find the size of the array, if the size of array is so large that the stack cannot accomodate that, then our program will crash
 // - so size of stack is selected accroding the information that we have in the compile time
 // - runtime se pehle to stack ban chuka tha, ab stack chota pad gaya to kya karoge
 // untill now what ever we were making int arr, int , char c, all used the stack memory
 
-// DYNAMIC MEMORY ALLOCATION
+// ✅ DYNAMIC MEMORY ALLOCATION
 // we can utilize heap also 
 // to make an array whose size will be decided in the runtime, we will use the heap memory
 // if we want to use the heap memory then we need to use the new keyword
@@ -2809,11 +2825,11 @@
 //     return 0;
 // };
 
-// STATIC v/s DYNAMIC MEMORY ALLOCATION
+// ✅ STATIC v/s DYNAMIC MEMORY ALLOCATION
 // static: int arr[5] will take 20 bytes if an int takes 4 bytes 
-// synamic: int *arr = new int[5] will take 28 bytes if an int takes 4 bytes and an int * pointer variable takes 8 bytes
+// synamic: int *arr = new int[5] will take 28 bytes if an int takes 4 bytes and an int * pointer variable takes 8 bytes (24 bytes if an int takes 4 bytes and an int * pointer variable takes 4 bytes)
 
-// BAD PRACTICE
+// ✅ BAD PRACTICE
 // while(true)
 // {
 //     int *p = new int;
@@ -2826,14 +2842,14 @@
 // in case of static memory space is cleaned automatically
 // in case of dynamic memory space isn't cleaned automatically, it needs to be handled manually
 
-// HOW TO DELETE MEMORY FROM HEAP
+// ✅ HOW TO DELETE MEMORY FROM HEAP
 // using the delete keyword
 // for int *i = new int;
 // delete i;
 // for int *arr = new int[5];
 // delete []arr;
 
-// STRINGS
+// ✅ STRINGS
 // strings are nothing but one dimensional character arrays
 // #include <iostream>
 // using namespace std;
@@ -2849,7 +2865,7 @@
 //     return 0;
 // };
 
-// CHARACTER ARRAYS
+// ✅ CHARACTER ARRAYS
 // while deciding the size of a character array keep in mind to account the null character at the end of the string 
 // so if size of character array is n then the number of characters that can be stored is 4, since the null character has the right to take up one space
 // #include <iostream>
@@ -2882,7 +2898,7 @@
 //     return 0;
 // };
 
-// LENGTH OF A STRING
+// ✅ LENGTH OF A STRING
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -2909,7 +2925,7 @@
 //     cout<<getLength(name)<<endl;
 // };
 
-// REVERSE A STRING
+// ✅ REVERSE A STRING
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -3003,10 +3019,10 @@
 //     return 0;
 // };
 
-// 2D ARRAYS
+// ✅ 2D ARRAYS
 //  // in the memory the 2D array is being stored as a linear array only
 
-// // TAKING INPUT FOR 2D ARRAY ELEMENT AND PRINTING THE ELEMENTS
+// ✅ // TAKING INPUT FOR 2D ARRAY ELEMENT AND PRINTING THE ELEMENTS
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -3047,7 +3063,7 @@
 //     return 0;
 // };
 
-// // INTIALIZING A 2D ARRAY
+// ✅ // INTIALIZING A 2D ARRAY
 // // #include <iostream>
 // // using namespace std;
 // // int main()
@@ -3067,7 +3083,7 @@
 // //     return 0;
 // // };
 
-// // LINEAR SEARCH IN ARRAYS
+// ✅ // LINEAR SEARCH IN ARRAYS
 // // time O(m*n)
 // // space O(1)
 // // #include <iostream>
@@ -3130,7 +3146,7 @@
 // //     return 0;
 // // };
 
-// // ROW-WISE SUM AND COLUMN-WISE SUM
+// ✅ // ROW-WISE SUM AND COLUMN-WISE SUM
 // // #include <iostream>
 // // #include <vector>
 // // using namespace std;
@@ -3205,7 +3221,7 @@
 // //     return 0;
 // // };
 
-// // LARGEST ROW SUM AND LARGEST COLUMN SUM
+// ✅ // LARGEST ROW SUM AND LARGEST COLUMN SUM
 // #include <iostream>
 // #include <vector>
 // using namespace std;
