@@ -1740,10 +1740,10 @@
 //     cout<<"name is "<<name<<endl;
 // };
 
-// 30) reverse-string (done) (leetcode)
+// 30) ✅ reverse-string (done) (leetcode)
 // https://leetcode.com/problems/reverse-string/
 
-// 31) check-if-the-string-is-a-palindrome (done) (codestudio)
+// 31) ✅ check-if-the-string-is-a-palindrome (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/check-if-the-string-is-a-palindrome_1062633
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -1785,10 +1785,10 @@
 //     cout<<checkPalindrome(s)<<endl;
 // }
 
-// 32) reverse-words-in-a-string (done) (leetcode)
+// 32) ✅ reverse-words-in-a-string (done) (leetcode)
 // https://leetcode.com/problems/reverse-words-in-a-string/description/
 
-// 33) maximum-occuring-character (done) (geeksforgeeks)
+// 33) 🎯 maximum-occuring-character (done) (geeksforgeeks)
 // https://www.geeksforgeeks.org/problems/maximum-occuring-character-1587115620/1
 // #include <iostream>
 // #include <algorithm>
@@ -1815,10 +1815,10 @@
 //     return 0;
 // };
 
-// 34) replace-spaces (done) (codestudio)
+// 34) 🎯 replace-spaces (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/replace-spaces_1172172?leftPanelTabValue=PROBLEM
 
-// 35) remove-all-occurrences-of-a-substring (done) (leetcode)
+// 35) 🎯 remove-all-occurrences-of-a-substring (done) (leetcode)
 // https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
 
 // 36) print-like-a-wave (done) (codestudio)
@@ -1868,7 +1868,7 @@
 //     return 0;
 // }
 
-// 37) allocate-books (done) (codestudio)
+// 37) ✅ allocate-books (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/allocate-books_1090540?leftPanelTabValue=PROBLEM
 // bool allowed(int midElem, vector<int> &arr, int n, int m)
 // {
@@ -1925,7 +1925,7 @@
 //     return answer;
 // };
 
-// 38) painter-s-partition-problem (done) (codestudio)
+// 38) ✅ painter-s-partition-problem (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/painter-s-partition-problem_1089557
 
 // 39) spiral-matrix (done) (leetcode)

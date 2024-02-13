@@ -3,46 +3,41 @@
 #include <vector>
 #include <cmath>
 using namespace std;
+#include <bits/stdc++.h> 
+int baseConversion(string &num, int base)
+{
+	// Write your code here
+	int count = 0;
+	double sum = 0;
+	for(int i = num.length()-1; i>=0; i--)
+	{
+        int checkNum; 
+        if(num[i]>=48 && num[i]<=57)
+        {
+            checkNum = num[i]-48;
+            cout<<"num[i] is "<<num[i]<<endl;
+            cout<<"checkNum is "<<checkNum<<endl;
+        }
+        else
+        {
+            checkNum = num[i] - 55;
+            cout<<"num[i] is "<<num[i]<<endl;
+            cout<<"checkNum is "<<checkNum<<endl;
+        };
+        if(checkNum>=base)
+        {
+            return -1;
+        };
+        sum += pow(base,count)*checkNum;
+        count++;
+	};
+	return sum;
+}
 int main()
 {
-    int A, B, K;
-    cin>>A>>B>>K;
-    int count = 0;
-    bool found = false;
-    int answer = 0;
-    for(int i = A; i<=B; i++)
-    {
-        bool prime = true;
-        for(int j = 2; j<i; j++)
-        {
-            if(i%j==0)
-            {
-                prime = false;
-                break;
-            };
-        };
-        if(i==1)
-        {
-            prime = false;
-        };
-        if(prime)
-        {
-            cout<<i<<" is prime"<<endl;
-            count++;
-            if(count==K)
-            {
-                answer = i;
-                found = true;
-                break;
-            };
-        };
-    };
-    if(found)
-    {
-        cout<<answer<<endl;
-    }
-    else
-    {
-        cout<<-1<<endl;
-    };
+    string num;
+    int base;
+    cin>>num;
+    cin>>base;
+    cout<<baseConversion(num,base)<<endl;
 };
