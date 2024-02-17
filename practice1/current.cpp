@@ -3,41 +3,22 @@
 #include <vector>
 #include <cmath>
 using namespace std;
-#include <bits/stdc++.h> 
-int baseConversion(string &num, int base)
+void printRotatedImage(vector<vector<int>> vect)
 {
-	// Write your code here
-	int count = 0;
-	double sum = 0;
-	for(int i = num.length()-1; i>=0; i--)
-	{
-        int checkNum; 
-        if(num[i]>=48 && num[i]<=57)
+    int rows = vect.size();
+    int cols = vect[0].size();
+    for(int j = 0; j<cols; j++)
+    {
+        for(int i = 0; i<rows; i++)
         {
-            checkNum = num[i]-48;
-            cout<<"num[i] is "<<num[i]<<endl;
-            cout<<"checkNum is "<<checkNum<<endl;
-        }
-        else
-        {
-            checkNum = num[i] - 55;
-            cout<<"num[i] is "<<num[i]<<endl;
-            cout<<"checkNum is "<<checkNum<<endl;
+            cout<<vect[rows-i-1][j]<<" ";
         };
-        if(checkNum>=base)
-        {
-            return -1;
-        };
-        sum += pow(base,count)*checkNum;
-        count++;
-	};
-	return sum;
-}
+        cout<<endl;
+    };
+};
 int main()
 {
-    string num;
-    int base;
-    cin>>num;
-    cin>>base;
-    cout<<baseConversion(num,base)<<endl;
+    vector<vector<int>> vect = {{1,2,3},{4,5,6},{7,8,9}};
+    printRotatedImage(vect);
+    return 0;
 };

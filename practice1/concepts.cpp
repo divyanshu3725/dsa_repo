@@ -1,4 +1,4 @@
-// ✅ FIRST PROGRAM
+// FIRST PROGRAM
 // #include <iostream>
 // int main()
 // {
@@ -6,7 +6,7 @@
 //     return 0;
 // };
 
-// ✅ EXECUTION PROCESS
+// EXECUTION PROCESS
 // we need to include header files before using their functionalities
 // iostream header file is necesssary for using the cin and cout functions
 // including the "using namespace std" allows us to use cout and cin without std::
@@ -28,7 +28,7 @@
 // };
 // ------------------------------------------------
 
-// ✅ DATA TYPES
+// DATA TYPES
 // before storing some data, we need to specify what type of data we are going to store
 // declaring data type of a variable gives two information to the compiler (a) what is the type of data that is going to be stored (b) what amount space in the memory will that variable take
 // the amount of space that a varaible of a particular type will take is dependent on the compiler
@@ -69,7 +69,7 @@
 // ------------------------------------------------
 // variable names (a) can contain digits, letters and underscores (b) cannot start with digit (c) cannot be same as the name of keywords
 
-// ✅ HOW INT DATA TYPE IS STORED IN MEMORY
+// HOW INT DATA TYPE IS STORED IN MEMORY
 // int a = 8;
 // int is taking 4 bytes here
 // so integer a will be converted into binary
@@ -79,7 +79,7 @@
 // so end 4 bits will be 1000
 // the starting 28 bits will be 0
 
-// ✅ HOW CHAR DATA TYPE IS STORED IN MEMORY
+// HOW CHAR DATA TYPE IS STORED IN MEMORY
 // char a = 'a';
 // our char datatye take 1 byte
 // every character corresponds to an ascii value
@@ -88,7 +88,7 @@
 // how ?
 // 97's binary will be stored in 8 bits of memory
 
-//  TYPECASTING
+// TYPECASTING
 // changing one data type to another
 // ------------------------------------------------
 // CODE for understanding TYPECASTING
@@ -116,7 +116,7 @@
 // };
 // ------------------------------------------------
 
-// ✅ MAX AND MIN FOR UNSGINED INT 
+// MAX AND MIN FOR UNSGINED INT 
 // max will be (2^32 - 1)
 // min will be 0
 // #include <iostream>
@@ -129,7 +129,7 @@
 //     return 0;
 // };
 
-// ✅ MAX AND MIN FOR SGINED INT  
+// MAX AND MIN FOR SGINED INT  
 // max will be (2^31 - 1)
 // min will be -(2^31)
 // int is signed by default
@@ -143,7 +143,7 @@
 //     return 0;
 // };
 
-// ✅ MAX AND MIN FOR SIGNED CHAR  
+// MAX AND MIN FOR SIGNED CHAR  
 // max will be (2^7 - 1)
 // min will be -(2^7)
 // #include <iostream>
@@ -167,7 +167,7 @@
 //     return 0;
 // };
 
-// ✅ MAX AND MIN FOR UNSIGNED CHAR  
+// MAX AND MIN FOR UNSIGNED CHAR  
 // max will be (2^8 - 1)
 // min will be (0)
 // #include <iostream>
@@ -180,7 +180,7 @@
 //     return 0;
 // };
 
-// ✅ WHAT WILL HAPPEN IF WE TRY TO STORE 123456 IN A CHAR
+// WHAT WILL HAPPEN IF WE TRY TO STORE 123456 IN A CHAR
 // char a = 123456;
 // the binary of 123456 is 11110001001000000
 // but char has been assigned a space of 8 bits
@@ -204,7 +204,7 @@
 // we got a warning:  overflow in implicit constant conversion
 // understood!
 
-// ✅ BINARY OF AN INTEGER AND IT'S 1'S COMPLIMENT USING BUILT IN FUNCTIONS
+// BINARY OF AN INTEGER AND IT'S 1'S COMPLIMENT USING BUILT IN FUNCTIONS
 // #include <iostream>
 // #include <bitset>
 // using namespace std;
@@ -218,7 +218,7 @@
 //     return 0;
 // };
 
-// ✅ HOW ARE NEGATIVE NUMBER STORED IN MEMORY
+// HOW ARE NEGATIVE NUMBER STORED IN MEMORY
 // int a = -6;
 // first: we will ignore -ve sign
 // second: get binary of integer (get binary of 6)
@@ -232,7 +232,7 @@
 // if an integer is -ve then the MSB in memory is -ve
 // 11111111111111111111111111111010 has MSB as -ve
 
-// ✅ HOW ARE NEGATIVE NUMBERS PRINTIED
+// HOW ARE NEGATIVE NUMBERS PRINTIED
 // int a = -6;
 // 11111111111111111111111111111010 is storing in memory
 // MSB is 1 so we will keep a -ve sign reserved
@@ -243,7 +243,7 @@
 // we have a -ve sign reserved
 // so -6 will be printed
 
-// ✅ WHAT PROBLEM DOES 2'S COMPLIMENT SOLVE 🟥 
+// WHAT PROBLEM DOES 2'S COMPLIMENT SOLVE  
 // WE COULD HAVE MADE A CONVENTION THAT 0SOMETHING WILL BE +VE AND 1SOMETHING WILL BE -VE
 // max would be 2^31-1
 // min would be - (2^31 - 1)
@@ -254,11 +254,11 @@
 // we will use this representation to store a negative number at the extreme end
 // so range would be from - (2^31) to (2^31 - 1)
 
-// ✅ SIGNED AND UNSIGNED
+// SIGNED AND UNSIGNED
 // for making unsigned we will do unsigned int a = 23;
 // this will increase the range of the int (in +ve region)
 
-// ✅ WHAT IF WE TRY TO STORE NEGATIVE VALUE IN UNSIGNED INT
+// WHAT IF WE TRY TO STORE NEGATIVE VALUE IN UNSIGNED INT
 // unsigned int a = -2;
 // 2 correpsonds to 00000000000000000000000000000010
 // 1's compliment:  11111111111111111111111111111101
@@ -281,11 +281,11 @@
 // ----------------------------
 // this will print 4294967294
 
-// ✅ RANGE OF SHORT DATATYPE
+// RANGE OF SHORT DATATYPE
 // min is -(2^15)
 // max is 2^15 - 1
 
-// ✅ OPERATORS
+// OPERATORS
 // + - * / % && || ! > < >= <= != ==
 // ------------------------------------------------
 // CODE for understading the DIVISION OPERATOR
@@ -309,7 +309,7 @@
 // };
 // ------------------------------------------------
 
-// ✅ GUESS THE OUTPUT (IF ELSE CONDITIONALS)
+// GUESS THE OUTPUT (IF ELSE CONDITIONALS)
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -327,7 +327,7 @@
 //     return 0;
 // };
 
-// ✅ QUESTION 1 SUPPLIED CHARACTER UPPERCASE OR LOWERCASE OR DIGIT
+// QUESTION 1 SUPPLIED CHARACTER UPPERCASE OR LOWERCASE OR DIGIT
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -354,7 +354,7 @@
 //     return 0;
 // };
 
-// ✅ QUESTION 2 FIND SUM OF ALL EVEN NUMBERS FROM 1 TO N
+// QUESTION 2 FIND SUM OF ALL EVEN NUMBERS FROM 1 TO N
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -374,7 +374,7 @@
 //     return 0;
 // };
 
-// ✅ QUESTION 3 PRIME OR NOT
+// QUESTION 3 PRIME OR NOT
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -413,7 +413,7 @@
 //     return 0;
 // };
 
-// ✅ AND
+// AND
 // a = 2 010
 // b = 3 011
 // a&b = 010 = 2
@@ -427,7 +427,7 @@
 //     return 0;
 // };
 
-// ✅ OR
+// OR
 // a = 2 010
 // b = 3 011
 // a|b = 011 = 3
@@ -441,7 +441,7 @@
 //     return 0;
 // };
 
-// ✅ NOT
+// NOT
 // int a = ~2;
 // 2 is  00000000000000000000000000000010
 // ~2 is 11111111111111111111111111111101
@@ -459,7 +459,7 @@
 //     return 0;
 // };
 
-// ✅ XOR
+// XOR
 // 0 ^ 1 1
 // 1 ^ 0 1
 // 1 ^ 1 0
@@ -479,7 +479,7 @@
 //     return 0;
 // };
 
-// ✅ LEFT SHIFT OPERATOR
+// LEFT SHIFT OPERATOR
 // 2<<1
 // 2 is 010
 // 100 is 4
@@ -494,7 +494,7 @@
 //     return 0;
 // };
 
-// ✅ RIGHT SHIFT OPERATOR
+// RIGHT SHIFT OPERATOR
 // 2>>1
 // 2 is 010
 // 001 is 1
@@ -507,25 +507,25 @@
 //     return 0;
 // };
 
-// ✅ DOING LEFT SHIFT ON LARGER NUMBERS WILL RETURN -VE NUMBERS
+// DOING LEFT SHIFT ON LARGER NUMBERS WILL RETURN -VE NUMBERS
 
-// ✅ IF WE DO SHIFTING WITH +VE NUMBER THEN PADDING IS DONE WITH 0
+// IF WE DO SHIFTING WITH +VE NUMBER THEN PADDING IS DONE WITH 0
 
-// ✅ FOR SHIFTING WITH NEGATIVE NUMBER PADDING IS DEPENDENT ON COMPILER
+// FOR SHIFTING WITH NEGATIVE NUMBER PADDING IS DEPENDENT ON COMPILER
 
-// ✅ POST INCREMENT
+// POST INCREMENT
 // use then increment
 
-// ✅ PRE INCREMENT
+// PRE INCREMENT
 // increment then use
 
-// ✅ POST DECREMENT
+// POST DECREMENT
 // use then decrement
 
-// ✅ PRE DECREMENT
+// PRE DECREMENT
 // use then decrement
 
-// ✅ GUESS THE OUTPUT1
+// GUESS THE OUTPUT1
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -545,7 +545,7 @@
 //     return 0;
 // };
 
-// ✅ GUESS THE OUTPUT2
+// GUESS THE OUTPUT2
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -565,7 +565,7 @@
 //     return 0;
 // };
 
-// ✅ GUESS THE OUTPUT3
+// GUESS THE OUTPUT3
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -575,7 +575,7 @@
 //     return 0;
 // };
 
-// ✅ GUESS THE OUTPUT4
+// GUESS THE OUTPUT4
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -588,7 +588,7 @@
 //     return 0;
 // };
 
-// ✅ SUM FROM 1 TO N
+// SUM FROM 1 TO N
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -605,7 +605,7 @@
 //     return 0;
 // };
 
-// ✅ FIBONACCI SERIES
+// FIBONACCI SERIES
 // #include <iostream>
 // using namespace std;
 // void fibo(int n)
@@ -642,7 +642,7 @@
 //     };
 // };
 
-// ✅ WHETHER N IS PRINE NUMBER OR NOT
+// WHETHER N IS PRINE NUMBER OR NOT
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -673,7 +673,7 @@
 //     return 0;
 // };
 
-// ✅ GUESS THE OUTPUT 1
+// GUESS THE OUTPUT 1
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -686,7 +686,7 @@
 //     return 0;
 // };
 
-// ✅ GUESS THE OUTPUT 2
+// GUESS THE OUTPUT 2
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -699,7 +699,7 @@
 //     return 0;
 // };
 
-// ✅ GUESS THE OUTPUT 3
+// GUESS THE OUTPUT 3
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -716,7 +716,7 @@
 //     return 0;
 // };
 
-// ✅ GUESS THE OUTPUT 4
+// GUESS THE OUTPUT 4
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -732,7 +732,7 @@
 //     return 0;
 // };
 
-// ✅ GUESS THE OUTPUT 5
+// GUESS THE OUTPUT 5
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -751,7 +751,7 @@
 //     return 0;
 // };
 
-// ✅ DECIMAL TO BINARY
+// DECIMAL TO BINARY
 // DIVISION BY 2
 // 2 4 0
 // 2 2 0
@@ -881,7 +881,7 @@
 //     return 0;
 // };
 
-// ✅ BINARY TO DECIMAL
+// BINARY TO DECIMAL
 // #include <iostream>
 // #include <algorithm>
 // #include <cmath>
@@ -909,7 +909,7 @@
 //     return 0;
 // };
 
-// ✅ TIME COMPLEXITY
+// TIME COMPLEXITY
 // amount of time taken by an algorithm to run as a function of length of input
 // why do we need complexities:
 // - to compare algorithm
@@ -953,7 +953,7 @@
 // TC for max in array and min in array will be O(n)
 // TC for isPrime function will be O(n) (actually n-2)
 
-// ✅ TLE
+// TLE
 // Most modern machines can perform 10^8 operations/second
 // n < 11 : O(n!) , O(n^6)
 // n < 18: O((2^n)*(n^2))
@@ -964,7 +964,7 @@
 // n < 10^6 : O(n*log(n))
 // n < 10^8 : O(n) , O(logn)
 
-// ✅ SPACE COMPLEXITY
+// SPACE COMPLEXITY
 // amount of time taken by an algorithm to run as a function of length of input
 // example 1
 // int a = 0, b = 0;
@@ -1028,7 +1028,7 @@
 // TC calculate karte wakt vector ke size ko nahi dekhne ka
 // SC calculate karte wakt for ke limit ko nahi dekhne ka
 
-// ✅ ARRAYS
+// ARRAYS
 // arrays in c++ can store only similar type of items
 // elements in an array are stored in contagious memory locations
 // #include <iostream>
@@ -1049,9 +1049,9 @@
 //     return 0;
 // };
 
-// ✅ ARRAY UTILITY FUNCTIONS
+// ARRAY UTILITY FUNCTIONS
 
-// ✅ PRINT ARRAY
+// PRINT ARRAY
 // #include <iostream>
 // using namespace std;
 // void printArray(int arr[], int n)
@@ -1063,7 +1063,7 @@
 //     cout<<endl;
 // };
 
-// ✅ MAXELEMENT
+// MAXELEMENT
 // int maxElement(int arr[], int n)
 // {
 //     int maxElem = INT32_MIN;
@@ -1077,7 +1077,7 @@
 //     return maxElem;
 // };
 
-// ✅ MINELEMENT
+// MINELEMENT
 // int minElement(int arr[], int n)
 // {
 //     int minElem = INT32_MAX;
@@ -1091,7 +1091,7 @@
 //     return minElem;
 // };
 
-// ✅ INPUTARRAYELEMENTS
+// INPUTARRAYELEMENTS
 // void inputArrayElement(int arr[], int n)
 // {
 //     for(int i = 0; i<n; i++)
@@ -1100,7 +1100,7 @@
 //     }
 // };
 
-// ✅ SUMOFELEMENTS
+// SUMOFELEMENTS
 // int sumOfElements(int arr[], int n)
 // {
 //     int sum = 0;
@@ -1111,7 +1111,7 @@
 //     return sum;
 // }
 
-// ✅ REVERSE ARRAY BRUTEFORCE
+// REVERSE ARRAY BRUTEFORCE
 // void reverseArray1(int arr[], int n)
 // {
 //     int limit = n/2;
@@ -1123,7 +1123,7 @@
 //     };
 // };
 
-// ✅ REVERSE ARRAY OPTIIZED
+// REVERSE ARRAY OPTIIZED
 // void reverseArray2(int arr[], int n)
 // {
 //     int start = 0;
@@ -1136,7 +1136,7 @@
 //     };
 // };
 
-// ✅ INBUILT FUNCTIONS:
+// INBUILT FUNCTIONS:
 // MIN_ELEMENT and MAX_ELEMENT (belong to the algorithm header file)
 // #include <iostream>
 // #include <algorithm>
@@ -1150,7 +1150,7 @@
 //     return 0;
 // };
 
-// ✅ MAX and MIN functions
+// MAX and MIN functions
 // #include <iostream>
 // #include <algorithm>
 // using namespace std;
@@ -1160,17 +1160,17 @@
 //     cout<<min(1,2)<<endl;
 // };
 
-// ✅ INSIDER INFORMATION ABOUT ARRAYS
+// INSIDER INFORMATION ABOUT ARRAYS
 // if array has 5 elements, but we have initialized only 3 values, then accessing the 4th of 5th element of an array using cout<<arr[4]<<endl; will print garbage value
 // but if we pass this array to the printArray function, then 0s are printed
 
-// ✅ WHY DO WE NEED TO PASS SIZE OF ARRAY EXPLICTLY
+// WHY DO WE NEED TO PASS SIZE OF ARRAY EXPLICTLY
 // because amount of space alloted to an array might be larger than the space used
 // while printing the array we need to specify the amount of space used by the array and not the amount of space alloted to the array
 
-// ✅ VARIABLES ARE PASSED BY VALUE, BUT ARRAYS ARE PASSED BY REFERENCE
+// VARIABLES ARE PASSED BY VALUE, BUT ARRAYS ARE PASSED BY REFERENCE
 
-// ✅ LINEAR SEARCH 
+// LINEAR SEARCH 
 // has TC O(n)
 // bool linearSearch(int arr[], int n, int num)
 // {
@@ -1184,9 +1184,9 @@
 //     return false;
 // };
 
-// ✅ BINARY SEARCH 
+// BINARY SEARCH 
 // for linear search the TC is O(n)
-// is applied only on monotoning functions
+// binary search is applied only on monotoning functions
 // #include <iostream>
 // using namespace std;
 // int binarySearch(int arr[], int size, int key)
@@ -1226,9 +1226,9 @@
 // why we shouldn't use s+e/2
 // because if s = e = 2^31 - 1
 // so we need to use s + (e-s)/2
-// for binary search TC is logN (base 2)
+// for binary search TC is O(log2(n))
 
-// ✅ SELECTION SORT
+// SELECTION SORT
 // in selection sort we select the smallest element and send them to their original position
 // #include <iostream>
 // #include <vector>
@@ -1274,7 +1274,7 @@
 // USE CASES
 // - use it for sorting arrays and vector of small size
 
-// ✅ BUBBLE SORT
+// BUBBLE SORT
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1331,7 +1331,7 @@
 // we will be running n-1 times so O(n) will be the complexity for best case scenario
 // USE CASES
 
-// ✅ INSERTION SORT
+// INSERTION SORT
 // EXAMPLE
 // 11 1 7 4 8 2 10
 // 1 11 7 4 8 2 10
@@ -1425,7 +1425,7 @@
 //     return 0;
 // };
 
-// ✅ STL VECTOR
+// STL VECTOR
 // needs the vector header file
 // VECTOR IS DYNAMIC
 // it's size can be reduced and increased
@@ -1435,7 +1435,7 @@
 // and then the new element will be added to the new vector
 // time complexity for accessing an element is O(1)
 
-// ✅ CAPACITY FUNCTION (STL VECTOR)
+// CAPACITY FUNCTION (STL VECTOR)
 // for finding the space occupied by a function
 // #include <iostream>
 // #include <vector>
@@ -1474,7 +1474,7 @@
 //     return 0;
 // };
 
-// ✅ SIZE FUNCTION (STL VECTOR)
+// SIZE FUNCTION (STL VECTOR)
 // for finding the size of a function
 // #include <iostream>
 // #include <vector>
@@ -1486,7 +1486,7 @@
 //     return 0;
 // };
 
-// ✅ PUSH_BACK FUNCTION(STL VECTOR)
+// PUSH_BACK FUNCTION(STL VECTOR)
 // for inserting a new element at the end of a vector
 // #include <iostream>
 // #include <vector>
@@ -1508,7 +1508,7 @@
 //     return 0;
 // };
 
-// ✅ FRONT & BACK FUNCTIONS (STL VECTOR)
+// FRONT & BACK FUNCTIONS (STL VECTOR)
 // for getting the first and last element
 // #include <iostream>
 // #include <vector>
@@ -1521,7 +1521,7 @@
 //     return 0;
 // };
 
-// ✅ POP_BACK FUNCTION (STL VECTOR)
+// POP_BACK FUNCTION (STL VECTOR)
 // for dropping the last element
 // #include <iostream>
 // #include <vector>
@@ -1543,7 +1543,7 @@
 //     return 0;
 // };
 
-// ✅ CLEAR FUNCTION (STL VECTOR)
+// CLEAR FUNCTION (STL VECTOR)
 // for clearing a vector
 // #include <iostream>
 // #include <vector>
@@ -1569,7 +1569,7 @@
 //     return 0;
 // };
 
-// ✅ BEGIN AND END ITERATORS (STL VECTOR)
+// BEGIN AND END ITERATORS (STL VECTOR)
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -1584,7 +1584,7 @@
 //     return 0;
 // };
 
-// ✅ INITIALIZING A VECTOR IN WHICH ALL THE ELEMENTS ARE SET TO n (STL VECTOR)
+// INITIALIZING A VECTOR IN WHICH ALL THE ELEMENTS ARE SET TO n (STL VECTOR)
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -1599,7 +1599,7 @@
 //     return 0;
 // };
 
-// ✅ COPYING A VECTOR INTO ANOTHER VECTOR
+// COPYING A VECTOR INTO ANOTHER VECTOR
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -1831,7 +1831,7 @@
 // n(SUM of hp of prime numbers)
 // n*log(logN)
 
-// ✅ FIND GCD USING EUCLID'S ALGORITHM)
+// FIND GCD USING EUCLID'S ALGORITHM)
 // EUCLID'S ALGORITHM
 // gcd(a,b) = gcd(a-b,b);
 // lcm(a,b) * gcd(a,b) = a*b;
@@ -1916,7 +1916,7 @@
 // (a*b)%m = a%m * b%m
 // (a*b)%m = a%m * b%m
 
-// ✅ FAST EXPONENTIATION
+// FAST EXPONENTIATION
 // a^b  = (a^(b/2))^2 if b is even
 // a^b = (a^((b-1)/2))^2 * a if b is odd
 // #include<iostream>
@@ -1976,7 +1976,7 @@
 // MODULAR EXPONENTIATION (DOUBT)
 // https://www.codingninjas.com/studio/problems/modular-exponentiation_1082146
 
-// ✅ POINTER
+// POINTER
 // int num = 5;
 // cout<<num<<endl;
 // HOW DOES NUM REFERENCE TO A PARTICULAR ADDRESS?
@@ -2094,7 +2094,7 @@
 //     return 0;
 // };
 
-// ✅ POINTERS IN ARRAY
+// POINTERS IN ARRAY
 // the name of an array references to first element of the array
 // #include <iostream>
 // using namespace std;
@@ -2130,7 +2130,7 @@
 // arr[i] = *(arr + i) 
 // i[arr] = *(i + arr)
 
-// ✅ DIFFERENCES BETWEEN A POINTER AND AN ARRAY
+// DIFFERENCES BETWEEN A POINTER AND AN ARRAY
 // #include <iostream>
 // using namespace std;
 // FIRST DIFFERENCE: SIZE OF 
@@ -2180,7 +2180,7 @@
 //     // arr = arr + 1 is not allowed
 // };
 
-// ✅ CHAR ARRAYS
+// CHAR ARRAYS
 // int main()
 // {
 //     char ch[6] = "abcde";
@@ -2229,7 +2229,7 @@
 // in this case ptr found a then some more characters and then it found null character, so it stopped
 // NEVER DO char *ptr = "abcd"
 
-// ✅ POINTERS AND FUNCTIONS
+// POINTERS AND FUNCTIONS
 // int main()
 // {
 //     int value = 5;
@@ -2259,7 +2259,7 @@
 //     return 0;
 // };
 
-// ✅ POINTERS AND ARRAYS
+// POINTERS AND ARRAYS
 // when we pass an array to a function, we are unknowingly passing a pointer (of the first array element to the function)
 // #include <iostream>
 // using namespace std;
@@ -2304,7 +2304,7 @@
 //     return 0;
 // };
 
-// ✅ MACROS
+// MACROS
 // we define macros using #define
 // a macro is a piece of code in a program that is replaced by value of macro
 // #include <iostream>
@@ -2324,7 +2324,7 @@
 // A MACRO DOES TAKE UP SPACED
 // A MACRO'S VALUE CANNOT BE UPDATED ULESS CHANGED AT THE LINE OF DEFINITION
 
-// ✅ GLOBAL VARIABLES
+// GLOBAL VARIABLES
 // used when we want to share a variable between functions
 // BUT WE CAN USE REFERENCE VARIABLES TO SHARE VARIABLES BETWEEN FUNCTIONS
 // #include <iostream>
@@ -2344,7 +2344,7 @@
 // using glbal variable is a bad practice, because any function can change it
 // SO WE WILL USE REFERENCE VARIABLES FOR SHARING VARIABLES
 
-// ✅ INLINE FUNCTIONS
+// INLINE FUNCTIONS
 // are used to reduce function calls overhead
 // #include <iostream>
 // using namespace std;
@@ -2386,7 +2386,7 @@
 // if the compiler made it inline then:
 // - then the code of the function would be replacd with the body of the function before the compilation of the code starts (similar to the case in MACROS)
 
-// ✅ DEFAULT ARGUMENTS
+// DEFAULT ARGUMENTS
 // #include <iostream>
 // using namespace std;
 // void printArr(int arr[], int size, int start = 0)
@@ -2403,7 +2403,7 @@
 //     return 0;
 // };
 
-// ✅ DOUBLE POINTERS
+// DOUBLE POINTERS
 // WHY DON'T WE HAVE SOMETHING LIKE THIS: POINTER PTR = &SOMETHING
 // because
 // - it doesn't give us an idea about the type of data that the address is holding
@@ -2431,7 +2431,7 @@
 // };
 // so a double pointer is a pointer which stores the address of another pointer
 
-// ✅ FUNCTIONS AND DOUBLE POINTERS
+// FUNCTIONS AND DOUBLE POINTERS
 // #include<iostream>
 // #include<algorithm>
 // #include<vector>
@@ -2717,7 +2717,7 @@
 //     return 0;
 // };
 
-// ✅ REFERENCE VARIABLES
+// REFERENCE VARIABLES
 // two variables pointing to the same address in the memory
 // or two names for the same address of memory
 // #include <iostream>
@@ -2734,7 +2734,7 @@
 //     return 0;
 // };
 
-// ✅ WHY DO WE NEED REFERENCE VARIABLES
+// WHY DO WE NEED REFERENCE VARIABLES
 // when we supply a variable to a function it's passed by value 
 // reference variables are used for passing arguments by reference
 // WHAT'S THE PROBLEM WITH PASS BY VALUE
@@ -2743,7 +2743,7 @@
 // we can also make a function return a reference variable, but the problem with this is that the reference variable will be local to the function and if we try to return it from the function that it won't work
 // SIMILAR IS THE PROBLME WITH A FUNCTION THAT RETURNS A POINTER
 
-// ✅ ARRAYS SIZE IN RUNTIME IS A BAD PRACTICE
+// ARRAYS SIZE IN RUNTIME IS A BAD PRACTICE
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -2768,7 +2768,7 @@
 // - runtime se pehle to stack ban chuka tha, ab stack chota pad gaya to kya karoge
 // untill now what ever we were making int arr, int , char c, all used the stack memory
 
-// ✅ DYNAMIC MEMORY ALLOCATION
+// DYNAMIC MEMORY ALLOCATION
 // we can utilize heap also 
 // to make an array whose size will be decided in the runtime, we will use the heap memory
 // if we want to use the heap memory then we need to use the new keyword
@@ -2825,11 +2825,11 @@
 //     return 0;
 // };
 
-// ✅ STATIC v/s DYNAMIC MEMORY ALLOCATION
+// STATIC v/s DYNAMIC MEMORY ALLOCATION
 // static: int arr[5] will take 20 bytes if an int takes 4 bytes 
 // synamic: int *arr = new int[5] will take 28 bytes if an int takes 4 bytes and an int * pointer variable takes 8 bytes (24 bytes if an int takes 4 bytes and an int * pointer variable takes 4 bytes)
 
-// ✅ BAD PRACTICE
+// BAD PRACTICE
 // while(true)
 // {
 //     int *p = new int;
@@ -2842,14 +2842,14 @@
 // in case of static memory space is cleaned automatically
 // in case of dynamic memory space isn't cleaned automatically, it needs to be handled manually
 
-// ✅ HOW TO DELETE MEMORY FROM HEAP
+// HOW TO DELETE MEMORY FROM HEAP
 // using the delete keyword
 // for int *i = new int;
 // delete i;
 // for int *arr = new int[5];
 // delete []arr;
 
-// ✅ STRINGS
+// STRINGS
 // strings are nothing but one dimensional character arrays
 // #include <iostream>
 // using namespace std;
@@ -2865,7 +2865,7 @@
 //     return 0;
 // };
 
-// ✅ CHARACTER ARRAYS
+// CHARACTER ARRAYS
 // while deciding the size of a character array keep in mind to account the null character at the end of the string 
 // so if size of character array is n then the number of characters that can be stored is 4, since the null character has the right to take up one space
 // #include <iostream>
@@ -2898,7 +2898,7 @@
 //     return 0;
 // };
 
-// ✅ LENGTH OF A STRING
+// LENGTH OF A STRING
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -2925,7 +2925,7 @@
 //     cout<<getLength(name)<<endl;
 // };
 
-// ✅ REVERSE A STRING
+// REVERSE A STRING
 // #include<iostream>
 // #include<algorithm>
 // #include<cmath>
@@ -3019,10 +3019,10 @@
 //     return 0;
 // };
 
-// ✅ 2D ARRAYS
+// 2D ARRAYS
 //  // in the memory the 2D array is being stored as a linear array only
 
-// ✅ // TAKING INPUT FOR 2D ARRAY ELEMENT AND PRINTING THE ELEMENTS
+// // TAKING INPUT FOR 2D ARRAY ELEMENT AND PRINTING THE ELEMENTS
 // #include <iostream>
 // using namespace std;
 // int main()
@@ -3063,7 +3063,7 @@
 //     return 0;
 // };
 
-// ✅ // INTIALIZING A 2D ARRAY
+// // INTIALIZING A 2D ARRAY
 // // #include <iostream>
 // // using namespace std;
 // // int main()
@@ -3083,7 +3083,7 @@
 // //     return 0;
 // // };
 
-// ✅ // LINEAR SEARCH IN ARRAYS
+// // LINEAR SEARCH IN ARRAYS
 // // time O(m*n)
 // // space O(1)
 // // #include <iostream>
@@ -3146,7 +3146,7 @@
 // //     return 0;
 // // };
 
-// ✅ // ROW-WISE SUM AND COLUMN-WISE SUM
+// // ROW-WISE SUM AND COLUMN-WISE SUM
 // // #include <iostream>
 // // #include <vector>
 // // using namespace std;
@@ -3221,7 +3221,7 @@
 // //     return 0;
 // // };
 
-// ✅ // LARGEST ROW SUM AND LARGEST COLUMN SUM
+// // LARGEST ROW SUM AND LARGEST COLUMN SUM
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -3326,3 +3326,4 @@
 
 // PROBLEMS TO BE SORTED OUT
 // slow compilation of c++ code
+
