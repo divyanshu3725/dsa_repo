@@ -4,11 +4,97 @@
 #include <algorithm>
 using namespace std;
 
-
+string str(int n)
+{
+    if (n == 0)
+    {
+        return "zero";
+    }
+    else if (n == 1)
+    {
+        return "one";
+    }
+    else if (n == 2)
+    {
+        return "two";
+    }
+    else if (n == 3)
+    {
+        return "three";
+    }
+    else if (n == 4)
+    {
+        return "four";
+    }
+    else if (n == 5)
+    {
+        return "five";
+    }
+    else if (n == 6)
+    {
+        return "six";
+    }
+    else if (n == 7)
+    {
+        return "seven";
+    }
+    else if (n == 8)
+    {
+        return "eight";
+    }
+    else
+    {
+        return "nine";
+    };
+}
+// bool sayDigits(int n)
+// {
+//     // cout<<"say digits running"<<endl;
+//     // cout<<"running for "<<n<<endl;
+//     if (n < 0)
+//     {
+//         return 0;
+//     }
+//     else if (n == 0)
+//     {
+//         // cout<<str(n);
+//         return 0;
+//     }
+//     else
+//     {
+//         sayDigits(n / 10);
+//         if (n / 10 == 0)
+//         {
+//             cout << str(n % 10);
+//         }
+//         else
+//         {
+//             cout << " " << str(n % 10);
+//         }
+//     };
+// };
+string sayDigits(int n)
+{
+    if (n / 10 == 0)
+    {
+        return str(n % 10);
+    }
+    else
+    {
+        return sayDigits(n / 10) + " " + str(n % 10);
+    }
+};
+int main()
+{
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+    cout << "|" << sayDigits(n) << "|";
+};
 
 // EXAMPLE 3 FIBONACCI SERIES
 // int fibonacci(int n)
-// {  
+// {
 //     if(n==1 || n==2)
 //     {
 //         return 1;
@@ -32,7 +118,7 @@ using namespace std;
 // FROM CODING NINJAS
 // a recursive method solves a problem by calling a copy of itself to work on a smaller problem
 // Recursion uses an in-built stack that stores recursive calls. Hence, the number of recursive calls must be as small as possible to avoid memory-overflow. If the number of recursion calls exceeded the maximum permissible amount, the recursion depth* will be exceeded. This condition is called stack overflow.
-// 
+//
 
 // EXTRA HOW TO WRITE SOME CODE THAT GET'S EXECUTED AFTER THE RECURSIVE CALL
 // int printer(int n)
@@ -64,7 +150,7 @@ using namespace std;
 //     {
 //         return -1;
 //     };
-//     // cout<<n<<endl; // this will give 5 4 3 2 1 
+//     // cout<<n<<endl; // this will give 5 4 3 2 1
 //     printer(n-1);
 //     cout<<n<<endl; // this will give 1 2 3 4 5
 // };

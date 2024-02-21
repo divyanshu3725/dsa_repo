@@ -3,3 +3,5 @@ https://leetcode.com/problems/fibonacci-number/description/
 
 count-ways-to-reach-nth-stairs (TLE) (codistudio) (requires DP)
 https://www.codingninjas.com/studio/problems/count-ways-to-reach-nth-stairs_798650
+
+say-digits (by babbar)
