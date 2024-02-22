@@ -1,7 +1,14 @@
-fibonacci-number (done) (leetcode)
+1. fibonacci-number (done) (leetcode)
 https://leetcode.com/problems/fibonacci-number/description/
 
-count-ways-to-reach-nth-stairs (TLE) (codistudio) (requires DP)
+2. count-ways-to-reach-nth-stairs (TLE) (codistudio) (requires DP)
 https://www.codingninjas.com/studio/problems/count-ways-to-reach-nth-stairs_798650
 
-say-digits (by babbar)
+
+3. say-digits (by babbar)
+
+4. ninja-and-the-sorted-check
+https://www.codingninjas.com/studio/problems/ninja-and-the-sorted-check_6581957?leftPanelTabValue=SUBMISSION
+
+5. binary-search (done) (codestudio)
+https://www.codingninjas.com/studio/problems/binary-search_972?leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_11&leftPanelTabValue=SUBMISSION

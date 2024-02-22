@@ -4,95 +4,156 @@
 #include <algorithm>
 using namespace std;
 
-string str(int n)
-{
-    if (n == 0)
-    {
-        return "zero";
-    }
-    else if (n == 1)
-    {
-        return "one";
-    }
-    else if (n == 2)
-    {
-        return "two";
-    }
-    else if (n == 3)
-    {
-        return "three";
-    }
-    else if (n == 4)
-    {
-        return "four";
-    }
-    else if (n == 5)
-    {
-        return "five";
-    }
-    else if (n == 6)
-    {
-        return "six";
-    }
-    else if (n == 7)
-    {
-        return "seven";
-    }
-    else if (n == 8)
-    {
-        return "eight";
-    }
-    else
-    {
-        return "nine";
-    };
-}
-// bool sayDigits(int n)
+// BINARY SEARCH
+// int binarySearch(int arr[],int start , int end, int key)
 // {
-//     // cout<<"say digits running"<<endl;
-//     // cout<<"running for "<<n<<endl;
-//     if (n < 0)
+//     if(start>end)
 //     {
-//         return 0;
+//         return -1;
+//     };
+//     cout<<"running"<<endl;
+//     int midInd = start + (end-start)/2;
+//     int midElem = arr[midInd];
+//     if(midElem<key)
+//     {
+//         return binarySearch(arr,midInd+1, end,key);
 //     }
-//     else if (n == 0)
+//     else if(midElem==key) 
 //     {
-//         // cout<<str(n);
-//         return 0;
+//         return midInd;
 //     }
 //     else
 //     {
-//         sayDigits(n / 10);
-//         if (n / 10 == 0)
-//         {
-//             cout << str(n % 10);
-//         }
-//         else
-//         {
-//             cout << " " << str(n % 10);
-//         }
+//         return binarySearch(arr,start,midInd-1,key);
 //     };
 // };
-string sayDigits(int n)
-{
-    if (n / 10 == 0)
-    {
-        return str(n % 10);
-    }
-    else
-    {
-        return sayDigits(n / 10) + " " + str(n % 10);
-    }
-};
-int main()
-{
-    int n;
-    cout << "Enter the value of n: ";
-    cin >> n;
-    cout << "|" << sayDigits(n) << "|";
-};
+// int main()
+// {
+//     int arr[] = {1,2,3,4,5};
+//     cout<<binarySearch(arr,0,4,6)<<endl;
+// };
 
-// EXAMPLE 3 FIBONACCI SERIES
+// LINEAR SEARCH
+// int linearSearch(int arr[],int n,int key)
+// {   
+//     if(n==0)
+//     {
+//         return 0;
+//     };
+//     if(arr[0]==key)
+//     {
+//         return 1;
+//     };
+//     return linearSearch(arr+1,n-1,key);
+// };  
+// int main()
+// {
+//     int arr[] = {1,2,3,4,5};
+//     cout<<linearSearch(arr,5,7)<<endl;
+// };
+
+// ARRAY SUM 
+// int arrSum(int arr[], int n)
+// {
+//     if(n==1)
+//     {
+//         return arr[0];
+//     }
+//     else
+//     {
+//         return arr[0] + arrSum(arr+1,n-1);
+//     }
+// };
+// int main()
+// {
+//     int arr[] = {1,2,3,4,5};
+//     cout<<arrSum(arr,5);
+// }
+
+// IS SORTED 
+// bool isSorted(int arr[], int size)
+// {
+//     if(size==1)
+//     {
+//         return 1;
+//     };
+//     if (arr[0]<=arr[1])
+//     {
+//         return isSorted(arr+1,size-1);
+//     };
+//     return 0;
+// };
+// int main()
+// {
+//     int arr[5] = {1,2,3,4,4};
+//     cout<<isSorted(arr,5)<<endl;
+// };
+
+// SAY DIGITS
+// EXAMPLE 5
+// string str(int n)
+// {
+//     if (n == 0)
+//     {
+//         return "zero";
+//     }
+//     else if (n == 1)
+//     {
+//         return "one";
+//     }
+//     else if (n == 2)
+//     {
+//         return "two";
+//     }
+//     else if (n == 3)
+//     {
+//         return "three";
+//     }
+//     else if (n == 4)
+//     {
+//         return "four";
+//     }
+//     else if (n == 5)
+//     {
+//         return "five";
+//     }
+//     else if (n == 6)
+//     {
+//         return "six";
+//     }
+//     else if (n == 7)
+//     {
+//         return "seven";
+//     }
+//     else if (n == 8)
+//     {
+//         return "eight";
+//     }
+//     else
+//     {
+//         return "nine";
+//     };
+// }
+// string sayDigits(int n)
+// {
+//     if (n / 10 == 0)
+//     {
+//         return str(n % 10);
+//     }
+//     else
+//     {
+//         return sayDigits(n / 10) + " " + str(n % 10);
+//     }
+// };
+// int main()
+// {
+//     int n;
+//     cout << "Enter the value of n: ";
+//     cin >> n;
+//     cout << "|" << sayDigits(n) << "|";
+// };
+
+// EXAMPLE 4 FIBONACCI SERIES
 // int fibonacci(int n)
 // {
 //     if(n==1 || n==2)
@@ -118,7 +179,6 @@ int main()
 // FROM CODING NINJAS
 // a recursive method solves a problem by calling a copy of itself to work on a smaller problem
 // Recursion uses an in-built stack that stores recursive calls. Hence, the number of recursive calls must be as small as possible to avoid memory-overflow. If the number of recursion calls exceeded the maximum permissible amount, the recursion depth* will be exceeded. This condition is called stack overflow.
-//
 
 // EXTRA HOW TO WRITE SOME CODE THAT GET'S EXECUTED AFTER THE RECURSIVE CALL
 // int printer(int n)
@@ -144,51 +204,34 @@ int main()
 // }
 
 // EXAMPLE 3 PRINTER FUNCTION (FROM 1 TO N)
-// int printer(int n)
+// void printer(int n)
 // {
-//     if(n<=0)
+//     if (n == 0)
 //     {
-//         return -1;
-//     };
-//     // cout<<n<<endl; // this will give 5 4 3 2 1
-//     printer(n-1);
-//     cout<<n<<endl; // this will give 1 2 3 4 5
+//         cout << 0 << endl;
+//     }
+//     else
+//     {
+//         cout << n << endl;
+//         printer(n - 1);
+//     }
 // };
 // int main()
 // {
 //     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
+//     cout << "Enter the value of n: ";
+//     cin >> n;
 //     printer(n);
 // };
 
 // EXAMPLE 2 POWER FUNCTION
 // int power(int a, int b)
 // {
-//     if (a == 0)
-//     {
-//         return 0;
-//     }
-//     else if (a == 1)
+//     if(b==0)
 //     {
 //         return 1;
 //     }
-//     else
-//     {
-//         if (b < 0)
-//         {
-//             cout << "Please enter a non negative power: ";
-//             return -1;
-//         }
-//         else if (b == 0)
-//         {
-//             return 1;
-//         }
-//         else
-//         {
-//             return a * power(a, b - 1);
-//         };
-//     };
+//     return a * power(a,b-1);
 // };
 // int main()
 // {
@@ -228,19 +271,11 @@ int main()
 // EXAMPLE 1 FACTORIAL FUNCTION
 // int factorial(int n)
 // {
-//     if(n<0)
-//     {
-//         cout<<"please enter a positive number!"<<endl;
-//         return -1;
-//     }
-//     else if(n==0 || n==1)
+//     if(n==0)
 //     {
 //         return 1;
 //     }
-//     else
-//     {
-//         return n*factorial(n-1);
-//     };
+//     return n * factorial(n-1);
 // };
 // int main()
 // {
