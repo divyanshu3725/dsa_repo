@@ -4,6 +4,147 @@
 #include <algorithm>
 using namespace std;
 
+// HOMEWORK INSERTION SORT AND SELECTION SORT USING RECURSION
+// HOMEWORK INVERSION CONTROL PROBLEM
+
+// MERGE SORT
+// void mergeArr(int arr[], int start, int end)
+// {
+//     cout<<"mergeArr running"<<endl;
+//     int mid = start + (end-start)/2;
+//     int len1 = mid-start+1;
+//     int len2 = end-mid;
+//     int mainArrayIndex = start;
+//     int *first = new int[len1];
+//     int *second = new int[len2];
+//     for(int i = 0; i<len1; i++)
+//     {
+//         first[i] = arr[mainArrayIndex++];
+//     };
+//     for(int i = 0; i<len2; i++)
+//     {
+//         second[i] = arr[mainArrayIndex++];
+//     };
+//     int index1 = 0;
+//     int index2 = 0;
+//     mainArrayIndex = start;
+//     while(index1<len1 && index2<len2)
+//     {
+//         if(first[index1]<second[index2])
+//         {
+//             arr[mainArrayIndex++] = first[index1++];
+//         }
+//         else
+//         {
+//             arr[mainArrayIndex++] = second[index2++];
+//         };
+//     };
+//     while (index1<len1)
+//     {
+//         arr[mainArrayIndex++] = first[index1++];
+//     };
+//     while (index2<len2)
+//     {
+//         arr[mainArrayIndex++] = second[index2++];
+//     };
+// };
+// void mergeSortThis(int arr[], int start, int end)
+// {
+//     cout<<"mergeSortThis running"<<endl;
+//     if(start<end)
+//     {
+//         int mid = start + (end-start)/2;
+//         mergeSortThis(arr,start,mid);
+//         mergeSortThis(arr,mid+1,end);
+//         mergeArr(arr,start,end);
+//     };
+// };
+// int main()
+// {
+//     int arr[7] = {5,4,3,2,1,6,7};
+//     mergeSortThis(arr,0,6);
+//     for(int i = 0; i<7; i++)
+//     {
+//         cout<<i<<" ";
+//         cout<<arr[i]<<endl;
+//     };
+//     return 0;
+// };
+
+// MERGE SORT
+// IS FASTER THAN BUBBLE SORT, INSERTION SORT, SELECTION SORT
+
+// void bubbleSort(vector<int> &vect, int end)
+// {
+//     // cout<<"running"<<endl;
+//     if (end - 1 != 0)
+//     {
+//         for (int i = 0; i < end - 1; i++)
+//         {
+//             if (vect[i] > vect[i + 1])
+//             {
+//                 swap(vect[i], vect[i + 1]);
+//             };
+//         };
+//         bubbleSort(vect,end-1);
+//     };
+// };
+// int main(){
+//     // vector<int> vect = {6,5,4,3,2,1};
+//     vector<int> vect = {-3,-1,99,213,-12345,0};
+//     bubbleSort(vect,vect.size());
+//     for(int i = 0; i<vect.size(); i++)
+//     {
+//         cout<<vect[i]<<" ";
+//     };
+//     return 0;
+// };
+
+// POWER FUNCTION
+// int power(int a, int b)
+// {
+//     cout<<"a is "<<a<<" b is "<<b<<endl;
+//     if(b==0)
+//     {
+//         return 1;
+//     };
+//     int ans = power(a,b/2);
+//     if(b%2==0)
+//     {
+//         return ans*ans;
+//     }
+//     else
+//     {
+//         return ans * ans * a;
+//     };
+// };
+// int main()
+// {
+//     int a = 2;
+//     int b = 8;
+//     cout<<power(a,b)<<endl;
+// };
+
+// REVERSE STRING USING RECURSION
+// void reverseString(string &str,int start = 0)
+// {
+//     int end = str.length()-1-start;
+//     // cout<<"start = "<<start<<" end = "<<end<<endl;
+//     if(start<=end)
+//     {
+//         swap(str[start],str[end]);
+//         reverseString(str,start+1);
+//     };
+// };
+// int main()
+// {
+//     string str = "chinu";
+//     cout<<str<<endl;
+//     reverseString(str);
+//     cout<<str<<endl;
+//     return 0;
+// };
+
 // BINARY SEARCH
 // int binarySearch(int arr[],int start , int end, int key)
 // {
@@ -18,7 +159,7 @@ using namespace std;
 //     {
 //         return binarySearch(arr,midInd+1, end,key);
 //     }
-//     else if(midElem==key) 
+//     else if(midElem==key)
 //     {
 //         return midInd;
 //     }
@@ -35,7 +176,7 @@ using namespace std;
 
 // LINEAR SEARCH
 // int linearSearch(int arr[],int n,int key)
-// {   
+// {
 //     if(n==0)
 //     {
 //         return 0;
@@ -45,14 +186,14 @@ using namespace std;
 //         return 1;
 //     };
 //     return linearSearch(arr+1,n-1,key);
-// };  
+// };
 // int main()
 // {
 //     int arr[] = {1,2,3,4,5};
 //     cout<<linearSearch(arr,5,7)<<endl;
 // };
 
-// ARRAY SUM 
+// ARRAY SUM
 // int arrSum(int arr[], int n)
 // {
 //     if(n==1)
@@ -70,7 +211,7 @@ using namespace std;
 //     cout<<arrSum(arr,5);
 // }
 
-// IS SORTED 
+// IS SORTED
 // bool isSorted(int arr[], int size)
 // {
 //     if(size==1)

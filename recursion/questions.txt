@@ -12,3 +12,12 @@ https://www.codingninjas.com/studio/problems/ninja-and-the-sorted-check_6581957?
 
 5. binary-search (done) (codestudio)
 https://www.codingninjas.com/studio/problems/binary-search_972?leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_11&leftPanelTabValue=SUBMISSION
+
+6. reverse-the-string (done) (codestudio)
+https://www.codingninjas.com/studio/problems/reverse-the-string_799927?leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_13
+
+7. check-palindrome (done) (codestudio)
+https://www.codingninjas.com/studio/problems/check-palindrome_920555?leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_13&leftPanelTabValue=SUBMISSION
+
+8. merge-sort (done) (codestudio)
+https://www.codingninjas.com/studio/problems/merge-sort_920442
