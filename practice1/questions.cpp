@@ -619,308 +619,19 @@
 
 // 13) 🟩  first-and-last-position-of-an-element-in-sorted-array (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/first-and-last-position-of-an-element-in-sorted-array_1082549
-// int leftMostOccurence(vector<int> &arr, int n, int k)
-// {
-//     int result = -1;
-//     int start = 0;
-//     int end = arr.size() - 1;
-//     while (start <= end)
-//     {
-//         int midInd = start + (end - start) / 2;
-//         int midElem = arr[midInd];
-//         if (k > midElem)
-//         {
-//             start = midInd + 1;
-//         }
-//         else
-//         {
-//             if (k == midElem)
-//             {
-//                 result = midInd;
-//             }
-//             end = midInd - 1;
-//         };
-//     };
-//     return result;
-// };
-// int rightMostOccurence(vector<int> &arr, int n, int k)
-// {
-//     int result = -1;
-//     int start = 0;
-//     int end = arr.size() - 1;
-//     while (start <= end)
-//     {
-//         int midInd = start + (end - start) / 2;
-//         int midElem = arr[midInd];
-//         if (k < midElem)
-//         {
-//             end = midInd - 1;
-//         }
-//         else
-//         {
-//             if (k == midElem)
-//             {
-//                 result = midInd;
-//             }
-//             start = midInd + 1;
-//         };
-//     };
-//     // cout<<"rightmost done"<<endl;
-//     return result;
-// };
-// pair<int, int> firstAndLastPosition(vector<int> &arr, int n, int k)
-// {
-//     pair<int, int> resultantPair;
-//     resultantPair.first = leftMostOccurence(arr, n, k);
-//     resultantPair.second = rightMostOccurence(arr, n, k);
-//     return resultantPair;
-// };
 
-// 14) 🟩 TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY
-// #include <iostream>
-// #include <vector>
-// #include <algorithm>
-// #include <cmath>
-// using namespace std;
-// int leftMostOccurence(vector<int> &arr, int n, int k){
-//     int result = -1;
-//     int start = 0;
-//     int end = arr.size()-1;
-//     while (start<=end)
-//     {
-//         int midInd = start + (end-start)/2;
-//         int midElem = arr[midInd];
-//         if(k<midElem)
-//         {
-//             end = midInd-1;
-//         }
-//         else if (k==midElem)
-//         {
-//             result = midInd;
-//             end = midInd-1;
-//         }
-//         else
-//         {
-//             start = midInd+1;
-//         };
-//     };
-//     return result;
-// };
-// int rightMostOccurence(vector<int> &arr, int n, int k){
-//     int result = -1;
-//     int start = 0;
-//     int end = arr.size()-1;
-//     while (start<=end)
-//     {
-//         int midInd = start + (end-start)/2;
-//         int midElem = arr[midInd];
-//         if(k<midElem)
-//         {
-//             end = midInd-1;
-//         }
-//         else if (k==midElem)
-//         {
-//             result = midInd;
-//             start = midInd+1;
-//         }
-//         else
-//         {
-//             start = midInd+1;
-//         };
-//     };
-//     return result;
-// };
-// int totalNumberOfOccurences(vector<int>& arr, int n, int k)
-// {
-//     int first = leftMostOccurence(arr,n,k);
-//     int second = rightMostOccurence(arr,n,k);
-//     if(first==-1 && second==-1)
-//     {
-//         return 0;
-//     }
-//     else
-//     {
-//         return second-first+1;
-//     };
-// };
-// int main()
-// {
-//     vector<int> vect = {0,0,1,1,2,2,2,2};
-//     cout<<totalNumberOfOccurences(vect,vect.size(),2)<<endl;
-//     return 0;
-// };
+// 14) 🟩 TOTAL NUMBER OF OCCURENCES IN A SORTED ARRAY (by babbar)
 
 // 15) 🟩 peak-index-in-a-mountain-array (done) (leetcode)
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/
-// int peakIndexInMountainArray(vector<int> &arr)
-// {
-//     int start = 0;
-//     int end = arr.size() - 1;
-//     while (start != end)
-//     {
-//         int midInd = start + (end - start) / 2;
-//         int midElem = arr[midInd];
-//         int nextElem = arr[midInd + 1];
-//         if (midElem < nextElem)
-//         {
-//             start = midInd + 1;
-//         }
-//         else
-//         {
-//             end = midInd;
-//         };
-//     };
-//     return start;
-// };
 
 // x)  🟩 PIVOTE IN A ROTATED SORTED ARRAY
-// #include <iostream>
-// #include <vector>
-// #include <algorithm>
-// #include <cmath>
-// using namespace std;
-// int pivot(vector<int> vect)
-// {
-//     cout<<"algo called"<<endl;
-//     int start = 0;
-//     int end = vect.size() - 1;
-//     int firstElem = vect[start];
-//     int lastElem = vect[end];
-//     int count = 1;
-//     while (start != end)
-//     {
-//         cout<<"count = "<<count<<endl;
-//         count++;
-//         int midInd = start + (end - start) / 2;
-//         int midElem = vect[midInd];
-//         if (firstElem <= midElem)
-//         {
-//             start = midInd + 1;
-//         }
-//         else
-//         {
-//             end = midInd;
-//         };
-//     };
-//     return start;
-// };
-// int main()
-// {
-//     vector<int> vect = {2, 3, 7, 9, 1};
-//     cout<<"algo calling"<<endl;
-//     cout << pivot(vect) << endl;
-// };
 
 // 16) 🟩 search-in-rotated-sorted-array (PARTIALLY ACCEPTED) (all solutions are partially accepted) (codestudio)
 // https://www.codingninjas.com/studio/problems/search-in-rotated-sorted-array_1082554?leftPanelTabValue=PROBLEM
-// int pivot(vector<int> arr, int n)
-// {
-//     int s = 0;
-//     int e = n - 1;
-//     int mid = (s + e) / 2;
-//     while (s < e)
-//     {
-//         if (arr[mid] >= arr[0])
-//         {
-//             s = mid + 1;
-//         }
-//         else
-//         {
-//             e = mid;
-//         }
-//         mid = (s + e) / 2;
-//     }
-//     return s;
-// }
-// int binSearch(vector<int> arr, int n, int s, int e, int k)
-// {
-//     int mid = (s + e) / 2;
-//     while (s <= e)
-//     {
-//         if (arr[mid] == k)
-//         {
-//             return mid;
-//         }
-//         else if (arr[mid] < k)
-//         {
-//             s = mid + 1;
-//         }
-//         else
-//         {
-//             e = mid - 1;
-//         }
-//         mid = (s + e) / 2;
-//     }
-//     return -1;
-// }
-// int search(vector<int> &arr, int n, int k)
-// {
-//     int p = pivot(arr, n);
-//     if ((k >= arr[p]) && (k <= arr[n - 1]))
-//     {
-//         return binSearch(arr, n, p, n - 1, k);
-//     }
-//     else
-//     {
-//         return binSearch(arr, n, 0, p - 1, k);
-//     }
-// }
 
-// 17) square-root-of-a-number (TLE for binary search method) (no TLE for linear search method) (codestudio)
+// 17) 🟩 square-root-of-a-number (TLE for binary search method) (no TLE for linear search method) (codestudio)
 // https://www.codingninjas.com/studio/problems/square-root-integral_893351
-// #include <iostream>
-// #include <vector>
-// #include <algorithm>
-// #include <cmath>
-// using namespace std;
-// int floorSqrt(int n)
-// {
-//     if(n==0)
-//     {
-//         return 0;
-//     };
-//     // cout<<"algo called"<<endl;
-//     vector<int> vect;
-//     for(int i = 1; i<=n; i++)
-//     {
-//         vect.push_back(i);
-//     };
-//     int start = 0;
-//     int end = vect.size() - 1;
-//     int answer;
-//     while(start<=end)
-//     {
-//         int midInd = start + (end-start)/2;
-//         int midElem = vect[midInd];
-//         if(n<midElem*midElem)
-//         {
-//             end = midInd - 1;
-//         }
-//         else if (n==midElem*midElem)
-//         {
-//             return midElem;
-//         }
-//         else
-//         {
-//             answer = midElem;
-//             start = midInd + 1;
-//         };
-//     };
-//     return answer;
-// };
-// using namespace std;
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
-//     // cout<<"calling algo"<<endl;
-//     for(int i = 0; i<=n; i++)
-//     {
-//         cout<<"square root of "<<i<<" is "<<floorSqrt(i)<<endl;
-//     }
-//     return 0;
-// };
 
 // XAMPLE) FLOATING SQUARE ROOT
 // #include <iostream>
@@ -985,7 +696,7 @@
 //     return 0;
 // };
 
-// 18) 🟩 selection-sort (done) (codestudio)
+// 18) selection-sort (done) (codestudio)
 // "Iteratively select the minimum element and place it at the beginning of the unsorted portion by swapping."
 // after each step the smallest element in the unsorted part of the array goes to it's correct position
 // https://www.codingninjas.com/studio/problems/selection-sort_624469?leftPanelTabValue=SUBMISSION
@@ -1031,7 +742,7 @@
 //     return 0;
 // };
 
-// 19) 🟩 bubble-sort (done) (codestudio)
+// 19) bubble-sort (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/bubble-sort_980524
 // #include <iostream>
 // #include <vector>
@@ -1070,7 +781,7 @@
 //     return 0;
 // };
 
-// 20) 🟩 insertion-sort (done) (codestudio)
+// 20) insertion-sort (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/insertion-sort_3155179?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2&leftPanelTabValue=SUBMISSION
 // #include <iostream>
 // #include <vector>
@@ -1777,117 +1488,9 @@
 
 // 37)  allocate-books (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/allocate-books_1090540?leftPanelTabValue=PROBLEM
-// bool allowed(int midElem, vector<int> &arr, int n, int m)
-// {
-//     // cout<<"allowed function called"<<endl;
-//     int studentCount = 1;
-//     int pageSum = 0;
-//     for (int i = 0; i < n; i++)
-//     {
-//         if (pageSum + arr[i] <= midElem)
-//         {
-//             pageSum += arr[i];
-//         }
-//         else
-//         {
-//             studentCount++;
-//             if (studentCount > m)
-//             {
-//                 return false;
-//             };
-//             pageSum = arr[i];
-//         };
-//     };
-//     return true;
-// };
-// int findPages(vector<int> &arr, int n, int m)
-// {
-//     if (m > n)
-//     {
-//         return -1;
-//     };
-//     int totalSum = 0;
-//     for (int i = 0; i < n; i++)
-//     {
-//         totalSum += arr[i];
-//     };
-//     int start = *(max_element(arr.begin(), arr.end()));
-//     // int end = *(max_element(arr.begin(),arr.end()));
-//     int end = totalSum;
-//     int answer;
-//     int count = 0;
-//     while (start <= end)
-//     {
-//         count++;
-//         int midElem = start + (end - start) / 2;
-//         if (allowed(midElem, arr, n, m))
-//         {
-//             answer = midElem;
-//             end = midElem - 1;
-//         }
-//         else
-//         {
-//             start = midElem + 1;
-//         };
-//     };
-//     return answer;
-// };
 
 // 38)  painter-s-partition-problem (done) (codestudio)
 // https://www.codingninjas.com/studio/problems/painter-s-partition-problem_1089557
-// bool possible(int midElem, vector<int> boards, int n, int k)
-// {
-//     int painterCount = 1;
-//     int boardSum = 0;
-//     for (int i = 0; i < n; i++)
-//     {
-//         if (boardSum + boards[i] <= midElem)
-//         {
-//             boardSum += boards[i];
-//         }
-//         else
-//         {
-//             painterCount++;
-//             if (painterCount > k)
-//             {
-//                 return false;
-//             };
-//             boardSum = boards[i];
-//         };
-//     };
-//     return true;
-// }
-// int findLargestMinDistance(vector<int> &boards, int k)
-// {
-//     //    Write your code here.
-//     int n = boards.size();
-//     if (k > n)
-//     {
-//         return -1;
-//     };
-//     int totalSum = 0;
-//     for (int i = 0; i < boards.size(); i++)
-//     {
-//         totalSum += boards[i];
-//     };
-//     int start = *(max_element(boards.begin(), boards.end()));
-//     int end = totalSum;
-//     int answer;
-//     while (start <= end)
-//     {
-//         int midElem = start + (end - start) / 2;
-//         if (possible(midElem, boards, n, k))
-//         {
-//             answer = midElem;
-//             end = midElem - 1;
-//         }
-//         else
-//         {
-//             start = midElem + 1;
-//         };
-//     };
-//     return answer;
-// }
 
 // 39) spiral-matrix (done) (leetcode)
 // time complexity is O(n*m)
@@ -1906,4 +1509,6 @@
 // 43) sum-of-two-arrays (done) (leetcode)
 // https://www.codingninjas.com/studio/problems/sum-of-two-arrays_893186
 
-// 44) 
+// 44) aggressive-cows (done) (codestudio)
+// https://www.codingninjas.com/studio/problems/aggressive-cows_1082559
+

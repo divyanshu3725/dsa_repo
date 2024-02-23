@@ -1184,7 +1184,7 @@
 //     return false;
 // };
 
-// BINARY SEARCH 
+// 🟩 BINARY SEARCH 
 // for linear search the TC is O(n)
 // binary search is applied only on monotoning functions
 // #include <iostream>
@@ -1274,7 +1274,7 @@
 // USE CASES
 // - use it for sorting arrays and vector of small size
 
-// BUBBLE SORT
+// 🟩 BUBBLE SORT
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -2743,6 +2743,48 @@
 // we can also make a function return a reference variable, but the problem with this is that the reference variable will be local to the function and if we try to return it from the function that it won't work
 // SIMILAR IS THE PROBLME WITH A FUNCTION THAT RETURNS A POINTER
 
+// 🟩 CHARACTER ARRAYS AND STRINGS
+// int main()
+// {
+//     char arr[5];
+//     cin>>arr;
+//     cout<<arr<<endl;
+//     // OBSERVATION 1
+//     // IF I SUPPLY A STRING LONGER THAN 5 THEN ALSO THE ARR TAKES IT AND THE WHOLE INPUT GETS PRINTED INTO THE TERMINAL
+//     // POINT 1
+//     // IF WE SUPPLY LESS THAN 5 CHARACTERS THEN THE INDEX AFTER THE INDEX CONTAINING THE LAST CHARACTER WILL BE ASSIGNED NULL CHARACTER. NOW WHILE PRINTING THE CHARACTER ARRAY, THE COMPILER USES THIS NULL CHARACTER TO KNOW WHERE TO STOP THE PRINTING OF CHARACTERS
+//     // POINT 2
+//     // CIN STOPS EXECUTION WHEN IT FINDS A SPACE OR A NEW LINE CHARACTER
+//     // POINT 3
+//     // TAKING THE INPUT FROM THE USER BUT SETTING CHARACTER AT SOME INDEX = NULL CHARACTER, THEN LOGGING THE CHARACTER ARRAY WILL PRINT ONLY THE ARRAY PART THAT IS BEFORE THE NULL CHARACTER
+//     arr[2] = '\0';
+//     cout<<arr<<endl;
+// };
+
+// 🟩 FUNCTION TO CALCULAT THE LENGTH OF A STRING
+// int lengthOfString(string str)
+// {
+//     int length = 0;
+//     for(int i = 0; str[i]!='\0'; i++)
+//     {
+//         length++;
+//     };
+//     return length;
+// };
+
+// 🟩 FUNCTION TO REVERSE A STRING
+// void reverseString(string &str)
+// {
+//     int start = 0;
+//     int end = str.length()-1;
+//     while(start<end)
+//     {
+//         swap(str[start],str[end]);
+//         start++;
+//         end--;
+//     };
+// };
+
 // ARRAYS SIZE IN RUNTIME IS A BAD PRACTICE
 // #include <iostream>
 // using namespace std;
@@ -2848,176 +2890,6 @@
 // delete i;
 // for int *arr = new int[5];
 // delete []arr;
-
-// STRINGS
-// strings are nothing but one dimensional character arrays
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     string naam = "chinu";
-//     cout<<naam<<endl;
-//     cout<<naam[0]<<endl;
-//     cout<<naam[1]<<endl;
-//     cout<<naam[2]<<endl;
-//     cout<<naam[3]<<endl;
-//     cout<<naam[4]<<endl;
-//     return 0;
-// };
-
-// CHARACTER ARRAYS
-// while deciding the size of a character array keep in mind to account the null character at the end of the string 
-// so if size of character array is n then the number of characters that can be stored is 4, since the null character has the right to take up one space
-// #include <iostream>
-// #include <algorithm>
-// #include <vector>
-// #include <cmath>
-// using namespace std;
-// int main()
-// {
-//     // TAKING INPUT 
-//     char name[5];
-//     cin>>name;
-//     // cout<<name<<endl;
-//     // OBSERVATION 1
-//     // if we supply chinu as input then the first remaining box of the array will be assigned null character which is ascii 0
-//     // this null character indicates where to stop the printing when printing is to be done
-//     // OBSERVATION 2
-//     // if we supply chinu boy then only chinu will be printed
-//     // cin stops execution when it recieves a new line character or a tab or a space
-//     // OBSERVATION 3
-//     // supplying new line character at one index
-//     // name[2] = '\n';
-//     // this will give ch and then nu is new line because of the \n character
-//     // OBSERVATION 4
-//     // supplying \0 character at one index
-//     // cout<<name<<endl;
-//     // name[2] = '\0';
-//     // cout<<name<<endl;
-//     // this will give only ch because of \0, but what is \0? DOUBT
-//     return 0;
-// };
-
-// LENGTH OF A STRING
-// #include<iostream>
-// #include<algorithm>
-// #include<cmath>
-// #include<vector>
-// using namespace std;
-// int getLength(char name[])
-// {
-//     int length = 0;
-//     for(int i = 0; name[i]!='\0'; i++)
-//     {   
-//         length++;
-//     };
-//     return length;
-// };
-// int main()
-// {
-//     char name[10];
-//     cout<<"Enter the name "<<endl;
-//     cin>>name;
-//     // OBSERVATION 1
-//     cout<<getLength(name)<<endl;
-//     name[2] = '\0';
-//     // OBSERVATION 2
-//     cout<<getLength(name)<<endl;
-// };
-
-// REVERSE A STRING
-// #include<iostream>
-// #include<algorithm>
-// #include<cmath>
-// #include<vector>
-// using namespace std;
-// int lengthOfString(char arr[])
-// {
-//     int length = 0;
-//     for(int i = 0; arr[i]!='\0'; arr++)
-//     {
-//         length++;
-//     };
-//     return length;
-// }
-// void reverseString(char arr[])
-// {
-//     int i = 0;
-//     int j = lengthOfString(arr)-1;
-//     while (i<j)
-//     {
-//         swap(arr[i],arr[j]);
-//         i++;
-//         j--;
-//     };
-// }
-// int main()
-// {
-//     char name[5];
-//     cout<<"enter the name: ";
-//     cin>>name;
-//     cout<<"name is "<<name<<endl;
-//     reverseString(name);
-//     cout<<"name is "<<name<<endl;
-// };
-
-// PALINDROME
-// it's palindrome if it's reverse is equal to it
-
-// PUSHING CHARACTERS IN A STRING
-// #include <iostream>
-// #include <vector>
-// #include <algorithm>
-// #include <cmath>
-// using namespace std;
-// int main()
-// {
-//     string s1 = "name";
-//     cout<<s1<<endl;
-//     s1.push_back('s');
-//     cout<<s1<<endl;
-//     return 0;
-// };
-
-// PROBLEM WITH TAKING STRING AS AN INPUT USING CIN
-// #include <iostream>
-// #include <algorithm>
-// #include <vector>
-// #include <cmath>
-// using namespace std;
-// int main(){
-//     string str;
-//     cin>>str;
-//     cout<<str<<endl;
-//     return 0;
-// };
-
-// SOLUTION CIN.GETLINE
-// REMAINING (homework)
-
-// INBUILT FUNCTIONS FOR CHARACTER ARRAYS
-// #include <iostream>
-// #include <algorithm>
-// #include <vector>
-// #include <cmath>
-// #include <cstring>
-// using namespace std;
-// int main(){
-//     // STRLEN FOR FIND THE LENGTH OF A CHARACTER ARRAY
-//     // char arr[6] = "";
-//     // cout<<strlen(arr)<<endl;
-//     // const char *arrNew = "chi"; // this too works
-//     // cout<<strlen(arrNew)<<endl;
-//     // char *arrNew = "chi"; // this won't work
-//     // cout<<strlen(arrNew)<<endl;
-//     // STRCMP NOT WORKING
-//     // STRCPY FOR COPYING THE CONTENTS OF A CHARACTER ARRAY INTO ANOTHER CHARACTER ARRAY
-//     // char arr1[6] = "chinu";
-//     // char arr2[6];
-//     // strcpy(arr2,arr1);
-//     // cout<<arr2<<endl;
-//     return 0;
-// };
 
 // 2D ARRAYS
 //  // in the memory the 2D array is being stored as a linear array only
