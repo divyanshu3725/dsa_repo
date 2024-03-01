@@ -4,7 +4,105 @@
 #include <algorithm>
 using namespace std;
 
-// HOMEWORK INSERTION SORT AND SELECTION SORT USING RECURSION
+// QUICK SORT
+// IN QUICK SORT WE TAKE AN ELEMENT AND THEN PUT IT ON IT'S RIGHT POSITION
+// SUCH THAT THE ELEMENTS ON THE LEFT OF THE ELEMENT ARE SMALLER THAN IT AND THE ELEMENTS ON THE RIGHT OF IT ARE GREATER THAN IT
+// SC OF QUICK SORT IS O(n)
+// TC OF QUCIK SORT IS O(n*log(n))
+// TC IN WORST CASE IS O(n^2)
+// #include<iostream>
+// using namespace std;
+// int partition( int arr[], int s, int e) {
+//     int pivot = arr[s];
+//     int cnt = 0;
+//     for(int i = s+1; i<=e; i++) {
+//         if(arr[i] <=pivot) {
+//             cnt++;
+//         }
+//     }
+//     //place pivot at right position
+//     int pivotIndex = s + cnt;
+//     swap(arr[pivotIndex], arr[s]);
+//     //left and right wala part smbhal lete h 
+//     int i = s, j = e;
+//     while(i < pivotIndex && j > pivotIndex) {
+//         while(arr[i] <= pivot) 
+//         {
+//             i++;
+//         }
+//         while(arr[j] > pivot) {
+//             j--;
+//         }
+//         if(i < pivotIndex && j > pivotIndex) {
+//             swap(arr[i++], arr[j--]);
+//         }
+//     }
+//     return pivotIndex;
+// }
+// void quickSort(int arr[], int s, int e) {
+//     //base case
+//     if(s >= e) 
+//         return ;
+//     //partitioon karenfe
+//     int p = partition(arr, s, e);
+//     //left part sort karo
+//     quickSort(arr, s, p-1);
+//     //right wala part sort karo
+//     quickSort(arr, p+1, e);
+// }
+// int main() {
+
+//     int arr[10] = {2,4,1,6,9 ,9,9,9,9,9};
+//     int n = 10;
+
+//     quickSort(arr, 0, n-1);
+
+//     for(int i=0; i<n; i++) 
+//     {
+//         cout << arr[i] << " ";
+//     } cout << endl;
+
+
+//     return 0;
+// }
+
+// RECURSIVE SELECTION SORT
+// void selectionSort(vector<int> &vect, int ind)
+// {
+//     if (ind != vect.size() - 1)
+//     {
+//         int miNInd = ind;
+//         for (int j = ind; j < vect.size(); j++)
+//         {
+//             if (vect[j] < vect[midInd])
+//             {
+//                 miNInd = j;
+//             };
+//         };
+//         swap(vect[miNInd], vect[ind]);
+//         selectionSort(vect, ind + 1);
+//     };
+// }
+
+// RECURSIVE INSERTION SORT
+// void insertionSort(vector<int> &vect, int ind)
+// {
+//     cout<<"for mainInd = "<<ind<<endl;
+//     if (ind != vect.size())
+//     {
+//         int mainInd = ind;
+//         for (int j = mainInd - 1; j >= 0; j--)
+//         {
+//             if (vect[j] > vect[mainInd])
+//             {
+//                 swap(vect[mainInd], vect[j]);
+//                 mainInd = j;
+//             };
+//         };
+//         selectionSort(vect, ind + 1);
+//     };
+// };
+
 // HOMEWORK INVERSION CONTROL PROBLEM
 
 // MERGE SORT
@@ -65,8 +163,7 @@ using namespace std;
 //     mergeSortThis(arr,0,6);
 //     for(int i = 0; i<7; i++)
 //     {
-//         cout<<i<<" ";
-//         cout<<arr[i]<<endl;
+//         cout<<arr[i]<<" ";
 //     };
 //     return 0;
 // };
@@ -74,6 +171,7 @@ using namespace std;
 // MERGE SORT
 // IS FASTER THAN BUBBLE SORT, INSERTION SORT, SELECTION SORT
 
+// RECURSIVE BUBBLE SORT
 // void bubbleSort(vector<int> &vect, int end)
 // {
 //     // cout<<"running"<<endl;
@@ -88,16 +186,6 @@ using namespace std;
 //         };
 //         bubbleSort(vect,end-1);
 //     };
-// };
-// int main(){
-//     // vector<int> vect = {6,5,4,3,2,1};
-//     vector<int> vect = {-3,-1,99,213,-12345,0};
-//     bubbleSort(vect,vect.size());
-//     for(int i = 0; i<vect.size(); i++)
-//     {
-//         cout<<vect[i]<<" ";
-//     };
-//     return 0;
 // };
 
 // POWER FUNCTION
@@ -145,7 +233,7 @@ using namespace std;
 //     return 0;
 // };
 
-// BINARY SEARCH
+// RECURSIVE BINARY SEARCH
 // int binarySearch(int arr[],int start , int end, int key)
 // {
 //     if(start>end)
@@ -174,7 +262,7 @@ using namespace std;
 //     cout<<binarySearch(arr,0,4,6)<<endl;
 // };
 
-// LINEAR SEARCH
+// RECURSIVE LINEAR SEARCH
 // int linearSearch(int arr[],int n,int key)
 // {
 //     if(n==0)
@@ -193,7 +281,7 @@ using namespace std;
 //     cout<<linearSearch(arr,5,7)<<endl;
 // };
 
-// ARRAY SUM
+// ARRAY SUM USING RECURSION
 // int arrSum(int arr[], int n)
 // {
 //     if(n==1)
@@ -211,7 +299,7 @@ using namespace std;
 //     cout<<arrSum(arr,5);
 // }
 
-// IS SORTED
+// IS SORTED USING RECURSION
 // bool isSorted(int arr[], int size)
 // {
 //     if(size==1)
@@ -230,7 +318,7 @@ using namespace std;
 //     cout<<isSorted(arr,5)<<endl;
 // };
 
-// SAY DIGITS
+// SAY DIGITS USING RECURSION
 // EXAMPLE 5
 // string str(int n)
 // {

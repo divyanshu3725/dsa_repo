@@ -1228,7 +1228,7 @@
 // so we need to use s + (e-s)/2
 // for binary search TC is O(log2(n))
 
-// SELECTION SORT
+// 🟩 SELECTION SORT
 // in selection sort we select the smallest element and send them to their original position
 // #include <iostream>
 // #include <vector>
@@ -1331,7 +1331,7 @@
 // we will be running n-1 times so O(n) will be the complexity for best case scenario
 // USE CASES
 
-// INSERTION SORT
+// 🟩 INSERTION SORT
 // EXAMPLE
 // 11 1 7 4 8 2 10
 // 1 11 7 4 8 2 10
@@ -2754,14 +2754,14 @@
 //     // POINT 1
 //     // IF WE SUPPLY LESS THAN 5 CHARACTERS THEN THE INDEX AFTER THE INDEX CONTAINING THE LAST CHARACTER WILL BE ASSIGNED NULL CHARACTER. NOW WHILE PRINTING THE CHARACTER ARRAY, THE COMPILER USES THIS NULL CHARACTER TO KNOW WHERE TO STOP THE PRINTING OF CHARACTERS
 //     // POINT 2
-//     // CIN STOPS EXECUTION WHEN IT FINDS A SPACE OR A NEW LINE CHARACTER
+//     // CIN STOPS INSERTION WHEN IT FINDS A SPACE OR A NEW LINE CHARACTER
 //     // POINT 3
 //     // TAKING THE INPUT FROM THE USER BUT SETTING CHARACTER AT SOME INDEX = NULL CHARACTER, THEN LOGGING THE CHARACTER ARRAY WILL PRINT ONLY THE ARRAY PART THAT IS BEFORE THE NULL CHARACTER
 //     arr[2] = '\0';
 //     cout<<arr<<endl;
 // };
 
-// 🟩 FUNCTION TO CALCULAT THE LENGTH OF A STRING
+// 🟩 FUNCTION TO CALCULATE THE LENGTH OF A STRING
 // int lengthOfString(string str)
 // {
 //     int length = 0;
@@ -2955,7 +2955,7 @@
 // //     return 0;
 // // };
 
-// // LINEAR SEARCH IN ARRAYS
+// // LINEAR SEARCH IN 2DARRAYS
 // // time O(m*n)
 // // space O(1)
 // // #include <iostream>
