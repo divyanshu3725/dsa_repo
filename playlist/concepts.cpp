@@ -1,223 +1,3 @@
-// FIRST PROGRAM
-// #include <iostream>
-// int main()
-// {
-//     std::cout<<"Hello DSA";
-//     return 0;
-// };
-
-// EXECUTION PROCESS
-// we need to include header files before using their functionalities
-// iostream header file is necesssary for using the cin and cout functions
-// including the "using namespace std" allows us to use cout and cin without std::
-// execution of code starts from the main function
-// cout is used for printing the output
-// << is the insertion operator, it is used with the cout
-// >> is the extraction operator, it is used with the cin
-// endl is used for inserting new line
-// we can use \n inside a string to end the line
-// semicolon(;) indicates the end of a statement
-// ------------------------------------------------
-// CODE for understanding HEADER FILES, NAMESPACE, MAIN FUNCTION, COUT, INSERTION OPERATOR, ENDL, \N, SEMICOLON
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     cout<<"Namaste\nIndia";
-//     return 0;
-// };
-// ------------------------------------------------
-
-// DATA TYPES
-// before storing some data, we need to specify what type of data we are going to store
-// declaring data type of a variable gives two information to the compiler (a) what is the type of data that is going to be stored (b) what amount space in the memory will that variable take
-// the amount of space that a varaible of a particular type will take is dependent on the compiler
-// int takes 4 bytes (in our compiler)
-// sizeof function is used for finding the size of a variable (amount of space that it's taking in the memory)
-// ------------------------------------------------
-// CODE for understanding DATA TYPES, VARIABLE NAMES, DECLARATIONS, INITIALIZATIONS
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     // int a = 2;
-//     // cout<<"size of int is "<<sizeof(a)<<endl;
-//     // char b = 'b';
-//     // cout<<"size of char is "<<sizeof(b)<<endl;
-//     // bool c = 1;
-//     // cout<<"size of bool is "<<sizeof(c)<<endl;
-//     // float d = 1.23;
-//     // cout<<"size of float is "<<sizeof(d)<<endl;
-//     // double e = 1.1234;
-//     // cout<<"size of double is "<<sizeof(e)<<endl;
-//     // long f = 1;
-//     // cout<<"size of long is "<<sizeof(f)<<endl;
-//     // long long g = 1;
-//     // cout<<"size of long long is "<<sizeof(g)<<endl;
-//     // long double h = 1;
-//     // cout<<"size of long double is "<<sizeof(h)<<endl;
-//     // int is taking 4 bytes
-//     // char is taking 1 byte
-//     // bool is taking 1 byte
-//     // float is taking 4 bytes
-//     // double is taking 8 bytes
-//     // long is taking 4 bytes
-//     // long long is taking 8 bytes
-//     // long double is taking 12 bytes
-//     return 0;
-// };
-// ------------------------------------------------
-// variable names (a) can contain digits, letters and underscores (b) cannot start with digit (c) cannot be same as the name of keywords
-
-// HOW INT DATA TYPE IS STORED IN MEMORY
-// int a = 8;
-// int is taking 4 bytes here
-// so integer a will be converted into binary
-// 8 in binary is 1000
-// 8 will take up 4 bits
-// but we have 32 bits
-// so end 4 bits will be 1000
-// the starting 28 bits will be 0
-
-// HOW CHAR DATA TYPE IS STORED IN MEMORY
-// char a = 'a';
-// our char datatye take 1 byte
-// every character corresponds to an ascii value
-// ascii value for 'a' is 97
-// now this 97 will be stored in memory
-// how ?
-// 97's binary will be stored in 8 bits of memory
-
-// TYPECASTING
-// changing one data type to another
-// ------------------------------------------------
-// CODE for understanding TYPECASTING
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     // EXPLICIT TYPCASTING
-//     // int a = 97;
-//     // cout<<a<<endl;
-//     // cout<<char(a)<<endl;
-//     // return 0;
-//     // EXPLICIT TYPCASTING
-//     // char to int
-//     // char a = 'a';
-//     // cout<<a<<endl;
-//     // cout<<int(a)<<endl;
-//     // return 0;
-//     // IMPLICIT TYPCASTING
-//     // int a = 'a';
-//     // cout<<a<<endl;
-//     // IMPLICIT TYPCASTING
-//     // char a = 97;
-//     // cout<<a<<endl;
-// };
-// ------------------------------------------------
-
-// MAX AND MIN FOR UNSGINED INT 
-// max will be (2^32 - 1)
-// min will be 0
-// #include <iostream>
-// #include <limits>
-// using namespace std;
-// int main()
-// {
-//     cout<<numeric_limits<unsigned int>::min()<<endl;
-//     cout<<numeric_limits<unsigned int>::max()<<endl;
-//     return 0;
-// };
-
-// MAX AND MIN FOR SGINED INT  
-// max will be (2^31 - 1)
-// min will be -(2^31)
-// int is signed by default
-// we can use the signed keyword but it would be redundant
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     cout<<(INT32_MAX)<<endl;
-//     cout<<(INT32_MIN)<<endl;
-//     return 0;
-// };
-
-// MAX AND MIN FOR SIGNED CHAR  
-// max will be (2^7 - 1)
-// min will be -(2^7)
-// #include <iostream>
-// #include <climits>
-// using namespace std;
-// int main()
-// {
-//     cout<<CHAR_MIN<<endl;
-//     cout<<CHAR_MAX<<endl;
-//     return 0;
-// };
-// MAX AND MIN FOR SGINED INT  
-// max will be (2^31 - 1)
-// min will be -(2^31)
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     cout<<(INT32_MAX)<<endl;
-//     cout<<(INT32_MIN)<<endl;
-//     return 0;
-// };
-
-// MAX AND MIN FOR UNSIGNED CHAR  
-// max will be (2^8 - 1)
-// min will be (0)
-// #include <iostream>
-// #include <climits>
-// using namespace std;
-// int main()
-// {
-//     cout<<static_cast<int>(0)<<endl;
-//     cout<<static_cast<int>(UCHAR_MAX)<<endl;
-//     return 0;
-// };
-
-// WHAT WILL HAPPEN IF WE TRY TO STORE 123456 IN A CHAR
-// char a = 123456;
-// the binary of 123456 is 11110001001000000
-// but char has been assigned a space of 8 bits
-// so the data in the starting 8 bits will stored in our char variable a
-// means 01000000 will be stored in char variable a
-// this correpsonds to 64
-// which correpsondds to character@
-// ---------------------------------
-// CODE
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int n = 123456;
-//     cout<<"int n = "<<n<<endl;
-//     cout<<"int of char n = "<<int(char(n))<<endl;
-//     cout<<"char n = "<<char(n)<<endl;
-//     return 0;
-// };
-// ---------------------------------
-// we got a warning:  overflow in implicit constant conversion
-// understood!
-
-// BINARY OF AN INTEGER AND IT'S 1'S COMPLIMENT USING BUILT IN FUNCTIONS
-// #include <iostream>
-// #include <bitset>
-// using namespace std;
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the number: ";
-//     cin>>n;
-//     cout<<bitset<32>(n)<<endl;
-//     cout<<bitset<32>(~n)<<endl;
-//     return 0;
-// };
-
 // HOW ARE NEGATIVE NUMBER STORED IN MEMORY
 // int a = -6;
 // first: we will ignore -ve sign
@@ -280,34 +60,6 @@
 // };
 // ----------------------------
 // this will print 4294967294
-
-// RANGE OF SHORT DATATYPE
-// min is -(2^15)
-// max is 2^15 - 1
-
-// OPERATORS
-// + - * / % && || ! > < >= <= != ==
-// ------------------------------------------------
-// CODE for understading the DIVISION OPERATOR
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int a = 3;
-//     float b = 3;
-//     double c = 3;
-//     long d = 3;
-//     long long e = 3;
-//     long double f = 3;
-//     cout<<"int 3 by 2 is "<<a/2<<endl;
-//     cout<<"float 3 by 2 is "<<b/2<<endl;
-//     cout<<"double 3 by 2 is "<<c/2<<endl;
-//     cout<<"long 3 by 2 is "<<d/2<<endl;
-//     cout<<"long long 3 by 2 is "<<e/2<<endl;
-//     cout<<"long double 3 by 2 is "<<f/2<<endl;
-//     return 0;
-// };
-// ------------------------------------------------
 
 // GUESS THE OUTPUT (IF ELSE CONDITIONALS)
 // #include <iostream>
@@ -413,34 +165,6 @@
 //     return 0;
 // };
 
-// AND
-// a = 2 010
-// b = 3 011
-// a&b = 010 = 2
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int a = 2;
-//     int b = 3;
-//     cout<<(a&b)<<endl;
-//     return 0;
-// };
-
-// OR
-// a = 2 010
-// b = 3 011
-// a|b = 011 = 3
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int a = 2;
-//     int b = 3;
-//     cout<<(a|b)<<endl;
-//     return 0;
-// };
-
 // NOT
 // int a = ~2;
 // 2 is  00000000000000000000000000000010
@@ -459,71 +183,7 @@
 //     return 0;
 // };
 
-// XOR
-// 0 ^ 1 1
-// 1 ^ 0 1
-// 1 ^ 1 0
-// 0 ^ 0 0
-// 2 ^ 3
-// 2 is 010
-// 3 is 011
-// 2^3 is 001
-// so 2^3 is 1
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int a = 2;
-//     int b = 3;
-//     cout<<(a^b)<<endl;
-//     return 0;
-// };
-
-// LEFT SHIFT OPERATOR
-// 2<<1
-// 2 is 010
-// 100 is 4
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int a = 2;
-//     cout<<(a<<1)<<endl;
-//     int b = 3;
-//     cout<<(b<<2)<<endl;
-//     return 0;
-// };
-
-// RIGHT SHIFT OPERATOR
-// 2>>1
-// 2 is 010
-// 001 is 1
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int a = 2;
-//     cout<<(a>>1)<<endl;
-//     return 0;
-// };
-
 // DOING LEFT SHIFT ON LARGER NUMBERS WILL RETURN -VE NUMBERS
-
-// IF WE DO SHIFTING WITH +VE NUMBER THEN PADDING IS DONE WITH 0
-
-// FOR SHIFTING WITH NEGATIVE NUMBER PADDING IS DEPENDENT ON COMPILER
-
-// POST INCREMENT
-// use then increment
-
-// PRE INCREMENT
-// increment then use
-
-// POST DECREMENT
-// use then decrement
-
-// PRE DECREMENT
-// use then decrement
 
 // GUESS THE OUTPUT1
 // #include <iostream>
@@ -585,91 +245,6 @@
 //     int c = ++a;
 //     cout<<b<<endl;
 //     cout<<c<<endl;
-//     return 0;
-// };
-
-// SUM FROM 1 TO N
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
-//     int sum = 0;
-//     for(int i = 1; i<=n; i++)
-//     {
-//         sum+=i;
-//     };
-//     cout<<sum<<endl;
-//     return 0;
-// };
-
-// FIBONACCI SERIES
-// #include <iostream>
-// using namespace std;
-// void fibo(int n)
-// {
-//     if(n<=0)
-//     {
-//         cout<<"Enter a positive number!"<<endl;
-//     }
-//     else if (n==1 || n==2)
-//     {
-//         cout<<1<<endl;
-//     }
-//     else
-//     {
-//         int a = 1;
-//         int b = 1;
-//         for(int i = 3; i<=n; i++)
-//         {
-//             int temp = a;
-//             a = b;
-//             b = b+temp;
-//         };
-//         cout<<b<<endl;
-//     };
-// };
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
-//     for(int i = 1; i<=n; i++)
-//     {
-//         fibo(i);
-//     };
-// };
-
-// WHETHER N IS PRINE NUMBER OR NOT
-// #include <iostream>
-// using namespace std;
-// int main()
-// {
-//     int n;
-//     cout<<"Enter the value of n: ";
-//     cin>>n;
-//     if(n<=0)
-//     {
-//         cout<<"enter +ve number"<<endl;
-//     }
-//     else if (n==1)
-//     {
-//         cout<<"neither prime nor composite"<<endl;
-//     }
-//     else
-//     {
-//         for(int i = 2; i<n; i++)
-//         {
-//             if(n%i==0)
-//             {
-//                 cout<<"composite"<<endl;
-//                 return 0;
-//             }
-//         };
-//         cout<<"prime"<<endl;
-//     };
 //     return 0;
 // };
 
@@ -1184,7 +759,7 @@
 //     return false;
 // };
 
-// 🟩 BINARY SEARCH 
+// BINARY SEARCH 
 // for linear search the TC is O(n)
 // binary search is applied only on monotoning functions
 // #include <iostream>
@@ -1228,7 +803,7 @@
 // so we need to use s + (e-s)/2
 // for binary search TC is O(log2(n))
 
-// 🟩 SELECTION SORT
+// SELECTION SORT
 // in selection sort we select the smallest element and send them to their original position
 // #include <iostream>
 // #include <vector>
@@ -1274,7 +849,7 @@
 // USE CASES
 // - use it for sorting arrays and vector of small size
 
-// 🟩 BUBBLE SORT
+// BUBBLE SORT
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -1331,7 +906,7 @@
 // we will be running n-1 times so O(n) will be the complexity for best case scenario
 // USE CASES
 
-// 🟩 INSERTION SORT
+// INSERTION SORT
 // EXAMPLE
 // 11 1 7 4 8 2 10
 // 1 11 7 4 8 2 10
@@ -2743,7 +2318,7 @@
 // we can also make a function return a reference variable, but the problem with this is that the reference variable will be local to the function and if we try to return it from the function that it won't work
 // SIMILAR IS THE PROBLME WITH A FUNCTION THAT RETURNS A POINTER
 
-// 🟩 CHARACTER ARRAYS AND STRINGS
+//  CHARACTER ARRAYS AND STRINGS
 // int main()
 // {
 //     char arr[5];
@@ -2761,7 +2336,7 @@
 //     cout<<arr<<endl;
 // };
 
-// 🟩 FUNCTION TO CALCULATE THE LENGTH OF A STRING
+//  FUNCTION TO CALCULATE THE LENGTH OF A STRING
 // int lengthOfString(string str)
 // {
 //     int length = 0;
@@ -2772,7 +2347,7 @@
 //     return length;
 // };
 
-// 🟩 FUNCTION TO REVERSE A STRING
+//  FUNCTION TO REVERSE A STRING
 // void reverseString(string &str)
 // {
 //     int start = 0;
